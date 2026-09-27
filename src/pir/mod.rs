@@ -63,5 +63,6 @@ impl<'a> PirResult<'a> {
 }
 
 
+pub mod inspire;
 pub mod pir_client;
 pub mod pir_server;

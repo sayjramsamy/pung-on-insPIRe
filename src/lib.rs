@@ -13,6 +13,8 @@ extern crate crypto;
 #[macro_use]
 extern crate gj;
 extern crate gjio;
+extern crate inspire;
+extern crate spiral_rs;
 extern crate timely;
 extern crate timely_communication;
 

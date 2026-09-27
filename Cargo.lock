@@ -882,6 +882,7 @@ dependencies = [
  "quicksort",
  "rand 0.3.23",
  "rust-crypto",
+ "spiral-rs",
  "time",
  "timely",
  "timely_communication",
