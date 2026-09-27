@@ -1,0 +1,1091 @@
+# XPIR baseline, 2026-09-27T20:00:34+02:00
+# host: 6 cores, 3.5Gi RAM, 6.18.33.2-microsoft-standard-WSL2
+# rustc: rustc 1.98.1 (48a229cea 2026-09-01); commit: d5dfa97
+=== bench_pir_answer_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_32_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+bench_pir_answer_131072_d_2_a_32_1KB query size: 2097152 bytes
+bench_pir_answer_131072_d_2_a_32_1KB answer size: 1982464 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 347.03 s (325 iterations)
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Analyzing
+bench_pir_answer_131072 time:   [333.42 ms 349.48 ms 368.56 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 145.07s
+
+peak_rss_kb=1655844 wall_s=145.16 exit=0
+=== bench_pir_answer_131072_d_2_a_64
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_64 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_131072_d_2_a_64 query size: 1572864 bytes
+bench_pir_answer_131072_d_2_a_64 answer size: 933888 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_131072_d_2_a_64
+Benchmarking bench_pir_answer_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_131072_d_2_a_64: Collecting 25 samples in estimated 55.025 s (325 iterations)
+Benchmarking bench_pir_answer_131072_d_2_a_64: Analyzing
+bench_pir_answer_131072 time:   [106.79 ms 109.45 ms 112.75 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 48.14s
+
+peak_rss_kb=1022892 wall_s=48.20 exit=0
+=== bench_pir_answer_2048_d_2_a_32
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_2048_d_2_a_32 query size: 262144 bytes
+bench_pir_answer_2048_d_2_a_32 answer size: 442368 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_32
+Benchmarking bench_pir_answer_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_2048_d_2_a_32: Collecting 25 samples in estimated 1.6449 s (325 iterations)
+Benchmarking bench_pir_answer_2048_d_2_a_32: Analyzing
+bench_pir_answer_2048_d time:   [4.3581 ms 4.4094 ms 4.4801 ms]
+                        change: [-4.9103% -3.4952% -2.0063%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 3 outliers among 25 measurements (12.00%)
+  3 (12.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.00s
+
+peak_rss_kb=375104 wall_s=7.02 exit=0
+=== bench_pir_answer_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_2048_d_2_a_8_1KB query size: 524288 bytes
+bench_pir_answer_2048_d_2_a_8_1KB answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 4.0582 s (325 iterations)
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Analyzing
+bench_pir_answer_2048_d time:   [11.015 ms 11.350 ms 11.701 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  1 (4.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.64s
+
+peak_rss_kb=334112 wall_s=7.66 exit=0
+=== bench_pir_answer_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_16_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_32768_d_2_a_16_1KB query size: 1572864 bytes
+bench_pir_answer_32768_d_2_a_16_1KB answer size: 933888 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 44.687 s (325 iterations)
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Analyzing
+bench_pir_answer_32768_ time:   [103.07 ms 105.31 ms 107.39 ms]
+Found 4 outliers among 25 measurements (16.00%)
+  1 (4.00%) low mild
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 44.81s
+
+peak_rss_kb=829904 wall_s=44.85 exit=0
+=== bench_pir_answer_32768_d_2_a_32
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_32768_d_2_a_32 query size: 1048576 bytes
+bench_pir_answer_32768_d_2_a_32 answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_32
+Benchmarking bench_pir_answer_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_32768_d_2_a_32: Collecting 25 samples in estimated 9.7692 s (325 iterations)
+Benchmarking bench_pir_answer_32768_d_2_a_32: Analyzing
+bench_pir_answer_32768_ time:   [24.723 ms 24.796 ms 24.878 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 14.01s
+
+peak_rss_kb=601784 wall_s=14.05 exit=0
+=== bench_pir_answer_8192_d_2_a_32
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_8192_d_2_a_32 query size: 524288 bytes
+bench_pir_answer_8192_d_2_a_32 answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_32
+Benchmarking bench_pir_answer_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_8192_d_2_a_32: Collecting 25 samples in estimated 4.1522 s (325 iterations)
+Benchmarking bench_pir_answer_8192_d_2_a_32: Analyzing
+bench_pir_answer_8192_d time:   [10.822 ms 10.938 ms 11.093 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.67s
+
+peak_rss_kb=346944 wall_s=7.69 exit=0
+=== bench_pir_answer_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_8192_d_2_a_8_1KB query size: 1048576 bytes
+bench_pir_answer_8192_d_2_a_8_1KB answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 9.8562 s (325 iterations)
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Analyzing
+bench_pir_answer_8192_d time:   [24.881 ms 24.974 ms 25.069 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 14.05s
+
+peak_rss_kb=553688 wall_s=14.08 exit=0
+=== bench_pir_decode_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_32_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+bench_pir_decode_131072_d_2_a_32_1KB query size: 2097152 bytes
+bench_pir_decode_131072_d_2_a_32_1KB answer size: 1982464 bytes
+bench_pir_decode_131072_d_2_a_32_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 203.12 s (325 iterations)
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Analyzing
+bench_pir_decode_131072 time:   [1.9850 ms 2.0171 ms 2.0474 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 125.61s
+
+peak_rss_kb=1674424 wall_s=125.72 exit=0
+=== bench_pir_decode_131072_d_2_a_64
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_64 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_131072_d_2_a_64 query size: 1572864 bytes
+bench_pir_decode_131072_d_2_a_64 answer size: 933888 bytes
+bench_pir_decode_131072_d_2_a_64 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_131072_d_2_a_64
+Benchmarking bench_pir_decode_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_131072_d_2_a_64: Collecting 25 samples in estimated 45.739 s (325 iterations)
+Benchmarking bench_pir_decode_131072_d_2_a_64: Analyzing
+bench_pir_decode_131072 time:   [902.81 us 908.76 us 914.74 us]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 45.99s
+
+peak_rss_kb=1023812 wall_s=46.06 exit=0
+=== bench_pir_decode_2048_d_2_a_32
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_2048_d_2_a_32 query size: 262144 bytes
+bench_pir_decode_2048_d_2_a_32 answer size: 442368 bytes
+bench_pir_decode_2048_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_32
+Benchmarking bench_pir_decode_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_2048_d_2_a_32: Collecting 25 samples in estimated 1.7867 s (325 iterations)
+Benchmarking bench_pir_decode_2048_d_2_a_32: Analyzing
+bench_pir_decode_2048_d time:   [432.39 us 437.93 us 444.80 us]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.54s
+
+peak_rss_kb=374624 wall_s=7.56 exit=0
+=== bench_pir_decode_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_2048_d_2_a_8_1KB query size: 524288 bytes
+bench_pir_decode_2048_d_2_a_8_1KB answer size: 475136 bytes
+bench_pir_decode_2048_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 4.4090 s (325 iterations)
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Analyzing
+bench_pir_decode_2048_d time:   [466.84 us 471.09 us 475.47 us]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) low mild
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.96s
+
+peak_rss_kb=335032 wall_s=7.98 exit=0
+=== bench_pir_decode_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_16_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_32768_d_2_a_16_1KB query size: 1572864 bytes
+bench_pir_decode_32768_d_2_a_16_1KB answer size: 933888 bytes
+bench_pir_decode_32768_d_2_a_16_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 44.063 s (325 iterations)
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Analyzing
+bench_pir_decode_32768_ time:   [908.27 us 922.33 us 937.55 us]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 44.11s
+
+peak_rss_kb=829324 wall_s=44.16 exit=0
+=== bench_pir_decode_32768_d_2_a_32
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_32768_d_2_a_32 query size: 1048576 bytes
+bench_pir_decode_32768_d_2_a_32 answer size: 475136 bytes
+bench_pir_decode_32768_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_32
+Benchmarking bench_pir_decode_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_32768_d_2_a_32: Collecting 25 samples in estimated 10.062 s (325 iterations)
+Benchmarking bench_pir_decode_32768_d_2_a_32: Analyzing
+bench_pir_decode_32768_ time:   [470.71 us 478.77 us 488.34 us]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 14.32s
+
+peak_rss_kb=605444 wall_s=14.36 exit=0
+=== bench_pir_decode_8192_d_2_a_32
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_8192_d_2_a_32 query size: 524288 bytes
+bench_pir_decode_8192_d_2_a_32 answer size: 475136 bytes
+bench_pir_decode_8192_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_32
+Benchmarking bench_pir_decode_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_8192_d_2_a_32: Collecting 25 samples in estimated 4.2906 s (325 iterations)
+Benchmarking bench_pir_decode_8192_d_2_a_32: Analyzing
+bench_pir_decode_8192_d time:   [720.68 us 772.82 us 830.39 us]
+Found 4 outliers among 25 measurements (16.00%)
+  1 (4.00%) low severe
+  1 (4.00%) low mild
+  2 (8.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.99s
+
+peak_rss_kb=346884 wall_s=8.01 exit=0
+=== bench_pir_decode_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_8192_d_2_a_8_1KB query size: 1048576 bytes
+bench_pir_decode_8192_d_2_a_8_1KB answer size: 475136 bytes
+bench_pir_decode_8192_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 9.8811 s (325 iterations)
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Analyzing
+bench_pir_decode_8192_d time:   [464.26 us 476.25 us 493.42 us]
+Found 4 outliers among 25 measurements (16.00%)
+  2 (8.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 14.27s
+
+peak_rss_kb=553008 wall_s=14.30 exit=0
+=== bench_pir_query_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_query_131072_d_2_a_32_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_32_1KB query size: 2097152 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 1.9690 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Analyzing
+bench_pir_query_131072_ time:   [6.0145 ms 6.0623 ms 6.1155 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.14s
+
+peak_rss_kb=17080 wall_s=5.14 exit=0
+=== bench_pir_query_131072_d_2_a_64
+
+running 1 test
+test bench_pir_query_131072_d_2_a_64 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_64 query size: 1572864 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_64
+Benchmarking bench_pir_query_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_64: Collecting 25 samples in estimated 1.3754 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_64: Analyzing
+bench_pir_query_131072_ time:   [4.2286 ms 4.3020 ms 4.3813 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.78s
+
+peak_rss_kb=17056 wall_s=5.78 exit=0
+=== bench_pir_query_2048_d_2_a_32
+
+running 1 test
+test bench_pir_query_2048_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_32 query size: 262144 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_32
+Benchmarking bench_pir_query_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_32: Collecting 25 samples in estimated 208.92 ms (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_32: Analyzing
+bench_pir_query_2048_d_ time:   [633.26 us 638.35 us 645.05 us]
+Found 4 outliers among 25 measurements (16.00%)
+  2 (8.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.53s
+
+peak_rss_kb=17324 wall_s=5.52 exit=0
+=== bench_pir_query_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_2048_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_8_1KB query size: 524288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 427.82 ms (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Analyzing
+bench_pir_query_2048_d_ time:   [1.3071 ms 1.3257 ms 1.3459 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.89s
+
+peak_rss_kb=17392 wall_s=5.88 exit=0
+=== bench_pir_query_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_query_32768_d_2_a_16_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_16_1KB query size: 1572864 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 1.4073 s (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Analyzing
+bench_pir_query_32768_d time:   [4.3057 ms 4.3368 ms 4.3694 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.90s
+
+peak_rss_kb=17056 wall_s=5.90 exit=0
+=== bench_pir_query_32768_d_2_a_32
+
+running 1 test
+test bench_pir_query_32768_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_32 query size: 1048576 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_32
+Benchmarking bench_pir_query_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_32: Collecting 25 samples in estimated 892.03 ms (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_32: Analyzing
+bench_pir_query_32768_d time:   [2.7069 ms 2.7366 ms 2.7661 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  3 (12.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 6.57s
+
+peak_rss_kb=17076 wall_s=6.56 exit=0
+=== bench_pir_query_8192_d_2_a_32
+
+running 1 test
+test bench_pir_query_8192_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_32 query size: 524288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_32
+Benchmarking bench_pir_query_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_32: Collecting 25 samples in estimated 427.03 ms (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_32: Analyzing
+bench_pir_query_8192_d_ time:   [1.2944 ms 1.3047 ms 1.3191 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.87s
+
+peak_rss_kb=17184 wall_s=5.87 exit=0
+=== bench_pir_query_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_8192_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_8_1KB query size: 1048576 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 933.91 ms (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Analyzing
+bench_pir_query_8192_d_ time:   [2.7809 ms 2.8672 ms 2.9672 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 6.88s
+
+peak_rss_kb=17372 wall_s=6.88 exit=0
+=== bench_pir_server_creation_131072
+
+running 1 test
+test bench_pir_server_creation_131072 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_131072
+Benchmarking bench_pir_server_creation_131072: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_131072: Collecting 25 samples in estimated 70.995 s (325 iterations)
+Benchmarking bench_pir_server_creation_131072: Analyzing
+bench_pir_server_creati time:   [243.36 ms 282.05 ms 311.99 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  3 (12.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 89.58s
+
+peak_rss_kb=2719884 wall_s=89.75 exit=0
+=== bench_pir_server_creation_131072_1KB
+
+running 1 test
+test bench_pir_server_creation_131072_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_131072_1KB
+Benchmarking bench_pir_server_creation_131072_1KB: Warming up for 3.0000 s
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_server_creation_131072_1KB: Collecting 25 samples in estimated 392.89 s (325 iterations)
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+WARNING: going to use more than one tenth of the available memory for storing the precomputed data, maybe you should reduce bytes_per_db_element when calling importData
+Benchmarking bench_pir_server_creation_131072_1KB: Analyzing
+bench_pir_server_creati time:   [749.02 ms 792.69 ms 845.30 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 263.01s
+
+peak_rss_kb=2825892 wall_s=263.18 exit=0
+=== bench_pir_server_creation_2048
+
+running 1 test
+test bench_pir_server_creation_2048 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_2048
+Benchmarking bench_pir_server_creation_2048: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_2048: Collecting 25 samples in estimated 1.0232 s (325 iterations)
+Benchmarking bench_pir_server_creation_2048: Analyzing
+bench_pir_server_creati time:   [3.0315 ms 3.1166 ms 3.2312 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4.31s
+
+peak_rss_kb=309096 wall_s=4.33 exit=0
+=== bench_pir_server_creation_2048_1KB
+
+running 1 test
+test bench_pir_server_creation_2048_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_2048_1KB
+Benchmarking bench_pir_server_creation_2048_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_2048_1KB: Collecting 25 samples in estimated 3.7282 s (325 iterations)
+Benchmarking bench_pir_server_creation_2048_1KB: Analyzing
+bench_pir_server_creati time:   [11.327 ms 11.361 ms 11.397 ms]
+Found 4 outliers among 25 measurements (16.00%)
+  1 (4.00%) low mild
+  3 (12.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 9.63s
+
+peak_rss_kb=205380 wall_s=9.64 exit=0
+=== bench_pir_server_creation_32768
+
+running 1 test
+test bench_pir_server_creation_32768 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_32768
+Benchmarking bench_pir_server_creation_32768: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_32768: Collecting 25 samples in estimated 15.542 s (325 iterations)
+Benchmarking bench_pir_server_creation_32768: Analyzing
+bench_pir_server_creati time:   [48.524 ms 50.651 ms 52.992 ms]
+Found 5 outliers among 25 measurements (20.00%)
+  1 (4.00%) low mild
+  4 (16.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 19.43s
+
+peak_rss_kb=884428 wall_s=19.47 exit=0
+=== bench_pir_server_creation_32768_1KB
+
+running 1 test
+test bench_pir_server_creation_32768_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_32768_1KB
+Benchmarking bench_pir_server_creation_32768_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_32768_1KB: Collecting 25 samples in estimated 60.661 s (325 iterations)
+Benchmarking bench_pir_server_creation_32768_1KB: Analyzing
+bench_pir_server_creati time:   [177.99 ms 184.32 ms 193.05 ms]
+Found 4 outliers among 25 measurements (16.00%)
+  1 (4.00%) high mild
+  3 (12.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 65.66s
+
+peak_rss_kb=942440 wall_s=65.71 exit=0
+=== bench_pir_server_creation_8192
+
+running 1 test
+test bench_pir_server_creation_8192 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_8192
+Benchmarking bench_pir_server_creation_8192: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_8192: Collecting 25 samples in estimated 3.8774 s (325 iterations)
+Benchmarking bench_pir_server_creation_8192: Analyzing
+bench_pir_server_creati time:   [11.953 ms 12.514 ms 13.311 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  1 (4.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.15s
+
+peak_rss_kb=372860 wall_s=7.17 exit=0
+=== bench_pir_server_creation_8192_1KB
+
+running 1 test
+test bench_pir_server_creation_8192_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_8192_1KB
+Benchmarking bench_pir_server_creation_8192_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_8192_1KB: Collecting 25 samples in estimated 15.321 s (325 iterations)
+Benchmarking bench_pir_server_creation_8192_1KB: Analyzing
+bench_pir_server_creati time:   [45.934 ms 47.002 ms 48.552 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 21.39s
+
+peak_rss_kb=325804 wall_s=21.42 exit=0
+# done 2026-09-27T20:18:40+02:00
