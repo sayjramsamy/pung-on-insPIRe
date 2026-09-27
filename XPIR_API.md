@@ -7,19 +7,20 @@ call sites, `schema/pung.capnp` and `build.rs` (repo at commit `d5dfa97`).
 ## Summary
 
 Pung's Rust code never calls XPIR directly. It only uses a C interface of **9 functions** exported by
-`src/pir/cpp/pungPIR.cpp`. An insPIRe backend that exports the same 9 functions and follows the contract
-rules below can replace XPIR with **no change to Pung's Rust code**, so both backends are benchmarked on
-identical code.
+`src/pir/cpp/pungPIR.cpp`. Everything above that interface (the Rust `PirServer` / `PirClient` API and
+its callers) is backend-independent. Because insPIRe is itself a Rust crate, the planned integration
+implements that Rust API directly rather than the C ABI; see "Recommended integration plan" at the end.
 
 ```
 Pung callers (db/mod.rs, server/rpc.rs, client/mod.rs)
         │
 Rust wrappers (src/pir/: PirServer, PirClient, PirQuery/PirAnswer/PirResult)
         │
-C ABI: 9 extern "C" functions   ◄── the contract to keep
+C ABI: 9 extern "C" functions   ◄── XPIR's contract
         │
-        ├── pungPIR.cpp + deps/xpir        (today)
-        └── new shim + insPIRe             (planned)
+        └── pungPIR.cpp + deps/xpir        (XPIR, today)
+
+insPIRe (planned) plugs in at the Rust-wrapper level instead, as a Rust implementation of src/pir/.
 ```
 
 ## Layer 1: Rust API (what Pung actually uses)
@@ -108,7 +109,10 @@ Rules the code relies on but never states:
   (`DefaultPIRParams::Factorize`). This is XPIR-specific; insPIRe can accept and ignore it. It comes from
   the `-d` command-line flag of the client and server binaries.
 
-## Implications for insPIRe (check against the paper)
+## Implications for insPIRe
+
+These were written before reading the insPIRe code; see "insPIRe implementation" below for what the
+code actually does.
 
 - **Server setup runs every round.** `db.pir_setup()` is called on every round
   (`src/server/send_dataflow.rs:85`), rebuilding a `PirServer` for every level of every collection. Any
@@ -129,8 +133,123 @@ Rules the code relies on but never states:
   `mpfr` and `boost_thread`. This is where to add a switch (Cargo feature or environment variable) between
   XPIR and insPIRe.
 
+## insPIRe implementation: API and mapping to Pung
+
+Source: [google/private-membership](https://github.com/google/private-membership), `research/InsPIRe`,
+commit `25b2fa3`, cloned to `~/private-membership`. The repo cites the paper as *"InsPIRe:
+Communication-Efficient PIR with Silent Preprocessing"*, [ePrint 2025/1352](https://eprint.iacr.org/2025/1352).
+
+The crate is Rust (`inspire`, edition 2021, pinned to `nightly-2024-02-07`, depends on `spiral-rs` at git
+rev `6929441`). It has four protocol variants; the paper's main **InsPIRe** scheme is the one run by
+`cargo run --release --bin inspire -- --num-items N --item-size-bits B --dim0 D`.
+
+### Hardware requirement: AVX-512
+
+The hot kernels (`src/kernel.rs` `fast_batched_dot_product_avx512*`, `src/packing.rs:736`) call `_mm512_*`
+intrinsics with no fallback and no runtime CPU detection, and the build uses `-C target-cpu=native` /
+`-march=native`. The development laptop (AMD Ryzen 5 4500U, Zen 2) has no AVX-512, so insPIRe cannot be
+benchmarked on it. Benchmarks need an AVX-512 machine (Intel Ice Lake+ or AMD Zen 4+), and the XPIR
+baseline in `results/` must be re-run on that same machine for a fair comparison.
+
+### Where the main scheme lives
+
+`src/client.rs` and `src/server.rs` are library building blocks (shared with the YPIR-derived
+SimplePIR / DoublePIR / InsPIRe⁽²⁾ variants). The main InsPIRe protocol is assembled in the **binary**
+`src/bin/inspire.rs`, so these parts must be moved into a library module before Pung can call them:
+
+- trait `RGSWPIR`: `YServer::<u16>::new_rgswpir(&params, &[u16], interpolate_degree)` and
+  `perform_online_computation_simplepir_and_rgsw(...)`
+- `params_rgswpir_given_input_size_and_dim0(num_items, item_size_bits, dim0) -> (Params, interpolate_degree, dims)`
+- `serialize_everything` / `deserialize_everything` (query to/from bytes)
+- the RGSW query encryption (an inline `t_gsw` loop in `run_simple_ypir_rgsw_on_params`)
+
+### Public library API used by the main scheme
+
+| Item | File | Purpose |
+|---|---|---|
+| `YClient<'a>`, `YClient::new(&'a mut Client<'a>, &'a Params)` | `client.rs` | Client wrapper; borrows the spiral-rs `Client` (secret key) and `Params` |
+| `generate_query_over_prime(seed_idx, dim_log2, PackingType, row) -> Vec<u64>` | `client.rs` | Row-selection query (first dimension) |
+| `pack_query(&Params, &[u64]) -> AlignedMemory64` | `client.rs` | Packs the row query for the server |
+| `decrypt_ct_reg_measured(...)` | `client.rs` | Decrypts one response ciphertext |
+| `YServer<'a, T>` | `server.rs` | Encoded DB (`db_buf_aligned`), borrowed `&'a Params`, packing parameters |
+| `perform_offline_precomputation_simplepir(gamma, None, online_only) -> OfflinePrecomputedValues` | `server.rs` | Offline phase; depends on the DB and public seeds only |
+| `PackingKeys::init_full(&PackParams, sk, W_SEED, V_SEED)` | `packing.rs` | Client packing keys, derived from the secret key |
+
+`YClient::decode_response` and `YServer::new` / `perform_online_computation{,_medium_payload}` belong to the
+other variants and are not used by the main scheme.
+
+### Flow
+
+```
+BOTH    params, d = params_rgswpir_given_input_size_and_dim0(num_items, item_bits, dim0)   // deterministic
+
+SERVER  server  = YServer::<u16>::new_rgswpir(&params, &db_u16, d)
+setup   offline = server.perform_offline_precomputation_simplepir(gamma = poly_len, None, false)
+
+CLIENT  client = Client::init(&params); client.generate_secret_keys()
+query   keys   = PackingKeys::init_full(&PackParams::new(&params, gamma), sk, W_SEED, V_SEED)
+        ct_gsw = RGSW encryption of X^(sub-column)                  // selects the column within a row
+        q_row  = pack_query(&params, &y_client.generate_query_over_prime(SEED_0, db_dim_1, InspiRING, row))
+        bytes  = serialize_everything(&params, &mut keys, q_row, ct_gsw)
+
+SERVER  (keys, q_row, ct_gsw) = deserialize_everything(&params, bytes)
+answer  resp = server.perform_online_computation_simplepir_and_rgsw(d, &q_row, ct_gsw, &offline, &mut keys, None)
+                                                                    // Vec<Vec<u8>>: c ciphertexts
+
+CLIENT  per ciphertext: PolyMatrixRaw::recover_how_many(...) -> decrypt_ct_reg_measured(...)[..gamma]
+decode  concatenation = the record as c·gamma u16 plaintext elements
+```
+
+The CRS is a set of hard-coded constants shared by both sides (`STATIC_PUBLIC_SEED`, `W_SEED`, `V_SEED`,
+`RGSW_SEEDS`), so Pung needs no setup exchange for it.
+
+### Mapping onto Pung's PIR interface
+
+| Pung (Layer 1 / 2) | insPIRe |
+|---|---|
+| `PirServer::new` / `cpp_server_setup` | params + `new_rgswpir` + offline precomputation |
+| `PirClient::new`, `update_params` | `Client::init`, secret keys, packing keys; params recomputed from `(num, size)` |
+| `gen_query` | row query + RGSW ciphertext + packing keys, serialized to one byte blob (`num = 1`) |
+| `gen_answer` | deserialize + `perform_online_computation_simplepir_and_rgsw`; concatenate the `c` ciphertexts |
+| `decode_answer` | `recover_how_many` + decrypt; convert elements back to bytes; extract the record |
+
+Like XPIR, the client is stateful: the secret key must persist between `gen_query` and `decode_answer`.
+
+### Entry size: a runtime parameter, with constraints
+
+- `item_size_bits` and `num_items` are runtime inputs to the params function, which returns a runtime
+  `Params`. The only compile-time choice is the plaintext element type (`u16` for InsPIRe).
+- Hard-coded in the params function: `poly_len = 2048`, plaintext modulus `p = 65535`, `q2_bits = 28`,
+  `t_exp = 3`.
+- **Granularity is one polynomial**, 2048 × 16 bits = 4 KiB. Smaller records are packed
+  `factor = ⌊32768 / item_bits⌋` to a polynomial: 14 Pung tuples of 286 B each. This plays the role of
+  XPIR's `alpha`.
+- **The library does no byte encoding or record extraction.** The benchmark binary fills the DB with random
+  `u16`s and checks raw elements. The Pung wrapper must implement:
+  - bytes → `u16` elements, laid out column-major (`db[col * db_rows + row]`);
+  - record index → (row, sub-column) mapping;
+  - extracting the record from the `c·gamma` decoded elements.
+- **Elements must be < 65535.** Values are reduced mod 65535, not 65536, so raw 16-bit words cannot be
+  packed (`0xFFFF` decodes as `0`). Pack 15 bits per element, or handle that value specially.
+
+### Integration friction
+
+1. **Lifetimes:** `YServer<'a>`, `YClient<'a>`, `PackingKeys<'a>` and `OfflinePrecomputedValues<'a>` all borrow
+   `&'a Params`, and `YClient` also borrows `&'a mut Client`. Storing them in Pung's long-lived
+   `PirServer` / `PirClient` needs an owning wrapper (boxed or leaked `Params`, or a self-referential-struct
+   crate).
+2. **Keys are uploaded with every query:** the packing keys (`3 × 2048 × 2` u64 ≈ 96 KiB in
+   `serialize_everything`, before the query row and RGSW ciphertext) are part of each serialized query.
+   Pung has no key channel, so the simplest integration sends them every time.
+3. **Per-round setup:** the offline phase needs no client input, so it fits Pung's server-only
+   `pir_setup()`. Pung calls that every round, so encode + offline time sits on the per-round critical
+   path and should be reported separately.
+4. **Toolchain:** insPIRe pins `nightly-2024-02-07`; Pung is a 2015-edition crate built on stable 1.98 with
+   `RUSTC_BOOTSTRAP=1`. Both must build under one toolchain.
+
 ## Recommended integration plan
 
-Write a new shim (e.g. `src/pir/cpp/pungInsPIRe.cpp`) that exports the same 9 functions, and choose the
-backend in `build.rs`. XPIR and insPIRe runs then share identical Rust code, and `tests/pir.rs` /
-`benches/pir.rs` work unchanged.
+insPIRe is a Rust crate, so a C++ shim is unnecessary. Add `inspire` as a Cargo dependency of Pung, move
+the main-scheme code out of `src/bin/inspire.rs` into a library module, and implement the `PirServer` /
+`PirClient` API of `src/pir/` directly in Rust behind a backend switch (a Cargo feature). XPIR and insPIRe
+runs then share identical calling code, and `tests/pir.rs` / `benches/pir.rs` work unchanged.
