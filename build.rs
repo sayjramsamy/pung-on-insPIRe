@@ -37,5 +37,4 @@ fn main() {
     println!("cargo:rustc-link-lib=gmp");
     println!("cargo:rustc-link-lib=mpfr");
     println!("cargo:rustc-link-lib=boost_thread");
-    println!("cargo:rustc-link-lib=boost_system");
 }
