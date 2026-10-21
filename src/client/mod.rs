@@ -12,7 +12,7 @@ use db;
 use gj;
 use gjio; // asynchronous IO libraries
 
-use pir::pir_client::PirClient;
+use pir::sealpir_client::SealPirClient;
 use pung_capnp::pung_rpc;
 
 use rand;
@@ -79,7 +79,11 @@ pub struct PungClient<'a> {
 
     peers: HashMap<&'a str, PungPeer>,
 
-    pir_handler: PirClient<'a>,
+    // Not read: pir_retr constructs a fresh SealPirClient per retrieval
+    // instead (SealPIR's params are fixed at construction, unlike XPIR's
+    // update_params). See TODO(sealpir) note on pir_retr.
+    #[allow(dead_code)]
+    pir_handler: SealPirClient,
     partitions: Vec<Vec<u8>>, // Static partitioning of label space
 
     // Mapping between collection and encoding recipe (i.e., which pieces to xor together)
@@ -98,7 +102,7 @@ impl<'a> PungClient<'a> {
         address: &str,
         send_rate: u32,
         ret_rate: u32,
-        depth: u64,
+        _depth: u64,
         ret_scheme: db::RetScheme,
         opt_scheme: db::OptScheme,
         scope: &gj::WaitScope,
@@ -196,7 +200,7 @@ impl<'a> PungClient<'a> {
             ret_scheme: ret_scheme,
             opt_scheme: opt_scheme,
             peers: HashMap::new(),
-            pir_handler: PirClient::new(1, 1, 1, depth),
+            pir_handler: SealPirClient::new(1, 1),
             partitions: partitions,
             h4_mappings: h4_mappings,
         }
@@ -1675,42 +1679,46 @@ impl<'a> PungClient<'a> {
         scope: &gj::WaitScope,
         port: &mut gjio::EventPort,
     ) -> Result<db::PungTuple, Error> {
-        // set up PIR handler
-        // compute ideal alpha
-        let alpha = util::get_alpha(len);
-        self.pir_handler
-            .update_params(db::TUPLE_SIZE as u64, len, alpha);
+        // SealPIR's encryption/PIR parameters are fixed at construction time
+        // (no update_params equivalent), and each BST level has a different
+        // size, so we build a fresh client per retrieval instead of reusing
+        // self.pir_handler.
+        //
+        // TODO(sealpir): galois-key exchange with the server has no RPC yet
+        // (shallow swap only - see task notes), so this path will fail at
+        // runtime against a real SealPIR server until that's wired up.
+        let client = SealPirClient::new(len, db::TUPLE_SIZE as u64);
 
         // Create PIR request
-        let query = self.pir_handler.gen_query(idx);
+        let query = client.gen_query(idx);
+        let query_bytes = query.to_bytes();
         let mut request = self.conn.retr_request();
         request.get().set_id(self.id);
         request.get().set_round(self.round);
         request.get().set_bucket(bucket as u32);
         request.get().set_collection(collection);
         request.get().set_level(level);
-        request.get().set_query(query.query);
-        request.get().set_qnum(query.num);
+        request.get().set_query(&query_bytes);
+        request.get().set_qnum(1);
 
-        println!("Upload (pir) {} bytes", 32 + query.query.len());
+        println!("Upload (pir) {} bytes", 32 + query_bytes.len());
 
         // Send request to the server and get response
         let response = request.send().promise.wait(scope, port)?;
 
         // Extract PIR answer from response
         let answer: &[u8] = response.get()?.get_answer()?;
-        let a_num: u64 = response.get()?.get_anum();
 
-        if answer.len() == 0 || a_num == 0 {
+        if answer.len() == 0 {
             return Err(Error::failed("Invalid PIR answer returned.".to_string()));
         }
 
         // Decode answer to get tuple
-        let decoded = self.pir_handler.decode_answer(answer, a_num);
+        let decoded = client.decode_answer_from_bytes(answer);
 
         println!("Download (pir) {} bytes", 8 + answer.len());
 
-        Ok(db::PungTuple::new(decoded.result))
+        Ok(db::PungTuple::new(&decoded.to_bytes()))
     }
 
     // Retrieves a tuple using only a label by searching on the server

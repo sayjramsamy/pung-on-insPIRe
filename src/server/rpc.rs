@@ -493,7 +493,9 @@ impl pung_rpc::Server for PungRpc {
         let collection_idx: usize = req.get_collection() as usize;
         let level_idx: usize = req.get_level() as usize;
         let query: &[u8] = pry!(req.get_query());
-        let q_num: u64 = req.get_qnum();
+        // qnum is a leftover XPIR-specific field (query slot count); SealPIR
+        // has no analog. See TODO(sealpir) note in client::pir_retr.
+        let _q_num: u64 = req.get_qnum();
 
         // check to make sure level
         let mut db = self.dbase.borrow_mut();
@@ -520,9 +522,9 @@ impl pung_rpc::Server for PungRpc {
             {
                 let pir_handler = collection.pir_handler(level_idx);
 
-                let answer = pir_handler.gen_answer(query, q_num);
-                res.get().set_answer(answer.answer);
-                res.get().set_anum(answer.num);
+                let answer = pir_handler.gen_answer_from_bytes(query);
+                res.get().set_answer(&answer.to_bytes());
+                res.get().set_anum(1);
             }
             // let end = time::PreciseTime::now();
             // println!("bucket {}, collection {}, level {}, answer time: {} usec",

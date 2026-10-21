@@ -4,3 +4,9 @@
 [submodule "capnproto"]
 	path = deps/capnproto
 	url = https://github.com/sandstorm-io/capnproto.git
+[submodule "deps/SEAL"]
+	path = deps/SEAL
+	url = https://github.com/microsoft/SEAL.git
+[submodule "deps/SealPIR"]
+	path = deps/SealPIR
+	url = https://github.com/microsoft/SealPIR.git

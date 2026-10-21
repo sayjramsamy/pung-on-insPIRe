@@ -1,6 +1,7 @@
 //! This module contains the collection of Pung's messages.
 
 use std::cell::RefCell;
+use std::mem;
 use std::rc::Rc;
 use std::slice;
 use util;
@@ -52,7 +53,7 @@ mod tuple;
 pub mod bst;
 
 use db::bst::BSTOrder;
-use pir::pir_server::PirServer;
+use pir::sealpir_server::SealPirServer;
 
 pub type DatabasePtr = Rc<RefCell<Database<'static>>>;
 
@@ -74,7 +75,8 @@ pub struct Bucket<'a> {
 pub struct Collection<'a> {
     set: Vec<PungTuple>,
     ret_scheme: RetScheme,
-    pir_dbs: Vec<PirServer<'a>>,
+    pir_dbs: Vec<SealPirServer<'a>>,
+    #[allow(dead_code)]
     depth: u64,
     bloom: util::bloomfilter::Bloom,
 }
@@ -589,22 +591,33 @@ impl<'a> Collection<'a> {
     }
 
     pub fn pir_setup(&mut self) {
-        let depth = self.depth;
-
         let levels = self.num_levels();
         let mut pir_dbs = Vec::with_capacity(levels);
 
         for i in 0..levels {
             let level: &[PungTuple] = self.get_level(i);
-            let alpha = util::get_alpha(level.len() as u64);
-            pir_dbs.push(PirServer::new(level, alpha, depth));
+            let num_entries = level.len() as u64;
+            let entry_size = mem::size_of::<PungTuple>() as u64;
+
+            // SealPIR's server takes a raw byte buffer rather than a generic
+            // collection; PungTuple is a single [u8; TUPLE_SIZE] field, so
+            // this reinterpretation is layout-compatible (same assumption
+            // XPIR's PirServer::new<T> relies on).
+            let db_bytes: &[u8] = unsafe {
+                slice::from_raw_parts(
+                    level.as_ptr() as *const u8,
+                    level.len() * mem::size_of::<PungTuple>(),
+                )
+            };
+
+            pir_dbs.push(SealPirServer::new(db_bytes, num_entries, entry_size));
         }
 
         self.pir_dbs = pir_dbs;
     }
 
     #[inline]
-    pub fn pir_handler(&self, level: usize) -> &PirServer {
+    pub fn pir_handler(&self, level: usize) -> &SealPirServer {
         &self.pir_dbs[level as usize]
     }
 

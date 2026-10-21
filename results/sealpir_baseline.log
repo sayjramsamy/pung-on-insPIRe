@@ -1,0 +1,1039 @@
+=== num_entries=2048 entry_size=288 (db=0.56 MiB) ===
+  setup: 161.877 ms
+Client: index 1/ 1 = 58
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Elements per plaintext: 35
+Coeff per ptxt: 4060
+Bytes per plaintext: 10080
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=2035 latency=118.965 ms
+Client: index 1/ 1 = 4
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=145 latency=94.765 ms
+Client: index 1/ 1 = 39
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=1398 latency=93.295 ms
+Client: index 1/ 1 = 40
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=1433 latency=93.583 ms
+Client: index 1/ 1 = 11
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=418 latency=93.412 ms
+Client: index 1/ 1 = 27
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=952 latency=93.668 ms
+Client: index 1/ 1 = 24
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=863 latency=94.020 ms
+Client: index 1/ 1 = 23
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=815 latency=93.588 ms
+Client: index 1/ 1 = 13
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=482 latency=94.282 ms
+Client: index 1/ 1 = 1
+Client: number of ctxts needed for query = 1
+Client: Inverting 64
+Server: 1-th recursion level started 
+Server: n_i = 60
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 60 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=47 latency=93.532 ms
+  mean_query=96.311 ms query_size=46428 bytes answer_size=46306 bytes
+=== num_entries=2048 entry_size=1024 (db=2.00 MiB) ===
+  setup: 146.079 ms
+Client: index 1/ 1 = 199
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Elements per plaintext: 9
+Coeff per ptxt: 3690
+Bytes per plaintext: 9216
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=1797 latency=432.427 ms
+Client: index 1/ 1 = 113
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=1019 latency=335.528 ms
+Client: index 1/ 1 = 158
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=1425 latency=339.329 ms
+Client: index 1/ 1 = 135
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=1219 latency=341.834 ms
+Client: index 1/ 1 = 85
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=769 latency=335.943 ms
+Client: index 1/ 1 = 128
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=1160 latency=336.978 ms
+Client: index 1/ 1 = 136
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=1224 latency=334.617 ms
+Client: index 1/ 1 = 73
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=665 latency=335.813 ms
+Client: index 1/ 1 = 200
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=1808 latency=340.030 ms
+Client: index 1/ 1 = 114
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 229
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 229 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=1026 latency=347.335 ms
+  mean_query=347.983 ms query_size=46375 bytes answer_size=46416 bytes
+=== num_entries=8192 entry_size=288 (db=2.25 MiB) ===
+  setup: 145.667 ms
+Client: index 1/ 1 = 162
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Elements per plaintext: 35
+Coeff per ptxt: 4060
+Bytes per plaintext: 10080
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=5690 latency=415.277 ms
+Client: index 1/ 1 = 99
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=3490 latency=344.483 ms
+Client: index 1/ 1 = 36
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=1285 latency=344.124 ms
+Client: index 1/ 1 = 187
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=6571 latency=349.004 ms
+Client: index 1/ 1 = 229
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=8028 latency=344.517 ms
+Client: index 1/ 1 = 32
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=1141 latency=346.764 ms
+Client: index 1/ 1 = 197
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=6919 latency=351.012 ms
+Client: index 1/ 1 = 153
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=5383 latency=344.831 ms
+Client: index 1/ 1 = 109
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=3837 latency=346.013 ms
+Client: index 1/ 1 = 74
+Client: number of ctxts needed for query = 1
+Client: Inverting 256
+Server: 1-th recursion level started 
+Server: n_i = 236
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 236 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=2612 latency=354.330 ms
+  mean_query=354.035 ms query_size=46404 bytes answer_size=46390 bytes
+=== num_entries=8192 entry_size=1024 (db=8.00 MiB) ===
+  setup: 148.482 ms
+Client: index 1/ 1 = 410
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Elements per plaintext: 9
+Coeff per ptxt: 3690
+Bytes per plaintext: 9216
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=3692 latency=1776.006 ms
+Client: index 1/ 1 = 190
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=1713 latency=1342.209 ms
+Client: index 1/ 1 = 394
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=3548 latency=1331.324 ms
+Client: index 1/ 1 = 66
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=594 latency=1332.693 ms
+Client: index 1/ 1 = 882
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=7941 latency=1337.357 ms
+Client: index 1/ 1 = 241
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=2169 latency=1366.034 ms
+Client: index 1/ 1 = 354
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=3186 latency=1343.721 ms
+Client: index 1/ 1 = 866
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=7797 latency=1317.704 ms
+Client: index 1/ 1 = 648
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=5838 latency=1316.083 ms
+Client: index 1/ 1 = 804
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 912
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 912 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=7240 latency=1317.536 ms
+  mean_query=1378.067 ms query_size=46436 bytes answer_size=46358 bytes
+=== num_entries=32768 entry_size=288 (db=9.00 MiB) ===
+  setup: 143.448 ms
+Client: index 1/ 1 = 262
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Elements per plaintext: 35
+Coeff per ptxt: 4060
+Bytes per plaintext: 10080
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=9201 latency=1644.957 ms
+Client: index 1/ 1 = 753
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=26369 latency=1349.104 ms
+Client: index 1/ 1 = 223
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=7826 latency=1352.118 ms
+Client: index 1/ 1 = 108
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=3800 latency=1354.298 ms
+Client: index 1/ 1 = 364
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=12742 latency=1351.444 ms
+Client: index 1/ 1 = 898
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=31431 latency=1359.760 ms
+Client: index 1/ 1 = 749
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=26233 latency=1352.514 ms
+Client: index 1/ 1 = 96
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=3389 latency=1369.750 ms
+Client: index 1/ 1 = 640
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=22411 latency=1351.515 ms
+Client: index 1/ 1 = 701
+Client: number of ctxts needed for query = 1
+Client: Inverting 1024
+Server: 1-th recursion level started 
+Server: n_i = 938
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 938 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=24546 latency=1357.048 ms
+  mean_query=1384.251 ms query_size=46456 bytes answer_size=46369 bytes
+=== num_entries=32768 entry_size=1024 (db=32.00 MiB) ===
+  setup: 136.769 ms
+Client: index 1/ 1 = 1529
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Elements per plaintext: 9
+Coeff per ptxt: 3690
+Bytes per plaintext: 9216
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=13767 latency=6692.705 ms
+Client: index 1/ 1 = 236
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=2126 latency=5250.240 ms
+Client: index 1/ 1 = 776
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=6987 latency=5252.292 ms
+Client: index 1/ 1 = 2879
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=25916 latency=5229.972 ms
+Client: index 1/ 1 = 1409
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=12681 latency=5228.540 ms
+Client: index 1/ 1 = 3459
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=31137 latency=5226.327 ms
+Client: index 1/ 1 = 472
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=4254 latency=5227.648 ms
+Client: index 1/ 1 = 786
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=7074 latency=5232.936 ms
+Client: index 1/ 1 = 2387
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=21488 latency=5337.974 ms
+Client: index 1/ 1 = 2942
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3642
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3642 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=26481 latency=5235.147 ms
+  mean_query=5391.378 ms query_size=46478 bytes answer_size=46352 bytes
+=== num_entries=131072 entry_size=288 (db=36.00 MiB) ===
+  setup: 139.812 ms
+Client: index 1/ 1 = 1986
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Elements per plaintext: 35
+Coeff per ptxt: 4060
+Bytes per plaintext: 10080
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=69521 latency=6425.645 ms
+Client: index 1/ 1 = 164
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=5743 latency=5364.449 ms
+Client: index 1/ 1 = 3171
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=111000 latency=5371.337 ms
+Client: index 1/ 1 = 2309
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=80830 latency=5365.957 ms
+Client: index 1/ 1 = 730
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=25584 latency=5465.857 ms
+Client: index 1/ 1 = 3035
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=106240 latency=5435.257 ms
+Client: index 1/ 1 = 745
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=26088 latency=5376.532 ms
+Client: index 1/ 1 = 1044
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=36560 latency=5366.302 ms
+Client: index 1/ 1 = 2143
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=75037 latency=5367.540 ms
+Client: index 1/ 1 = 1148
+Client: number of ctxts needed for query = 1
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 3746
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3746 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=40183 latency=5467.102 ms
+  mean_query=5500.598 ms query_size=46417 bytes answer_size=46417 bytes
+=== num_entries=131072 entry_size=1024 (db=128.00 MiB) ===
+  setup: 139.390 ms
+Client: index 1/ 1 = 13320
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Elements per plaintext: 9
+Coeff per ptxt: 3690
+Bytes per plaintext: 9216
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 1/10: idx=119888 latency=26167.279 ms
+Client: index 1/ 1 = 13391
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 2/10: idx=120520 latency=20854.749 ms
+Client: index 1/ 1 = 9673
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 3/10: idx=87057 latency=20877.222 ms
+Client: index 1/ 1 = 1459
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 4/10: idx=13136 latency=20996.011 ms
+Client: index 1/ 1 = 4430
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 5/10: idx=39878 latency=20892.625 ms
+Client: index 1/ 1 = 13760
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 6/10: idx=123848 latency=20897.953 ms
+Client: index 1/ 1 = 4758
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 7/10: idx=42827 latency=20935.059 ms
+Client: index 1/ 1 = 2519
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 8/10: idx=22676 latency=20909.939 ms
+Client: index 1/ 1 = 4393
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 9/10: idx=39541 latency=20878.072 ms
+Client: index 1/ 1 = 2229
+Client: number of ctxts needed for query = 4
+Client: Inverting 4096
+Server: 1-th recursion level started 
+Server: n_i = 14565
+Server: expanding 4 query ctxts
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 4096 ctxts 
+-- expanding one query ctxt into 2277 ctxts 
+Server: expansion done 
+Client: 1/ 1-th decryption layer started.
+Client: done.
+
+  query 10/10: idx=20066 latency=20999.052 ms
+  mean_query=21440.796 ms query_size=185967 bytes answer_size=46347 bytes
+Wrote results/sealpir_baseline.csv

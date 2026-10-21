@@ -2,6 +2,8 @@ extern crate capnpc;
 extern crate cc;
 extern crate cmake;
 
+use std::path::PathBuf;
+
 fn main() {
 
     // Compile RPC schema file into rust code
@@ -37,4 +39,32 @@ fn main() {
     println!("cargo:rustc-link-lib=gmp");
     println!("cargo:rustc-link-lib=mpfr");
     println!("cargo:rustc-link-lib=boost_thread");
+
+    // --- SealPIR backend ---
+    let seal_install = PathBuf::from("deps/SEAL/install");
+    let seal_include = seal_install.join("include").join("SEAL-3.6");
+    let sealpir_src = PathBuf::from("deps/SealPIR/src");
+
+    // SealPIR has no CMake install target (and no stable ABI to link against
+    // as a prebuilt lib), so its sources are compiled directly alongside our
+    // shim rather than built separately and linked.
+    cc::Build::new()
+        .cpp(true)
+        .file("src/pir/cpp/pungSealPIR.cpp")
+        .file(sealpir_src.join("pir.cpp"))
+        .file(sealpir_src.join("pir_client.cpp"))
+        .file(sealpir_src.join("pir_server.cpp"))
+        .include(&sealpir_src)
+        .include(&seal_include)
+        .flag("-std=c++17")
+        .flag("-O3")
+        .pic(true)
+        .compile("pungsealpir");
+
+    println!(
+        "cargo:rustc-link-search=native={}",
+        seal_install.join("lib").display()
+    );
+    println!("cargo:rustc-link-lib=static=seal-3.6");
+    println!("cargo:rustc-link-lib=pthread");
 }
