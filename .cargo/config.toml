@@ -1,0 +1,8 @@
+[build]
+# insPIRe's hot kernels (src/kernel.rs, src/packing.rs) call AVX-512/AVX2
+# intrinsics directly with no runtime feature detection or fallback (see
+# XPIR_API.md "Hardware requirement: AVX-512"). Without this, rustc compiles
+# out the AVX2-gated functions in spiral-rs and inspire falls back to a
+# `type __m512i = u64` shim, producing "cannot find function" / "mismatched
+# types" errors that look like an API mismatch but aren't.
+rustflags = ["-C", "target-cpu=native"]
