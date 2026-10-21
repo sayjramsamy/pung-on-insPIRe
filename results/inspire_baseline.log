@@ -1,0 +1,2099 @@
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/any_pointer.rs:69:32
+   |
+69 |         Ok(FromClientHook::new(try!(self.reader.get_capability())))
+   |                                ^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/any_pointer.rs:81:31
+   |
+81 |                     pointer = try!(pointer.get_struct(::std::ptr::null())).get_pointer_field(idx as usize);
+   |                               ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/capability.rs:75:9
+   |
+75 |         try!(self.hook.get()).get_as()
+   |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/capability.rs:129:12
+    |
+129 |         Ok(try!(try!(self.hook.get()).get_as()))
+    |            ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/capability.rs:129:17
+    |
+129 |         Ok(try!(try!(self.hook.get()).get_as()))
+    |                 ^^^
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+   --> patches/crates/capnp-0.7.5/src/capability.rs:162:12
+    |
+162 |     fn new(Box<ClientHook>) -> Self;
+    |            ^^^^^^^^^^^^^^^ help: try naming the parameter or explicitly ignoring it: `_: Box<ClientHook>`
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+    = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+    = note: `#[warn(anonymous_parameters)]` on by default
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/data_list.rs:56:30
+   |
+56 |         Ok(Reader { reader : try!(reader.get_list(Pointer, ::std::ptr::null())) })
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/data_list.rs:103:23
+    |
+103 |             builder : try!(builder.get_list(Pointer, ::std::ptr::null()))
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/data_list.rs:119:9
+    |
+119 |         try!(pointer.set_list(&value.reader));
+    |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/enum_list.rs:60:30
+   |
+60 |         Ok(Reader { reader : try!(reader.get_list(TwoBytes, ::std::ptr::null())),
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/enum_list.rs:103:32
+    |
+103 |         Ok(Builder { builder : try!(builder.get_list(TwoBytes, ::std::ptr::null())),
+    |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/list_list.rs:71:30
+   |
+71 |         Ok(Reader { reader : try!(reader.get_list(Pointer, ::std::ptr::null())),
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/list_list.rs:118:23
+    |
+118 |             builder : try!(builder.get_list(Pointer, ::std::ptr::null()))
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/message.rs:139:34
+    |
+139 |             let pointer_reader = try!(layout::PointerReader::get_root(
+    |                                  ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/message.rs:148:9
+    |
+148 |         try!(self.get_root_internal()).get_as()
+    |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/message.rs:240:17
+    |
+240 |                 try!(layout::PointerReader::get_root(root_segment,
+    |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/primitive_list.rs:60:30
+   |
+60 |         Ok(Reader { reader : try!(reader.get_list(T::element_size(), ::std::ptr::null())),
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/primitive_list.rs:101:32
+    |
+101 |         Ok(Builder { builder : try!(builder.get_list(T::element_size(), ::std::ptr::null())),
+    |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:471:24
+    |
+471 |             *segment = try!((*(**segment).get_arena()).get_segment((**reff).far_ref().segment_id.get()));
+    |                        ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:481:24
+    |
+481 |             *segment = try!((*(**segment).get_arena()).get_segment((*pad).far_ref().segment_id.get()));
+    |                        ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:502:13
+    |
+502 |             try!(bounds_check(*segment, ptr, ptr.offset(pad_words), WirePointerKind::Far));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:496:17
+    |
+496 |                 try!((**segment).arena.try_get_segment((**reff).far_ref().segment_id.get()));
+    |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:517:21
+    |
+517 |                     try!((**segment).arena.try_get_segment((*pad).far_ref().segment_id.get()));
+    |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:621:26
+    |
+621 |             let pad = (* try!((* (*segment).get_arena()).get_segment((*reff).far_ref().segment_id.get())))
+    |                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:643:56
+    |
+643 |             let ptr = { let target = (*reff).target(); try!(follow_fars(&mut reff, target, &mut segment)) };
+    |                                                        ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:647:17
+    |
+647 |                 try!(bounds_check(segment, ptr, ptr.offset((*reff).struct_ref().word_size() as isize),
+    |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:655:36
+    |
+655 |                     result.plus_eq(try!(total_size(segment, pointer_section.offset(i), nesting_limit)));
+    |                                    ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:665:25
+    |
+665 |                         try!(bounds_check(segment, ptr, ptr.offset(total_words as isize), WirePointerKind::List));
+    |                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:670:25
+    |
+670 |                         try!(bounds_check(segment, ptr, ptr.offset((count * WORDS_PER_POINTER as u32) as isize),
+    |                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:677:33
+    |
+677 | ...                   try!(total_size(segment,
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:684:25
+    |
+684 |                         try!(bounds_check(segment, ptr,
+    |                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:716:37
+    |
+716 | ...                   try!(total_size(segment, pos as *const WirePointer, nesting_limit)));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:840:23
+    |
+840 |         let old_ptr = try!(follow_builder_fars(&mut old_ref, ref_target, &mut old_segment));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:862:13
+    |
+862 |             try!(zero_pointer_and_fars(segment, reff));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:990:23
+    |
+990 |         let mut ptr = try!(follow_builder_fars(&mut reff, orig_ref_target, &mut segment));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1100:27
+     |
+1100 |         let mut old_ptr = try!(follow_builder_fars(&mut old_ref, orig_ref_target, &mut old_segment));
+     |                           ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1176:17
+     |
+1176 |                 try!(zero_pointer_and_fars(orig_segment, orig_ref));
+     |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1272:19
+     |
+1272 |         let ptr = try!(follow_builder_fars(&mut reff, ref_target, &mut segment));
+     |                   ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1335:19
+     |
+1335 |         let ptr = try!(follow_builder_fars(&mut reff, ref_target, &mut segment));
+     |                   ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1368:13
+     |
+1368 |             try!(copy_pointer(segment, cap_table, pointer_section.offset(i),
+     |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1398:21
+     |
+1398 |                     try!(copy_pointer(segment, cap_table,
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1442:21
+     |
+1442 |                     try!(copy_pointer(segment, cap_table, dst as *mut _,
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1465:23
+     |
+1465 |         let mut ptr = try!(follow_fars(&mut src, src_target, &mut src_segment));
+     |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1474:17
+     |
+1474 |                 try!(bounds_check(src_segment, ptr, ptr.offset((*src).struct_ref().word_size() as isize),
+     |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1502:21
+     |
+1502 |                     try!(bounds_check(src_segment, ptr.offset(-1), ptr.offset(word_count as isize),
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1521:25
+     |
+1521 |                         try!(amplified_read(src_segment, element_count as u64));
+     |                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1544:21
+     |
+1544 |                     try!(bounds_check(src_segment, ptr, ptr.offset(word_count as isize), WirePointerKind::List));
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1549:25
+     |
+1549 |                         try!(amplified_read(src_segment, element_count as u64));
+     |                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1618:9
+     |
+1618 |         try!(bounds_check(segment, ptr,
+     |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1609:19
+     |
+1609 |         let ptr = try!(follow_fars(&mut reff, ref_target, &mut segment));
+     |                   ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1677:36
+     |
+1677 |         let mut ptr: *const Word = try!(follow_fars(&mut reff, ref_target, &mut segment));
+     |                                    ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1695:17
+     |
+1695 |                 try!(bounds_check(segment, ptr.offset(-1),
+     |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1716:21
+     |
+1716 |                     try!(amplified_read(segment, size as u64));
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1772:17
+     |
+1772 |                 try!(bounds_check(segment, ptr, ptr.offset(word_count as isize), WirePointerKind::List));
+     |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1777:21
+     |
+1777 |                     try!(amplified_read(segment, element_count as u64));
+     |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1835:9
+     |
+1835 |         try!(bounds_check(segment, ptr,
+     |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1821:32
+     |
+1821 |         let ptr: *const Word = try!(follow_fars(&mut reff, ref_target, &mut segment));
+     |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1850:12
+     |
+1850 |         Ok(try!(text::new_reader(slice::from_raw_parts(str_ptr, size as usize -1))))
+     |            ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1880:9
+     |
+1880 |         try!(bounds_check(segment, ptr,
+     |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1864:32
+     |
+1864 |         let ptr: *const Word = try!(follow_fars(&mut reff, ref_target, &mut segment));
+     |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1992:13
+     |
+1992 |             try!(wire_helpers::bounds_check(segment, location,
+     |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2185:13
+     |
+2185 |             try!(wire_helpers::set_struct_pointer(self.segment, self.cap_table, self.pointer, *value));
+     |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2192:13
+     |
+2192 |             try!(wire_helpers::set_list_pointer(self.segment, self.cap_table, self.pointer, *value));
+     |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2225:17
+     |
+2225 |                 try!(wire_helpers::copy_pointer(self.segment, self.cap_table, self.pointer,
+     |                 ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2352:32
+     |
+2352 |                 result.plus_eq(try!(wire_helpers::total_size(self.segment, self.pointers.offset(i),
+     |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/serialize.rs:56:32
+   |
+56 |     let (num_words, offsets) = try!(read_segment_table(&mut bytes, options));
+   |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/serialize.rs:88:41
+   |
+88 |     let (total_words, segment_slices) = try!(read_segment_table(read, options));
+   |                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:105:5
+    |
+105 |     try!(read_exact(read, &mut buf));
+    |     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:121:13
+    |
+121 |             try!(read_exact(read, &mut buf));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:131:13
+    |
+131 |             try!(read_exact(read, &mut segment_sizes[..]));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:162:5
+    |
+162 |     try!(read_exact(read, Word::words_to_bytes_mut(&mut owned_space[..])));
+    |     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:200:5
+    |
+200 |     try!(write_segment_table(write, &*segments));
+    |     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:215:5
+    |
+215 |     try!(write.write_all(&buf));
+    |     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:226:13
+    |
+226 |             try!(write.write_all(&buf));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:236:13
+    |
+236 |             try!(write.write_all(&buf));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize.rs:246:9
+    |
+246 |         try!(write.write_all(Word::words_to_bytes(segment)));
+    |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:40:19
+   |
+40 |         let buf = try!(self.inner.fill_buf());
+   |                   ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:83:44
+   |
+83 |             let (mut in_ptr, mut in_end) = try!(self.get_read_buffer());
+   |                                            ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:57:26
+    |
+57  |             let (b, e) = try!($this.get_read_buffer());
+    |                          ^^^
+...
+104 |                         refresh_buffer!(self, size, in_ptr, in_end, out, out_buf, buffer_begin);
+    |                         ----------------------------------------------------------------------- in this macro invocation
+    |
+    = note: this warning originates in the macro `refresh_buffer` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:57:26
+    |
+57  |               let (b, e) = try!($this.get_read_buffer());
+    |                            ^^^
+...
+117 | /                                 refresh_buffer!(self, size, in_ptr, in_end,
+118 | |                                                 out, out_buf, buffer_begin);
+    | |___________________________________________________________________________- in this macro invocation
+    |
+    = note: this warning originates in the macro `refresh_buffer` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:57:26
+    |
+57  |               let (b, e) = try!($this.get_read_buffer());
+    |                            ^^^
+...
+130 | /                         refresh_buffer!(self, size, in_ptr, in_end,
+131 | |                                         out, out_buf, buffer_begin);
+    | |___________________________________________________________________- in this macro invocation
+    |
+    = note: this warning originates in the macro `refresh_buffer` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:186:29
+    |
+186 | ...                   try!(read_exact(&mut self.inner, buf));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:194:42
+    |
+194 | ...                   let (b, e) = try!(self.get_read_buffer());
+    |                                    ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:353:13
+    |
+353 |             try!(self.inner.write_all(&buf[..buf_idx]));
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:242:21
+    |
+242 |                     try!(self.inner.write_all(&buf[..buf_idx]));
+    |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:347:21
+    |
+347 |                     try!(self.inner.write_all(&buf[..buf_idx]));
+    |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/serialize_packed.rs:349:21
+    |
+349 |                     try!(self.inner.write_all(slice::from_raw_parts::<u8>(run_start, count)));
+    |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/struct_list.rs:72:30
+   |
+72 |         Ok(Reader { reader : try!(reader.get_list(InlineComposite, ::std::ptr::null())),
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/struct_list.rs:127:13
+    |
+127 |             try!(builder.get_struct_list(<<T as ::traits::OwnedStruct>::Builder as HasStructSize>::struct_size(),
+    |             ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> patches/crates/capnp-0.7.5/src/text_list.rs:56:30
+   |
+56 |         Ok(Reader { reader : try!(reader.get_list(Pointer, ::std::ptr::null())) })
+   |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/capnp-0.7.5/src/text_list.rs:103:23
+    |
+103 |             builder : try!(builder.get_list(Pointer, ::std::ptr::null()))
+    |                       ^^^
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:71:21
+   |
+71 |     fn init_pointer(PointerBuilder<'a>, u32) -> Self;
+   |                     ^^^^^^^^^^^^^^^^^^ help: try naming the parameter or explicitly ignoring it: `_: PointerBuilder<'a>`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:71:41
+   |
+71 |     fn init_pointer(PointerBuilder<'a>, u32) -> Self;
+   |                                         ^^^ help: try naming the parameter or explicitly ignoring it: `_: u32`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:80:32
+   |
+80 |     fn set_pointer_builder<'a>(PointerBuilder<'a>, Self) -> Result<()>;
+   |                                ^^^^^^^^^^^^^^^^^^ help: try naming the parameter or explicitly ignoring it: `_: PointerBuilder<'a>`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:80:52
+   |
+80 |     fn set_pointer_builder<'a>(PointerBuilder<'a>, Self) -> Result<()>;
+   |                                                    ^^^^ help: try naming the parameter or explicitly ignoring it: `_: Self`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:84:25
+   |
+84 |     fn imbue(&mut self, &'a CapTable);
+   |                         ^^^^^^^^^^^^ help: try naming the parameter or explicitly ignoring it: `_: &'a CapTable`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: anonymous parameters are deprecated and will be removed in the next edition
+  --> patches/crates/capnp-0.7.5/src/traits.rs:88:29
+   |
+88 |     fn imbue_mut(&mut self, &'a mut CapTable);
+   |                             ^^^^^^^^^^^^^^^^ help: try naming the parameter or explicitly ignoring it: `_: &'a mut CapTable`
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+   = note: for more information, see issue #41686 <https://github.com/rust-lang/rust/issues/41686>
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/any_pointer.rs:181:19
+    |
+181 |     pub hook: Box<PipelineHook>,
+    |                   ^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+    = note: `#[warn(bare_trait_objects)]` on by default
+help: use `dyn`
+    |
+181 |     pub hook: Box<dyn PipelineHook>,
+    |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/capability.rs:65:19
+   |
+65 |     pub hook: Box<ResponseHook>,
+   |                   ^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+65 |     pub hook: Box<dyn ResponseHook>,
+   |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/capability.rs:81:19
+   |
+81 |     pub hook: Box<RequestHook>
+   |                   ^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+81 |     pub hook: Box<dyn RequestHook>
+   |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:119:19
+    |
+119 |     pub hook: Box<ParamsHook>,
+    |                   ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+119 |     pub hook: Box<dyn ParamsHook>,
+    |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:135:19
+    |
+135 |     pub hook: Box<ResultsHook>,
+    |                   ^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+135 |     pub hook: Box<dyn ResultsHook>,
+    |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:166:19
+    |
+166 |     pub hook: Box<ClientHook>
+    |                   ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+166 |     pub hook: Box<dyn ClientHook>
+    |                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/message.rs:176:31
+    |
+176 |     cap_table: Vec<Option<Box<::private::capability::ClientHook>>>,
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+176 |     cap_table: Vec<Option<Box<dyn (::private::capability::ClientHook)>>>,
+    |                               +++++                                 +
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/arena.rs:161:28
+    |
+161 |     raw_segments: &'static ReaderSegments,
+    |                            ^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+161 |     raw_segments: &'static dyn ReaderSegments,
+    |                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/arena.rs:221:29
+    |
+221 |     allocator: &'static mut Allocator,
+    |                             ^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+221 |     allocator: &'static mut dyn Allocator,
+    |                             +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1896:33
+     |
+1896 |     Plain(*const Vec<Option<Box<ClientHook>>>),
+     |                                 ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1896 |     Plain(*const Vec<Option<Box<dyn ClientHook>>>),
+     |                                 +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1920:31
+     |
+1920 |     Plain(*mut Vec<Option<Box<ClientHook>>>),
+     |                               ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1920 |     Plain(*mut Vec<Option<Box<dyn ClientHook>>>),
+     |                               +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/lib.rs:282:32
+    |
+282 |     fn cause(&self) -> Option<&::std::error::Error> {
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+282 |     fn cause(&self) -> Option<&dyn (::std::error::Error)> {
+    |                                +++++                   +
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/any_pointer.rs:74:71
+   |
+74 |     pub fn get_pipelined_cap(&self, ops: &[PipelineOp]) -> Result<Box<ClientHook>> {
+   |                                                                       ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+74 |     pub fn get_pipelined_cap(&self, ops: &[PipelineOp]) -> Result<Box<dyn ClientHook>> {
+   |                                                                       +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1891:36
+     |
+1891 | pub type CapTable = Vec<Option<Box<ClientHook>>>;
+     |                                    ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1891 | pub type CapTable = Vec<Option<Box<dyn ClientHook>>>;
+     |                                    +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/any_pointer.rs:149:52
+    |
+149 |     pub fn set_as_capability(&mut self, value: Box<ClientHook>) {
+    |                                                    ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+149 |     pub fn set_as_capability(&mut self, value: Box<dyn ClientHook>) {
+    |                                                    +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/any_pointer.rs:187:26
+    |
+187 |     pub fn new(hook: Box<PipelineHook>) -> Pipeline {
+    |                          ^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+187 |     pub fn new(hook: Box<dyn PipelineHook>) -> Pipeline {
+    |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/any_pointer.rs:204:33
+    |
+204 |     pub fn as_cap(&self) -> Box<ClientHook> {
+    |                                 ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+204 |     pub fn as_cap(&self) -> Box<dyn ClientHook> {
+    |                                 +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:162:16
+    |
+162 |     fn new(Box<ClientHook>) -> Self;
+    |                ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+162 |     fn new(Box<dyn ClientHook>) -> Self;
+    |                +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/capability.rs:71:26
+   |
+71 |     pub fn new(hook: Box<ResponseHook>) -> Response<Results> {
+   |                          ^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+71 |     pub fn new(hook: Box<dyn ResponseHook>) -> Response<Results> {
+   |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/capability.rs:87:26
+   |
+87 |     pub fn new(hook: Box<RequestHook>) -> Request <Params, Results> {
+   |                          ^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+87 |     pub fn new(hook: Box<dyn RequestHook>) -> Request <Params, Results> {
+   |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:123:26
+    |
+123 |     pub fn new(hook: Box<ParamsHook>) -> Params<T> {
+    |                          ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+123 |     pub fn new(hook: Box<dyn ParamsHook>) -> Params<T> {
+    |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:141:26
+    |
+141 |     pub fn new(hook: Box<ResultsHook>) -> Results<T> {
+    |                          ^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+141 |     pub fn new(hook: Box<dyn ResultsHook>) -> Results<T> {
+    |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/capability.rs:170:26
+    |
+170 |     pub fn new(hook: Box<ClientHook>) -> Client {
+    |                          ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+170 |     pub fn new(hook: Box<dyn ClientHook>) -> Client {
+    |                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/arena.rs:168:35
+    |
+168 |     pub fn new(segments: &'static ReaderSegments,
+    |                                   ^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+168 |     pub fn new(segments: &'static dyn ReaderSegments,
+    |                                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/arena.rs:228:40
+    |
+228 |     pub fn new(allocator: &'static mut Allocator) -> Box<BuilderArena> {
+    |                                        ^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+228 |     pub fn new(allocator: &'static mut dyn Allocator) -> Box<BuilderArena> {
+    |                                        +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:82:20
+   |
+82 | impl Clone for Box<ClientHook> {
+   |                    ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+82 | impl Clone for Box<dyn ClientHook> {
+   |                    +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:105:20
+    |
+105 | impl Clone for Box<ResultsDoneHook> {
+    |                    ^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+105 | impl Clone for Box<dyn ResultsDoneHook> {
+    |                    +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:139:20
+    |
+139 | impl Clone for Box<PipelineHook> {
+    |                    ^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+139 | impl Clone for Box<dyn PipelineHook> {
+    |                    +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:35:74
+   |
+35 |                  -> Option<(u32, ::capability::Promise<(), ::Error>, Box<PipelineHook>)>;
+   |                                                                          ^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+35 |                  -> Option<(u32, ::capability::Promise<(), ::Error>, Box<dyn PipelineHook>)>;
+   |                                                                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:39:30
+   |
+39 |     fn add_ref(&self) -> Box<ClientHook>;
+   |                              ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+39 |     fn add_ref(&self) -> Box<dyn ClientHook>;
+   |                              +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:47:25
+   |
+47 |             params: Box<ParamsHook>, results: Box<ResultsHook>,
+   |                         ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+47 |             params: Box<dyn ParamsHook>, results: Box<ResultsHook>,
+   |                         +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:47:51
+   |
+47 |             params: Box<ParamsHook>, results: Box<ResultsHook>,
+   |                                                   ^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+47 |             params: Box<ParamsHook>, results: Box<dyn ResultsHook>,
+   |                                                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:48:53
+   |
+48 |             results_done: ::capability::Promise<Box<ResultsDoneHook>, ::Error>)
+   |                                                     ^^^^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+48 |             results_done: ::capability::Promise<Box<dyn ResultsDoneHook>, ::Error>)
+   |                                                     +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:49:57
+   |
+49 |             -> (::capability::Promise<(), ::Error>, Box<PipelineHook>);
+   |                                                         ^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+49 |             -> (::capability::Promise<(), ::Error>, Box<dyn PipelineHook>);
+   |                                                         +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:58:42
+   |
+58 |     fn get_resolved(&self) -> Option<Box<ClientHook>>;
+   |                                          ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+58 |     fn get_resolved(&self) -> Option<Box<dyn ClientHook>>;
+   |                                          +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:65:70
+   |
+65 |     fn when_more_resolved(&self) -> Option<::capability::Promise<Box<ClientHook>, ::Error>>;
+   |                                                                      ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+65 |     fn when_more_resolved(&self) -> Option<::capability::Promise<Box<dyn ClientHook>, ::Error>>;
+   |                                                                      +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:89:31
+   |
+89 |     fn new_client(server: Box<::capability::Server>) -> ::capability::Client;
+   |                               ^^^^^^^^^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+89 |     fn new_client(server: Box<dyn (::capability::Server)>) -> ::capability::Client;
+   |                               +++++                    +
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:95:48
+   |
+95 |     fn tail_call(self: Box<Self>, request: Box<RequestHook>) -> Promise<(), ::Error>;
+   |                                                ^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+95 |     fn tail_call(self: Box<Self>, request: Box<dyn RequestHook>) -> Promise<(), ::Error>;
+   |                                                +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:96:55
+   |
+96 |     fn direct_tail_call(self: Box<Self>, request: Box<RequestHook>) ->
+   |                                                       ^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+96 |     fn direct_tail_call(self: Box<Self>, request: Box<dyn RequestHook>) ->
+   |                                                       +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:97:50
+   |
+97 |         (::capability::Promise<(), ::Error>, Box<PipelineHook>);
+   |                                                  ^^^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+97 |         (::capability::Promise<(), ::Error>, Box<dyn PipelineHook>);
+   |                                                  +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:101:30
+    |
+101 |     fn add_ref(&self) -> Box<ResultsDoneHook>;
+    |                              ^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+101 |     fn add_ref(&self) -> Box<dyn ResultsDoneHook>;
+    |                              +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:129:30
+    |
+129 |     fn add_ref(&self) -> Box<PipelineHook>;
+    |                              ^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+129 |     fn add_ref(&self) -> Box<dyn PipelineHook>;
+    |                              +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:130:60
+    |
+130 |     fn get_pipelined_cap(&self, ops: &[PipelineOp]) -> Box<ClientHook>;
+    |                                                            ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+130 |     fn get_pipelined_cap(&self, ops: &[PipelineOp]) -> Box<dyn ClientHook>;
+    |                                                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:134:67
+    |
+134 |     fn get_pipelined_cap_move(&self, ops: Vec<PipelineOp>) -> Box<ClientHook> {
+    |                                                                   ^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+134 |     fn get_pipelined_cap_move(&self, ops: Vec<PipelineOp>) -> Box<dyn ClientHook> {
+    |                                                                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> patches/crates/capnp-0.7.5/src/private/capability.rs:83:28
+   |
+83 |     fn clone(&self) -> Box<ClientHook> {
+   |                            ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+   |
+83 |     fn clone(&self) -> Box<dyn ClientHook> {
+   |                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:106:28
+    |
+106 |     fn clone(&self) -> Box<ResultsDoneHook> {
+    |                            ^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+106 |     fn clone(&self) -> Box<dyn ResultsDoneHook> {
+    |                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/private/capability.rs:140:28
+    |
+140 |     fn clone(&self) -> Box<PipelineHook> {
+    |                            ^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+140 |     fn clone(&self) -> Box<dyn PipelineHook> {
+    |                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1900:59
+     |
+1900 |     pub fn extract_cap(&self, index: usize) -> Option<Box<ClientHook>> {
+     |                                                           ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1900 |     pub fn extract_cap(&self, index: usize) -> Option<Box<dyn ClientHook>> {
+     |                                                           +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1931:59
+     |
+1931 |     pub fn extract_cap(&self, index: usize) -> Option<Box<ClientHook>> {
+     |                                                           ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1931 |     pub fn extract_cap(&self, index: usize) -> Option<Box<dyn ClientHook>> {
+     |                                                           +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1947:43
+     |
+1947 |     pub fn inject_cap(&mut self, cap: Box<ClientHook>) -> usize {
+     |                                           ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1947 |     pub fn inject_cap(&mut self, cap: Box<dyn ClientHook>) -> usize {
+     |                                           +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2064:48
+     |
+2064 |     pub fn get_capability(&self) -> Result<Box<ClientHook>> {
+     |                                                ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+2064 |     pub fn get_capability(&self) -> Result<Box<dyn ClientHook>> {
+     |                                                +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2143:48
+     |
+2143 |     pub fn get_capability(&self) -> Result<Box<ClientHook>> {
+     |                                                ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+2143 |     pub fn get_capability(&self) -> Result<Box<dyn ClientHook>> {
+     |                                                +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:2209:43
+     |
+2209 |     pub fn set_capability(&self, cap: Box<ClientHook>) {
+     |                                           ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+2209 |     pub fn set_capability(&self, cap: Box<dyn ClientHook>) {
+     |                                           +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1379:51
+     |
+1379 | ...                   cap: Box<ClientHook>) {
+     |                                ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1379 |                                          cap: Box<dyn ClientHook>) {
+     |                                                   +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1638:78
+     |
+1638 | ...                   _nesting_limit: i32) -> Result<Box<ClientHook>> {
+     |                                                          ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1638 |                                           _nesting_limit: i32) -> Result<Box<dyn ClientHook>> {
+     |                                                                              +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/message.rs:129:50
+    |
+129 |             unsafe { ::std::mem::transmute(r as &ReaderSegments) }
+    |                                                  ^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+129 |             unsafe { ::std::mem::transmute(r as &dyn ReaderSegments) }
+    |                                                  +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/capnp-0.7.5/src/message.rs:186:54
+    |
+186 |             unsafe { ::std::mem::transmute(r as &mut Allocator) }
+    |                                                      ^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+186 |             unsafe { ::std::mem::transmute(r as &mut dyn Allocator) }
+    |                                                      +++
+
+warning: type annotations needed
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1399:55
+     |
+1399 | ...                   (ptr as *mut _).offset(i),
+     |                                       ^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+     = note: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>
+     = note: `#[warn(tyvar_behind_raw_pointer)]` on by default
+
+warning: type annotations needed
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1401:63
+     |
+1401 | ...                   (value.ptr as *const _).offset(i),
+     |                                               ^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2018!
+     = note: for more information, see issue #46906 <https://github.com/rust-lang/rust/issues/46906>
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1904:44
+     |
+1904 |                 let hooks: &Vec<Option<Box<ClientHook>>> = unsafe { &*hooks };
+     |                                            ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1904 |                 let hooks: &Vec<Option<Box<dyn ClientHook>>> = unsafe { &*hooks };
+     |                                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1935:44
+     |
+1935 |                 let hooks: &Vec<Option<Box<ClientHook>>> = unsafe { &*hooks };
+     |                                            ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1935 |                 let hooks: &Vec<Option<Box<dyn ClientHook>>> = unsafe { &*hooks };
+     |                                            +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1951:48
+     |
+1951 |                 let hooks: &mut Vec<Option<Box<ClientHook>>> = unsafe { &mut *hooks };
+     |                                                ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1951 |                 let hooks: &mut Vec<Option<Box<dyn ClientHook>>> = unsafe { &mut *hooks };
+     |                                                +++
+
+warning: trait objects without an explicit `dyn` are deprecated
+    --> patches/crates/capnp-0.7.5/src/private/layout.rs:1962:48
+     |
+1962 |                 let hooks: &mut Vec<Option<Box<ClientHook>>> = unsafe { &mut *hooks };
+     |                                                ^^^^^^^^^^
+     |
+     = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+     = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+     |
+1962 |                 let hooks: &mut Vec<Option<Box<dyn ClientHook>>> = unsafe { &mut *hooks };
+     |                                                +++
+
+warning: variable does not need to be mutable
+   --> patches/crates/capnp-0.7.5/src/message.rs:345:33
+    |
+345 |     pub fn second_segment_words(mut self, value: u32) -> ScratchSpaceHeapAllocator<'a, 'b> {
+    |                                 ----^^^^
+    |                                 |
+    |                                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+warning: variable does not need to be mutable
+   --> patches/crates/capnp-0.7.5/src/message.rs:351:32
+    |
+351 |     pub fn allocation_strategy(mut self, value: AllocationStrategy) -> ScratchSpaceHeapAllocator<'a, 'b> {
+    |                                ----^^^^
+    |                                |
+    |                                help: remove this `mut`
+
+warning: type alias `SegmentId` is never used
+  --> patches/crates/capnp-0.7.5/src/message.rs:87:6
+   |
+87 | type SegmentId = u32;
+   |      ^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: panic message contains braces
+   --> patches/crates/capnp-0.7.5/src/private/layout.rs:972:38
+    |
+972 |                 "Use get_struct_list_{element,field}() for structs");
+    |                                      ^             ^
+    |
+    = note: this message is not used as a format string, but will be in Rust 2021
+    = note: `#[warn(non_fmt_panics)]` on by default
+help: add a "{}" format string to use the message literally
+    |
+972 |                 "{}", "Use get_struct_list_{element,field}() for structs");
+    |                 +++++
+
+warning: `capnp` (lib) generated 164 warnings (run `cargo fix --lib -p capnp` to apply 71 suggestions)
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:108:36
+    |
+108 | ...                   try!(::nix::sys::socket::UnixAddr::new(addr.as_ref())))
+    |                       ^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:152:30
+    |
+152 |         let fd = AutoCloseFd(try!(socket::socket(self.addr.family(), socket::SockType::Stream,
+    |                              ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:160:22
+    |
+160 |         let handle = try!(self.reactor.borrow_mut().new_observer(fd.0));
+    |                      ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:271:23
+    |
+271 |         let handle0 = try!(reactor.borrow_mut().new_observer(fd0.0));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:272:23
+    |
+272 |         let handle1 = try!(reactor.borrow_mut().new_observer(fd1.0));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:282:22
+    |
+282 |         let handle = try!(reactor.borrow_mut().new_observer(fd.0));
+    |                      ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:298:23
+    |
+298 |         let handle0 = try!(reactor.borrow_mut().new_observer(fd0.0));
+    |                       ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:302:34
+    |
+302 |                 let event_port = try!(::EventPort::new());
+    |                                  ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:304:31
+    |
+304 |                 let handle1 = try!(network.reactor.borrow_mut().new_observer(fd1.0));
+    |                               ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:165:43
+    |
+165 |             reactor: Rc::new(RefCell::new(try!(sys::Reactor::new()))),
+    |                                           ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:184:9
+    |
+184 |         try!(self.reactor.borrow_mut().run_once(timeout));
+    |         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:215:31
+    |
+215 |         Ok(SocketAddress::new(try!(SocketAddressInner::new_unix(self.reactor.clone(), addr))))
+    |                               ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:220:32
+    |
+220 |         let (inner0, inner1) = try!(SocketStreamInner::new_pair(self.reactor.clone()));
+    |                                ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:254:21
+    |
+254 |         let inner = try!(SocketStreamInner::wrap_raw_socket_descriptor(self.reactor.clone(), fd));
+    |                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:267:36
+    |
+267 |         let (join_handle, inner) = try!(SocketStreamInner::socket_spawn(self.reactor.clone(), start_func));
+    |                                    ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> patches/crates/gjio-0.1.3/src/lib.rs:296:32
+    |
+296 |         Ok(SocketListener::new(try!(self.inner.listen())))
+    |                                ^^^
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/gjio-0.1.3/src/lib.rs:264:86
+    |
+264 |         where F: FnOnce(SocketStream, &::gj::WaitScope, EventPort) -> Result<(), Box<::std::error::Error>>,
+    |                                                                                      ^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+    = note: `#[warn(bare_trait_objects)]` on by default
+help: use `dyn`
+    |
+264 |         where F: FnOnce(SocketStream, &::gj::WaitScope, EventPort) -> Result<(), Box<dyn (::std::error::Error)>>,
+    |                                                                                      +++++                   +
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/gjio-0.1.3/src/lib.rs:263:89
+    |
+263 | ...                   -> Result<(::std::thread::JoinHandle<()>, SocketStream), Box<::std::error::Error>>
+    |                                                                                    ^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+263 |                            -> Result<(::std::thread::JoinHandle<()>, SocketStream), Box<dyn (::std::error::Error)>>
+    |                                                                                         +++++                   +
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:289:90
+    |
+289 |         where F: FnOnce(::SocketStream, &::gj::WaitScope, ::EventPort) -> Result<(), Box<::std::error::Error>>,
+    |                                                                                          ^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+289 |         where F: FnOnce(::SocketStream, &::gj::WaitScope, ::EventPort) -> Result<(), Box<dyn (::std::error::Error)>>,
+    |                                                                                          +++++                   +
+
+warning: trait objects without an explicit `dyn` are deprecated
+   --> patches/crates/gjio-0.1.3/src/sys/unix/mod.rs:288:94
+    |
+288 | ...                   -> Result<(::std::thread::JoinHandle<()>, SocketStreamInner), Box<::std::error::Error>>
+    |                                                                                         ^^^^^^^^^^^^^^^^^^^
+    |
+    = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+help: use `dyn`
+    |
+288 |                            -> Result<(::std::thread::JoinHandle<()>, SocketStreamInner), Box<dyn (::std::error::Error)>>
+    |                                                                                              +++++                   +
+
+warning: `gjio` (lib) generated 20 warnings (run `cargo fix --lib -p gjio` to apply 4 suggestions)
+warning: `capnp` (lib) generated 164 warnings (164 duplicates)
+warning: unused import: `std::time`
+ --> /home/ubuntu/private-membership/research/InsPIRe/src/client.rs:1:5
+  |
+1 | use std::time;
+  |     ^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `params`
+  --> /home/ubuntu/private-membership/research/InsPIRe/src/client.rs:18:24
+   |
+18 | pub fn rlwe_to_lwe<'a>(params: &'a Params, ct: &PolyMatrixRaw<'a>, how_many: usize) -> Vec<u64> {
+   |                        ^^^^^^ help: if this is intentional, prefix it with an underscore: `_params`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `how_many`
+  --> /home/ubuntu/private-membership/research/InsPIRe/src/client.rs:18:68
+   |
+18 | pub fn rlwe_to_lwe<'a>(params: &'a Params, ct: &PolyMatrixRaw<'a>, how_many: usize) -> Vec<u64> {
+   |                                                                    ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_how_many`
+
+warning: `inspire` (lib) generated 3 warnings (run `cargo fix --lib -p inspire` to apply 3 suggestions)
+warning: pung@0.1.0: In file included from deps/xpir/libpir.hpp:8,
+warning: pung@0.1.0:                  from src/pir/cpp/pungPIR.hpp:9,
+warning: pung@0.1.0:                  from src/pir/cpp/pungPIR.cpp:2:
+warning: pung@0.1.0: deps/xpir/pir/replyGenerator/PIRReplyGeneratorNFL_internal.hpp:76:10: warning: 'virtual void PIRReplyGeneratorNFL_internal::pushQuery(char*, unsigned int, int, int)' was hidden [-Woverloaded-virtual=]
+warning: pung@0.1.0:    76 |     void pushQuery(char* rawQuery, unsigned int size, int dim, int nbr);
+warning: pung@0.1.0:       |          ^~~~~~~~~
+warning: pung@0.1.0: deps/xpir/libpir.hpp:122:8: note:   by 'void PIRReplyGenerator::pushQuery(char*)'
+warning: pung@0.1.0:   122 |   void pushQuery(char* rawQuery);
+warning: pung@0.1.0:       |        ^~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir.cpp: In function 'std::vector<long unsigned int> get_dimensions(uint64_t, uint32_t)':
+warning: pung@0.1.0: deps/SealPIR/src/pir.cpp:19:21: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'unsigned int'} [-Wsign-compare]
+warning: pung@0.1.0:    19 |   for (int i = 0; i < d; i++) {
+warning: pung@0.1.0:       |                   ~~^~~
+warning: pung@0.1.0: deps/SealPIR/src/pir.cpp:21:44: warning: comparison of integer expressions of different signedness: 'int' and 'uint64_t' {aka 'long unsigned int'} [-Wsign-compare]
+warning: pung@0.1.0:    20 |     if (accumulate(dimensions.begin(), dimensions.end(), 1,
+warning: pung@0.1.0:       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+warning: pung@0.1.0:    21 |                    multiplies<uint64_t>()) > num_of_plaintexts) {
+warning: pung@0.1.0:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir.cpp: In function 'PirQuery deserialize_query(uint32_t, uint32_t, std::string, uint32_t, std::shared_ptr<seal::SEALContext>)':
+warning: pung@0.1.0: deps/SealPIR/src/pir.cpp:358:37: warning: unused parameter 'len_ciphertext' [-Wunused-parameter]
+warning: pung@0.1.0:   358 |                            uint32_t len_ciphertext,
+warning: pung@0.1.0:       |                            ~~~~~~~~~^~~~~~~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir_client.cpp: In member function 'std::vector<unsigned char> PIRClient::extract_bytes(seal::Plaintext, uint64_t)':
+warning: pung@0.1.0: deps/SealPIR/src/pir_client.cpp:158:12: warning: unused variable 'N' [-Wunused-variable]
+warning: pung@0.1.0:   158 |   uint32_t N = enc_params_.poly_modulus_degree();
+warning: pung@0.1.0:       |            ^
+warning: pung@0.1.0: deps/SealPIR/src/pir_client.cpp: In member function 'seal::Plaintext PIRClient::decode_reply(PirReply&)':
+warning: pung@0.1.0: deps/SealPIR/src/pir_client.cpp:190:12: warning: unused variable 't' [-Wunused-variable]
+warning: pung@0.1.0:   190 |   uint64_t t = enc_params_.plain_modulus().value();
+warning: pung@0.1.0:       |            ^
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp: In member function 'int PIRServer::serialize_reply(PirReply&, std::stringstream&)':
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp:168:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<seal::Ciphertext>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+warning: pung@0.1.0:   168 |   for (int i = 0; i < reply.size(); i++) {
+warning: pung@0.1.0:       |                   ~~^~~~~~~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp: In member function 'PirReply PIRServer::generate_reply(PirQuery&, uint32_t)':
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp:184:8: warning: unused variable 'coeff_count' [-Wunused-variable]
+warning: pung@0.1.0:   184 |   auto coeff_count = enc_params_.poly_modulus_degree();
+warning: pung@0.1.0:       |        ^~~~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp:193:7: warning: unused variable 'logt' [-Wunused-variable]
+warning: pung@0.1.0:   193 |   int logt = floor(log2(enc_params_.plain_modulus().value()));
+warning: pung@0.1.0:       |       ^~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp: In member function 'void PIRServer::multiply_power_of_X(const seal::Ciphertext&, seal::Ciphertext&, uint32_t)':
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp:413:21: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+warning: pung@0.1.0:   413 |   for (int i = 0; i < encrypted_count; i++) {
+warning: pung@0.1.0:       |                   ~~^~~~~~~~~~~~~~~~~
+warning: pung@0.1.0: deps/SealPIR/src/pir_server.cpp:414:23: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+warning: pung@0.1.0:   414 |     for (int j = 0; j < coeff_mod_count; j++) {
+warning: pung@0.1.0:       |                     ~~^~~~~~~~~~~~~~~~~
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:50:53
+   |
+50 |       ::std::result::Result::Ok(FromClientHook::new(try!(reader.get_capability())))
+   |                                                     ^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+  --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:59:53
+   |
+59 |       ::std::result::Result::Ok(FromClientHook::new(try!(builder.get_capability())))
+   |                                                     ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:182:74
+    |
+182 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:239:75
+    |
+239 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:319:74
+    |
+319 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:376:75
+    |
+376 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:456:74
+    |
+456 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:513:75
+    |
+513 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:593:74
+    |
+593 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:650:75
+    |
+650 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:730:74
+    |
+730 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:798:75
+    |
+798 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:901:74
+    |
+901 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+    |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+   --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:968:75
+    |
+968 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+    |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1070:74
+     |
+1070 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1154:75
+     |
+1154 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1289:74
+     |
+1289 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1353:75
+     |
+1353 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1448:74
+     |
+1448 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1505:75
+     |
+1505 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1585:74
+     |
+1585 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1645:75
+     |
+1645 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1732:74
+     |
+1732 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1789:75
+     |
+1789 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1869:74
+     |
+1869 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:1929:75
+     |
+1929 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2016:74
+     |
+2016 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2073:75
+     |
+2073 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2153:74
+     |
+2153 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2210:75
+     |
+2210 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2290:74
+     |
+2290 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2347:75
+     |
+2347 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2427:74
+     |
+2427 |         ::std::result::Result::Ok(::capnp::traits::FromStructReader::new(try!(reader.get_struct(::std::ptr::null()))))
+     |                                                                          ^^^
+
+warning: use of deprecated macro `try`: use the `?` operator instead
+    --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:2484:75
+     |
+2484 | ...   ::std::result::Result::Ok(::capnp::traits::FromStructBuilder::new(try!(builder.get_struct(_private::STRUCT_SIZE, ::std::ptr::null()...
+     |                                                                         ^^^
+
+warning: trait objects without an explicit `dyn` are deprecated
+  --> /home/ubuntu/pung-on-insPIRe/target/release/build/pung-8d12b6579b540ff8/out/pung_capnp.rs:40:22
+   |
+40 |     fn new(hook: Box<ClientHook>) -> Client {
+   |                      ^^^^^^^^^^
+   |
+   = warning: this is accepted in the current edition (Rust 2015) but is a hard error in Rust 2021!
+   = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/warnings-promoted-to-error.html>
+   = note: `#[warn(bare_trait_objects)]` on by default
+help: use `dyn`
+   |
+40 |     fn new(hook: Box<dyn ClientHook>) -> Client {
+   |                      +++
+
+warning: fields `num_entries` and `entry_bytes` are never read
+   --> src/pir/inspire.rs:134:5
+    |
+119 | pub struct InspireServer {
+    |            ------------- fields in this struct
+...
+134 |     num_entries: u64,
+    |     ^^^^^^^^^^^
+135 |     /// Size of each Pung tuple in bytes.
+136 |     entry_bytes: u64,
+    |     ^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: field `depth` is never read
+   --> src/pir/inspire.rs:204:5
+    |
+203 | pub struct InspireClient {
+    |            ------------- field in this struct
+204 |     depth: u64,
+    |     ^^^^^
+
+warning: field `num_entries` is never read
+   --> src/pir/inspire.rs:220:5
+    |
+210 | struct ClientDbState {
+    |        ------------- field in this struct
+...
+220 |     num_entries: u64,
+    |     ^^^^^^^^^^^
+
+warning: `pung` (lib) generated 38 warnings (run `cargo fix --lib -p pung` to apply 1 suggestion)
+    Finished release [optimized] target(s) in 0.09s
+     Running `target/release/inspire_baseline`
+=== num_entries=2048 entry_size=288 (db=0.56 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 69145.022 ms
+  query 1/10: idx=966 latency=406.377 ms
+  query 2/10: idx=772 latency=414.778 ms
+  query 3/10: idx=1810 latency=402.960 ms
+  query 4/10: idx=699 latency=403.143 ms
+  query 5/10: idx=1609 latency=405.471 ms
+  query 6/10: idx=1515 latency=404.912 ms
+  query 7/10: idx=206 latency=415.529 ms
+  query 8/10: idx=1676 latency=417.805 ms
+  query 9/10: idx=1669 latency=404.024 ms
+  query 10/10: idx=1123 latency=415.598 ms
+  mean_query=409.060 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=2048 entry_size=1024 (db=2.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 68850.549 ms
+  query 1/10: idx=2038 latency=395.863 ms
+  query 2/10: idx=333 latency=403.235 ms
+  query 3/10: idx=1238 latency=404.628 ms
+  query 4/10: idx=1417 latency=405.173 ms
+  query 5/10: idx=344 latency=404.251 ms
+  query 6/10: idx=1123 latency=403.632 ms
+  query 7/10: idx=1696 latency=402.779 ms
+  query 8/10: idx=1805 latency=404.655 ms
+  query 9/10: idx=1823 latency=404.790 ms
+  query 10/10: idx=2028 latency=405.292 ms
+  mean_query=403.430 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=8192 entry_size=288 (db=2.25 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 68281.753 ms
+  query 1/10: idx=5053 latency=403.897 ms
+  query 2/10: idx=2989 latency=405.360 ms
+  query 3/10: idx=31 latency=402.231 ms
+  query 4/10: idx=1675 latency=402.651 ms
+  query 5/10: idx=4696 latency=397.403 ms
+  query 6/10: idx=271 latency=398.271 ms
+  query 7/10: idx=2827 latency=400.861 ms
+  query 8/10: idx=2529 latency=398.867 ms
+  query 9/10: idx=5520 latency=392.529 ms
+  query 10/10: idx=745 latency=398.018 ms
+  mean_query=400.009 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=8192 entry_size=1024 (db=8.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 69461.510 ms
+  query 1/10: idx=4332 latency=439.892 ms
+  query 2/10: idx=4192 latency=428.211 ms
+  query 3/10: idx=1825 latency=428.114 ms
+  query 4/10: idx=8004 latency=427.724 ms
+  query 5/10: idx=7456 latency=427.783 ms
+  query 6/10: idx=6159 latency=437.915 ms
+  query 7/10: idx=870 latency=441.202 ms
+  query 8/10: idx=5425 latency=440.098 ms
+  query 9/10: idx=3931 latency=428.881 ms
+  query 10/10: idx=5353 latency=432.527 ms
+  mean_query=433.235 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=32768 entry_size=288 (db=9.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 85101.892 ms
+  query 1/10: idx=1295 latency=480.600 ms
+  query 2/10: idx=30158 latency=486.489 ms
+  query 3/10: idx=22500 latency=474.767 ms
+  query 4/10: idx=29365 latency=483.871 ms
+  query 5/10: idx=15124 latency=475.810 ms
+  query 6/10: idx=3642 latency=488.801 ms
+  query 7/10: idx=2173 latency=476.220 ms
+  query 8/10: idx=13028 latency=473.860 ms
+  query 9/10: idx=10689 latency=474.139 ms
+  query 10/10: idx=23143 latency=474.614 ms
+  mean_query=478.917 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=32768 entry_size=1024 (db=32.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 120758.730 ms
+  query 1/10: idx=31861 latency=578.621 ms
+  query 2/10: idx=31363 latency=572.756 ms
+  query 3/10: idx=20381 latency=577.589 ms
+  query 4/10: idx=16387 latency=569.406 ms
+  query 5/10: idx=18271 latency=572.074 ms
+  query 6/10: idx=32662 latency=573.773 ms
+  query 7/10: idx=31645 latency=563.649 ms
+  query 8/10: idx=6388 latency=571.338 ms
+  query 9/10: idx=12130 latency=573.101 ms
+  query 10/10: idx=21402 latency=579.668 ms
+  mean_query=573.198 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=131072 entry_size=288 (db=36.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 196008.451 ms
+  query 1/10: idx=119203 latency=551.784 ms
+  query 2/10: idx=40230 latency=551.453 ms
+  query 3/10: idx=25868 latency=546.948 ms
+  query 4/10: idx=106968 latency=550.315 ms
+  query 5/10: idx=21014 latency=558.282 ms
+  query 6/10: idx=104426 latency=547.672 ms
+  query 7/10: idx=21846 latency=547.485 ms
+  query 8/10: idx=63806 latency=550.257 ms
+  query 9/10: idx=4708 latency=546.644 ms
+  query 10/10: idx=25843 latency=544.056 ms
+  mean_query=549.490 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=131072 entry_size=1024 (db=128.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 341073.406 ms
+  query 1/10: idx=87606 latency=877.175 ms
+  query 2/10: idx=65174 latency=872.677 ms
+  query 3/10: idx=8096 latency=882.804 ms
+  query 4/10: idx=36773 latency=884.121 ms
+  query 5/10: idx=83233 latency=886.161 ms
+  query 6/10: idx=69297 latency=874.178 ms
+  query 7/10: idx=104101 latency=880.640 ms
+  query 8/10: idx=35185 latency=874.715 ms
+  query 9/10: idx=21344 latency=878.550 ms
+  query 10/10: idx=26725 latency=872.658 ms
+  mean_query=878.368 ms query_size=311296 bytes answer_size=12288 bytes
+Wrote results/inspire_baseline.csv
