@@ -56,14 +56,17 @@ index b9d546c..ab5bb25 100644
   * This file is part of XPIR.
   *
 diff --git a/apps/client/DESC.hpp b/apps/client/DESC.hpp
-index 7263365..fc3f042 100644
+index 7263365..3820611 100644
 --- a/apps/client/DESC.hpp
 +++ b/apps/client/DESC.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_DESC
+ #define DEF_DESC
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <string>
+ #include <vector>
+ #include <sstream>
 diff --git a/apps/client/PIRClient.cpp b/apps/client/PIRClient.cpp
 index 78b0026..7fa768e 100644
 --- a/apps/client/PIRClient.cpp
@@ -92,89 +95,30 @@ index 78b0026..7fa768e 100644
      // Tell the server we are a client
      int is_client = 1;
 diff --git a/apps/client/PIRClient.hpp b/apps/client/PIRClient.hpp
-index e4af5b5..fdb9887 100644
+index e4af5b5..d5f9313 100644
 --- a/apps/client/PIRClient.hpp
 +++ b/apps/client/PIRClient.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRCLIENT
+ #define DEF_PIRCLIENT
+ //#define DEBUG
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -94,7 +95,7 @@ class PIRClientSimple
-     uint64_t chosenElement;
+ #include <string>
+ #include <iostream>
  
-   public:
--    PIRClientSimple( boost::asio::io_service& ios, ClientParams params, FixedVars vars);
-+    PIRClientSimple( boost::asio::io_context& ios, ClientParams params, FixedVars vars);
-     ~PIRClientSimple();
- 
-     void connect();
 diff --git a/apps/client/PIRController.cpp b/apps/client/PIRController.cpp
-index 5edc116..cb83005 100644
+index 5edc116..4951f52 100644
 --- a/apps/client/PIRController.cpp
 +++ b/apps/client/PIRController.cpp
-@@ -14,9 +14,11 @@
-  *  You should have received a copy of the GNU General Public License
-  *  along with XPIR.  If not, see <http://www.gnu.org/licenses/>.
- */
-+using boost::placeholders::_1;
- 
+@@ -18,6 +18,8 @@
  #include "PIRController.hpp"
  #include "PIRClient.hpp"
-+using boost::placeholders::_1;
  
++using boost::placeholders::_1;
++
  /**
   *	Class constructor.
-@@ -30,21 +32,26 @@ PIRController::PIRController(PIRClientSimple& model_ptr_):
- {
-   addListenersToModel();
- }
-+using boost::placeholders::_1;
- 
- /**
-  *	Add listners (attribute of PIRController) to the model (model_ptr).
-  **/
- void PIRController::addListenersToModel()
- {
--  connectionMessage.push_back(model_ptr.addMessageListener(boost::bind(&PIRView::messageUpdate, &view_cli, _1)));
--  connectionMessage.push_back(model_ptr.addMessageListener(boost::bind(&PIRView::messageUpdate, &logger, _1)));
-+  connectionMessage.push_back(model_ptr.addMessageListener(boost::bind(&PIRView::messageUpdate, &view_cli, boost::placeholders::_1)));
-+  connectionMessage.push_back(model_ptr.addMessageListener(boost::bind(&PIRView::messageUpdate, &logger, boost::placeholders::_1)));
-+using boost::placeholders::_1;
- 
--  connectionMenu.push_back(model_ptr.addMenuListener(boost::bind(&PIRView::catalogUpdate, &view_cli, _1))); 
--  connectionMenu.push_back(model_ptr.addMenuListener(boost::bind(&PIRView::catalogUpdate, &logger, _1)));
-+  connectionMenu.push_back(model_ptr.addMenuListener(boost::bind(&PIRView::catalogUpdate, &view_cli, boost::placeholders::_1))); 
-+  connectionMenu.push_back(model_ptr.addMenuListener(boost::bind(&PIRView::catalogUpdate, &logger, boost::placeholders::_1)));
-+using boost::placeholders::_1;
- 
--  connectionWrite.push_back(model_ptr.addWriteListener(boost::bind(&PIRView::writeUpdate, &view_cli, _1))); 
-+  connectionWrite.push_back(model_ptr.addWriteListener(boost::bind(&PIRView::writeUpdate, &view_cli, boost::placeholders::_1))); 
- }
-+using boost::placeholders::_1;
- 
-+using boost::placeholders::_1;
- 
- /**
-  *	Notify model of a client choice.
-@@ -55,14 +62,17 @@ void PIRController::notifyClientChoice(int c)
- {
-   model_ptr.setChosenElement(c);
- }
-+using boost::placeholders::_1;
- 
- PIRController::~PIRController()
- {
-   for (auto &messageView : connectionMessage)
-     messageView.disconnect();
-+using boost::placeholders::_1;
- 
-   for (auto &menuView : connectionMenu)
-     menuView.disconnect();
-+using boost::placeholders::_1;
- 
-   for (auto &writeView : connectionWrite)
-     writeView.disconnect();
+  *	Param :
 diff --git a/apps/client/main.cpp b/apps/client/main.cpp
 index a167fcb..e52c23f 100644
 --- a/apps/client/main.cpp
@@ -263,74 +207,45 @@ index d5b8a79..8be87f5 100644
  
  include_directories(.)
 diff --git a/apps/server/PIRServer.cpp b/apps/server/PIRServer.cpp
-index 82238de..7ada080 100644
+index 82238de..f60750d 100644
 --- a/apps/server/PIRServer.cpp
 +++ b/apps/server/PIRServer.cpp
-@@ -1,3 +1,4 @@
-+#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -24,7 +25,7 @@
-  *		- tcp::endpoint& endpoint_down : download enpoint ;
-  *		- tcp::endpoint& endpoint_up   : upload endpoit.
-  **/
--PIRServer::PIRServer(boost::asio::io_service &ios, unsigned int port, uint64_t split_value, bool usedbgenerator, uint64_t dbgenerator_n, uint64_t dbgenerator_l) : 
-+PIRServer::PIRServer(boost::asio::io_context &ios, unsigned int port, uint64_t split_value, bool usedbgenerator, uint64_t dbgenerator_n, uint64_t dbgenerator_l) : 
- 	acceptor(ios, tcp::endpoint(tcp::v4(), port)),
-   drivenMode(true),
-   pirParamsFilePath("exp/PIRParams.cfg"),
-@@ -58,7 +59,7 @@ PIRServer::PIRServer(boost::asio::io_service &ios, unsigned int port, uint64_t s
+@@ -58,7 +58,7 @@ PIRServer::PIRServer(boost::asio::io_service &ios, unsigned int port, uint64_t s
   **/
  void PIRServer::serve()
  {
 -  PIRSession::pointer new_session =  PIRSession::create(acceptor.get_io_service());
-+  PIRSession::pointer new_session =  PIRSession::create(static_cast<boost::asio::io_context&>(acceptor.get_executor().context()));
++  PIRSession::pointer new_session =  PIRSession::create(ios);
    new_session->no_pipeline(no_pipeline_mode);
    new_session->setDBHandler(dbhandler);
  
-@@ -77,12 +78,12 @@ void PIRServer::processDrivenSession(const std::string & file_path)
+@@ -77,12 +77,12 @@ void PIRServer::processDrivenSession(const std::string & file_path)
    session_option.keep_database = true;
  
    // Loop while we get dry-run queries
 -  PIRSession* session_ptr = new PIRSession(acceptor.get_io_service());
-+  PIRSession* session_ptr = new PIRSession(static_cast<boost::asio::io_context&>(acceptor.get_executor().context()));
++  PIRSession* session_ptr = new PIRSession(ios);
    do 
    {
      // Trick to have only one PIRSession at a time ... must be a better way :)
      delete session_ptr;
 -    session_ptr = new PIRSession(acceptor.get_io_service());
-+    session_ptr = new PIRSession(static_cast<boost::asio::io_context&>(acceptor.get_executor().context()));
++    session_ptr = new PIRSession(ios);
      session_ptr->setDBHandler(dbhandler);
      session_ptr->no_pipeline(no_pipeline_mode);
      acceptor.accept(session_ptr->getSessionSocket());
 diff --git a/apps/server/PIRServer.hpp b/apps/server/PIRServer.hpp
-index f6a98c1..e2d0048 100644
+index f6a98c1..2278552 100644
 --- a/apps/server/PIRServer.hpp
 +++ b/apps/server/PIRServer.hpp
-@@ -1,3 +1,4 @@
-+#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -36,7 +37,7 @@ struct session_option_t;
- class PIRServer 
- {
- 	private:
--    boost::asio::io_service ios;
-+    boost::asio::io_context ios;
-     boost::asio::ip::tcp::acceptor acceptor;
-     DBHandler *dbhandler;
-     PIRParameters savedPIRParams;
-@@ -47,7 +48,7 @@ class PIRServer
-     bool no_pipeline_mode;
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRSERVER
+ #define DEF_PIRSERVER
  
- 	public:
--		PIRServer(boost::asio::io_service &ios, unsigned int port, uint64_t split_value, 
-+		PIRServer(boost::asio::io_context &ios, unsigned int port, uint64_t split_value, 
-         bool usedbgenerator, uint64_t dbgenerator_n, uint64_t dbgenerator_l);
- 		~PIRServer();
-     void serve();
++#include <cstdint>
+ #include <string>
+ 
+ #include "PIRSession.hpp"
 diff --git a/apps/server/PIRSession.cpp b/apps/server/PIRSession.cpp
 index d906486..a0684c3 100644
 --- a/apps/server/PIRSession.cpp
@@ -356,25 +271,17 @@ index d906486..a0684c3 100644
    handmadeExceptionRaised(false),
    finished(false),
 diff --git a/apps/server/PIRSession.hpp b/apps/server/PIRSession.hpp
-index 47003f2..9e3a905 100644
+index 47003f2..a86b202 100644
 --- a/apps/server/PIRSession.hpp
 +++ b/apps/server/PIRSession.hpp
-@@ -1,3 +1,4 @@
+@@ -17,6 +17,7 @@
+ 
+ #ifndef DEF_PIRSESSION
+ #define DEF_PIRSESSION
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -89,8 +90,8 @@ class PIRSession : public boost::enable_shared_from_this<PIRSession>
- 
- 	public:
-     	typedef boost::shared_ptr<PIRSession> pointer;
--    	static pointer create(boost::asio::io_service& ios);
--		PIRSession(boost::asio::io_service& ios);
-+    	static pointer create(boost::asio::io_context& ios);
-+		PIRSession(boost::asio::io_context& ios);
- 		~PIRSession();
- 
-     void setDBHandler(DBHandler *db);
+ #include <vector>
+ #include <iostream>
+ #include <dirent.h>
 diff --git a/apps/server/main.cpp b/apps/server/main.cpp
 index d2bcb3a..7d89fc0 100644
 --- a/apps/server/main.cpp
@@ -449,14 +356,17 @@ index c939505..3393571 100644
   * This file is part of XPIR.
   *
 diff --git a/crypto/LatticesBasedCryptosystem.hpp b/crypto/LatticesBasedCryptosystem.hpp
-index f9d2e72..5f3dc8f 100644
+index f9d2e72..5c29d54 100644
 --- a/crypto/LatticesBasedCryptosystem.hpp
 +++ b/crypto/LatticesBasedCryptosystem.hpp
-@@ -1,3 +1,4 @@
+@@ -17,6 +17,7 @@
+ 
+ #ifndef DEF_LATTICESBASEDCRYPTOSYSTEM
+ #define DEF_LATTICESBASEDCRYPTOSYSTEM
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include "NFLlib.hpp"
+ #include "NFLLWEDatatypes.hpp"
+ #include "HomomorphicCrypto.hpp"
 diff --git a/crypto/NFLLWE.cpp b/crypto/NFLLWE.cpp
 index ed0ad9b..3904cf8 100644
 --- a/crypto/NFLLWE.cpp
@@ -476,14 +386,17 @@ index 021097e..81f8e85 100644
   * This file is part of XPIR.
   *
 diff --git a/crypto/NFLLWEDatatypes.hpp b/crypto/NFLLWEDatatypes.hpp
-index 376c438..27d6f54 100644
+index 376c438..d5b551c 100644
 --- a/crypto/NFLLWEDatatypes.hpp
 +++ b/crypto/NFLLWEDatatypes.hpp
-@@ -1,3 +1,4 @@
+@@ -17,6 +17,7 @@
+ 
+ #ifndef DEF_NFLLWEDATATYPES
+ #define DEF_NFLLWEDATATYPES
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ struct lwe_in_data
+ {
+ 	poly64 *p;
 diff --git a/crypto/NFLLWEPublicParameters.cpp b/crypto/NFLLWEPublicParameters.cpp
 index b5f4b6d..602ed6e 100644
 --- a/crypto/NFLLWEPublicParameters.cpp
@@ -596,14 +509,17 @@ index 5af3027..f5be668 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/dbhandlers/DBArrayProcessor.hpp b/pir/dbhandlers/DBArrayProcessor.hpp
-index d9489fe..40ace17 100644
+index d9489fe..fb965b7 100644
 --- a/pir/dbhandlers/DBArrayProcessor.hpp
 +++ b/pir/dbhandlers/DBArrayProcessor.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_DBARRPROC
+ #define DEF_DBARRPROC
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include "DBHandler.hpp"
+ #include <boost/interprocess/sync/interprocess_semaphore.hpp>
+ #include <boost/thread.hpp>
 diff --git a/pir/dbhandlers/DBDirectoryProcessor.cpp b/pir/dbhandlers/DBDirectoryProcessor.cpp
 index 4a9da3e..17656f6 100644
 --- a/pir/dbhandlers/DBDirectoryProcessor.cpp
@@ -614,14 +530,17 @@ index 4a9da3e..17656f6 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/dbhandlers/DBDirectoryProcessor.hpp b/pir/dbhandlers/DBDirectoryProcessor.hpp
-index 2019077..b2f15d9 100644
+index 2019077..d7659ae 100644
 --- a/pir/dbhandlers/DBDirectoryProcessor.hpp
 +++ b/pir/dbhandlers/DBDirectoryProcessor.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_DBDIRPROC
+ #define DEF_DBDIRPROC
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include "DBHandler.hpp"
+ #include <boost/interprocess/sync/interprocess_semaphore.hpp>
+ #include <boost/thread.hpp>
 diff --git a/pir/dbhandlers/DBGenerator.cpp b/pir/dbhandlers/DBGenerator.cpp
 index aa1f0b3..bf9f60c 100644
 --- a/pir/dbhandlers/DBGenerator.cpp
@@ -632,23 +551,29 @@ index aa1f0b3..bf9f60c 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/dbhandlers/DBGenerator.hpp b/pir/dbhandlers/DBGenerator.hpp
-index 3670e0b..510cb7e 100644
+index 3670e0b..9e70c81 100644
 --- a/pir/dbhandlers/DBGenerator.hpp
 +++ b/pir/dbhandlers/DBGenerator.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_DBGEN
+ #define DEF_DBGEN
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include "DBHandler.hpp"
+ #include <cstring>
+ #include <random>
 diff --git a/pir/dbhandlers/DBHandler.hpp b/pir/dbhandlers/DBHandler.hpp
-index 14009ca..bdede32 100644
+index 14009ca..2030fb3 100644
 --- a/pir/dbhandlers/DBHandler.hpp
 +++ b/pir/dbhandlers/DBHandler.hpp
-@@ -1,3 +1,4 @@
+@@ -21,6 +21,7 @@
+ #include <vector>
+ #include <string>
+ #include <iostream>
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ 
+ class DBHandler
+ {
 diff --git a/pir/events/CMakeLists.txt b/pir/events/CMakeLists.txt
 index 9cc11d1..0e6d82f 100644
 --- a/pir/events/CMakeLists.txt
@@ -697,14 +622,17 @@ index 40695f1..574bcfa 100644
  include_directories(../..)
  
 diff --git a/pir/optim/OptimVars.hpp b/pir/optim/OptimVars.hpp
-index 4821231..eba6627 100644
+index 4821231..2cd71d5 100644
 --- a/pir/optim/OptimVars.hpp
 +++ b/pir/optim/OptimVars.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_OPTIVAR
+ #define DEF_OPTIVAR
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <assert.h>
+ #include <limits>
+ #include <math.h>
 diff --git a/pir/queryGen/CMakeLists.txt b/pir/queryGen/CMakeLists.txt
 index dff5502..7d683a1 100644
 --- a/pir/queryGen/CMakeLists.txt
@@ -725,14 +653,17 @@ index 54b2836..eb02154 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/queryGen/PIRQueryGenerator_internal.hpp b/pir/queryGen/PIRQueryGenerator_internal.hpp
-index 27510bf..62271db 100644
+index 27510bf..18720af 100644
 --- a/pir/queryGen/PIRQueryGenerator_internal.hpp
 +++ b/pir/queryGen/PIRQueryGenerator_internal.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRQUERY
+ #define DEF_PIRQUERY
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <boost/thread.hpp>
+ #include <boost/interprocess/sync/interprocess_semaphore.hpp>
+ 
 diff --git a/pir/replyExtraction/CMakeLists.txt b/pir/replyExtraction/CMakeLists.txt
 index cf56de0..d32f5ea 100644
 --- a/pir/replyExtraction/CMakeLists.txt
@@ -762,14 +693,17 @@ index f634caa..7f7d713 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/replyExtraction/PIRReplyWriter.hpp b/pir/replyExtraction/PIRReplyWriter.hpp
-index 8437d10..a78296f 100644
+index 8437d10..e815eee 100644
 --- a/pir/replyExtraction/PIRReplyWriter.hpp
 +++ b/pir/replyExtraction/PIRReplyWriter.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRREPLYWRITER
+ #define DEF_PIRREPLYWRITER
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <iostream>
+ #include <boost/signals2.hpp>
+ #include <boost/thread.hpp>
 diff --git a/pir/replyGenerator/CMakeLists.txt b/pir/replyGenerator/CMakeLists.txt
 index 794c3b8..1c3c51c 100644
 --- a/pir/replyGenerator/CMakeLists.txt
@@ -781,57 +715,42 @@ index 794c3b8..1c3c51c 100644
  include_directories(.)
  include_directories(..)
 diff --git a/pir/replyGenerator/GenericPIRReplyGenerator.hpp b/pir/replyGenerator/GenericPIRReplyGenerator.hpp
-index 649b328..8691dae 100644
+index 649b328..23677df 100644
 --- a/pir/replyGenerator/GenericPIRReplyGenerator.hpp
 +++ b/pir/replyGenerator/GenericPIRReplyGenerator.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_ABSTRACTGENERATOR
+ #define DEF_ABSTRACTGENERATOR
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <omp.h>
+ #include <string>
+ 
 diff --git a/pir/replyGenerator/PIROptimizer.cpp b/pir/replyGenerator/PIROptimizer.cpp
-index f670179..1a736a0 100644
+index f670179..8655702 100644
 --- a/pir/replyGenerator/PIROptimizer.cpp
 +++ b/pir/replyGenerator/PIROptimizer.cpp
-@@ -1,3 +1,4 @@
-+#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -210,13 +211,13 @@ double PIROptimizer::getPrecompute1PlaintextTime(HomomorphicCrypto* crypto_ptr,
- 
- void PIROptimizer::serve()
- {
--  tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), COMMAND_AND_CONTROL_PORT));
-+  tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), COMMAND_AND_CONTROL_PORT));
-   acceptor.listen(5);
- 
+@@ -216,7 +216,7 @@ void PIROptimizer::serve()
    cout << "Waiting client..." << endl;
    while(true)
    {
 -    boost::asio::ip::tcp::socket socket(acceptor.get_io_service());
-+    boost::asio::ip::tcp::socket socket(acceptor.get_executor());
++    boost::asio::ip::tcp::socket socket(io_service);
      acceptor.accept(socket);
     // boost::thread t(boost::bind(&PIROptimizer::controlAndCommand, this, socket));
      controlAndCommand(socket);
 diff --git a/pir/replyGenerator/PIROptimizer.hpp b/pir/replyGenerator/PIROptimizer.hpp
-index f18c5a7..bc55edb 100644
+index f18c5a7..a2a8619 100644
 --- a/pir/replyGenerator/PIROptimizer.hpp
 +++ b/pir/replyGenerator/PIROptimizer.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIROPTIM
+ #define DEF_PITOPTIM
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
-@@ -40,7 +41,7 @@ class PIROptimizer
- {
- 	private:
-     std::vector<std::string> abs1bitCacheLines;
--    boost::asio::io_service io_service;
-+    boost::asio::io_context io_context;
- 		PIRParameters pirParameters;
-     uint64_t fileCount;
-     uint64_t maxFileBytesize;
+ #include <iostream>
+ #include <sstream>
+ #include <string>
 diff --git a/pir/replyGenerator/PIRReplyGeneratorGMP.cpp b/pir/replyGenerator/PIRReplyGeneratorGMP.cpp
 index 05b2534..63e1b3c 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorGMP.cpp
@@ -842,14 +761,17 @@ index 05b2534..63e1b3c 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/replyGenerator/PIRReplyGeneratorGMP.hpp b/pir/replyGenerator/PIRReplyGeneratorGMP.hpp
-index 7936cf8..6f6c9ea 100644
+index 7936cf8..b999269 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorGMP.hpp
 +++ b/pir/replyGenerator/PIRReplyGeneratorGMP.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRREPLYGENERATOR
+ #define DEF_PIRREPLYGENERATOR
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <omp.h>
+ #include <string>
+ 
 diff --git a/pir/replyGenerator/PIRReplyGeneratorNFL_internal.cpp b/pir/replyGenerator/PIRReplyGeneratorNFL_internal.cpp
 index 2f916b5..219cc72 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorNFL_internal.cpp
@@ -860,14 +782,17 @@ index 2f916b5..219cc72 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/replyGenerator/PIRReplyGeneratorNFL_internal.hpp b/pir/replyGenerator/PIRReplyGeneratorNFL_internal.hpp
-index 9d6f424..dc3000f 100644
+index 9d6f424..a95b0a3 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorNFL_internal.hpp
 +++ b/pir/replyGenerator/PIRReplyGeneratorNFL_internal.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRREPLYGENERATORNFL
+ #define DEF_PIRREPLYGENERATORNFL
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include <unistd.h>
+ #include <omp.h>
+ #include "pir/replyGenerator/GenericPIRReplyGenerator.hpp"
 diff --git a/pir/replyGenerator/PIRReplyGeneratorTrivial.cpp b/pir/replyGenerator/PIRReplyGeneratorTrivial.cpp
 index 51ec424..4717c4a 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorTrivial.cpp
@@ -878,11 +803,14 @@ index 51ec424..4717c4a 100644
   * This file is part of XPIR.
   *
 diff --git a/pir/replyGenerator/PIRReplyGeneratorTrivial.hpp b/pir/replyGenerator/PIRReplyGeneratorTrivial.hpp
-index 3e2a3cb..6e20c3a 100644
+index 3e2a3cb..549bbbf 100644
 --- a/pir/replyGenerator/PIRReplyGeneratorTrivial.hpp
 +++ b/pir/replyGenerator/PIRReplyGeneratorTrivial.hpp
-@@ -1,3 +1,4 @@
+@@ -18,6 +18,7 @@
+ #ifndef DEF_PIRREPLYGENERATORTRIVIAL
+ #define DEF_PIRREPLYGENERATORTRIVIAL
+ 
 +#include <cstdint>
- /* Copyright (C) 2014 Carlos Aguilar Melchor, Joris Barrier, Marc-Olivier Killijian
-  * This file is part of XPIR.
-  *
+ #include "pir/replyGenerator/GenericPIRReplyGenerator.hpp"
+ #include "crypto/HomomorphicCrypto.hpp"
+ #include "crypto/NoCryptography.hpp"
