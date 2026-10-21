@@ -1,0 +1,3031 @@
+# insPIRe baseline, 2026-10-20T20:17:53+00:00
+# host: 4 cores, 9Gi RAM, 6.17.0-1017-aws
+# rustc: rustc 1.78.0-nightly (256b6fb19 2024-02-06); commit: a189cb3
+# note: insPIRe ignores alpha/d (see XPIR_API.md); case names/sizes mirror benches/pir.rs for comparison only
+=== bench_pir_answer_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_32_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+Command terminated by signal 9
+peak_rss_kb=9426016 wall_s=80.61 exit=0
+=== bench_pir_answer_131072_d_2_a_64
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_64 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_131072_d_2_a_64 query size: 311296 bytes
+bench_pir_answer_131072_d_2_a_64 answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_131072_d_2_a_64
+Benchmarking bench_pir_answer_131072_d_2_a_64: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_131072_d_2_a_64: Collecting 25 samples in estimated 55450.08267695 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_131072_d_2_a_64: Analyzing
+bench_pir_answer_131072 time:   [568.94 ms 570.99 ms 573.00 ms]
+                        change: [+327.95% +333.34% +339.02%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) low mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4684.72s
+
+peak_rss_kb=8274032 wall_s=4684.80 exit=0
+=== bench_pir_answer_2048_d_2_a_32
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_2048_d_2_a_32 query size: 311296 bytes
+bench_pir_answer_2048_d_2_a_32 answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_32
+Benchmarking bench_pir_answer_2048_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_2048_d_2_a_32: Collecting 25 samples in estimated 15794.5183981 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_2048_d_2_a_32: Analyzing
+bench_pir_answer_2048_d time:   [260.69 ms 261.11 ms 261.57 ms]
+                        change: [+4201.625263137101% +4235.722076367063% +4267.767755891487%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) low mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1405.09s
+
+peak_rss_kb=1440224 wall_s=1405.12 exit=0
+=== bench_pir_answer_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_2048_d_2_a_8_1KB query size: 311296 bytes
+bench_pir_answer_2048_d_2_a_8_1KB answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 15777.40483605 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Analyzing
+bench_pir_answer_2048_d time:   [258.16 ms 258.40 ms 258.62 ms]
+                        change: [+1584.5574904366697% +1614.9176695340195% +1643.8078512018585%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1396.52s
+
+peak_rss_kb=1462024 wall_s=1396.55 exit=0
+=== bench_pir_answer_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_16_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_32768_d_2_a_16_1KB query size: 311296 bytes
+bench_pir_answer_32768_d_2_a_16_1KB answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 30365.721056125 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Analyzing
+bench_pir_answer_32768_ time:   [405.37 ms 406.09 ms 406.70 ms]
+                        change: [+203.86% +206.95% +210.32%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 2635.79s
+
+peak_rss_kb=5403532 wall_s=2635.88 exit=0
+=== bench_pir_answer_32768_d_2_a_32
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_32768_d_2_a_32 query size: 311296 bytes
+bench_pir_answer_32768_d_2_a_32 answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_32
+Benchmarking bench_pir_answer_32768_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_32768_d_2_a_32: Collecting 25 samples in estimated 19736.935381475 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_32768_d_2_a_32: Analyzing
+bench_pir_answer_32768_ time:   [321.69 ms 322.43 ms 323.20 ms]
+                        change: [+912.34% +922.30% +930.43%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1724.99s
+
+peak_rss_kb=3769460 wall_s=1725.06 exit=0
+=== bench_pir_answer_8192_d_2_a_32
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_8192_d_2_a_32 query size: 311296 bytes
+bench_pir_answer_8192_d_2_a_32 answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_32
+Benchmarking bench_pir_answer_8192_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_8192_d_2_a_32: Collecting 25 samples in estimated 15661.87387245 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_8192_d_2_a_32: Analyzing
+bench_pir_answer_8192_d time:   [259.42 ms 259.92 ms 260.57 ms]
+                        change: [+1687.6978172287459% +1712.224004487212% +1737.9489786095764%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1398.34s
+
+peak_rss_kb=1494500 wall_s=1398.36 exit=0
+=== bench_pir_answer_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_answer_8192_d_2_a_8_1KB query size: 311296 bytes
+bench_pir_answer_8192_d_2_a_8_1KB answer size: 12288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 15794.1601467 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Analyzing
+bench_pir_answer_8192_d time:   [280.57 ms 281.48 ms 282.99 ms]
+                        change: [+785.17% +792.55% +799.09%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1415.65s
+
+peak_rss_kb=2451244 wall_s=1415.70 exit=0
+=== bench_pir_decode_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_32_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+Command terminated by signal 9
+peak_rss_kb=10026708 wall_s=112.80 exit=0
+=== bench_pir_decode_131072_d_2_a_64
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_64 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_131072_d_2_a_64 query size: 311296 bytes
+bench_pir_decode_131072_d_2_a_64 answer size: 12288 bytes
+bench_pir_decode_131072_d_2_a_64 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_131072_d_2_a_64
+Benchmarking bench_pir_decode_131072_d_2_a_64: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_131072_d_2_a_64: Collecting 25 samples in estimated 53188.59364715 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_131072_d_2_a_64: Analyzing
+bench_pir_decode_131072 time:   [791.22 us 793.11 us 794.95 us]
+                        change: [-32.576% -31.895% -31.360%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4491.85s
+
+peak_rss_kb=8593480 wall_s=4491.93 exit=0
+=== bench_pir_decode_2048_d_2_a_32
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_2048_d_2_a_32 query size: 311296 bytes
+bench_pir_decode_2048_d_2_a_32 answer size: 12288 bytes
+bench_pir_decode_2048_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_32
+Benchmarking bench_pir_decode_2048_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_2048_d_2_a_32: Collecting 25 samples in estimated 15722.202083575 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_2048_d_2_a_32: Analyzing
+bench_pir_decode_2048_d time:   [798.33 us 815.62 us 841.61 us]
+                        change: [+46.328% +50.510% +55.323%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1400.22s
+
+peak_rss_kb=1460596 wall_s=1400.25 exit=0
+=== bench_pir_decode_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_2048_d_2_a_8_1KB query size: 311296 bytes
+bench_pir_decode_2048_d_2_a_8_1KB answer size: 12288 bytes
+bench_pir_decode_2048_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 15733.035170125 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Analyzing
+bench_pir_decode_2048_d time:   [790.76 us 797.97 us 813.19 us]
+                        change: [+29.927% +32.173% +35.331%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 25 measurements (16.00%)
+  1 (4.00%) low mild
+  3 (12.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1408.62s
+
+peak_rss_kb=1461864 wall_s=1408.65 exit=0
+=== bench_pir_decode_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_16_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_32768_d_2_a_16_1KB query size: 311296 bytes
+bench_pir_decode_32768_d_2_a_16_1KB answer size: 12288 bytes
+bench_pir_decode_32768_d_2_a_16_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 31192.793086325 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Analyzing
+bench_pir_decode_32768_ time:   [924.05 us 929.56 us 933.11 us]
+                        change: [-22.947% -21.411% -20.210%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 25 measurements (20.00%)
+  2 (8.00%) low severe
+  1 (4.00%) low mild
+  2 (8.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 2679.42s
+
+peak_rss_kb=5320652 wall_s=2679.50 exit=0
+=== bench_pir_decode_32768_d_2_a_32
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_32768_d_2_a_32 query size: 311296 bytes
+bench_pir_decode_32768_d_2_a_32 answer size: 12288 bytes
+bench_pir_decode_32768_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_32
+Benchmarking bench_pir_decode_32768_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_32768_d_2_a_32: Collecting 25 samples in estimated 18807.7165042 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_32768_d_2_a_32: Analyzing
+bench_pir_decode_32768_ time:   [762.21 us 766.19 us 772.32 us]
+                        change: [+31.558% +34.039% +37.506%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1704.54s
+
+peak_rss_kb=3763632 wall_s=1704.61 exit=0
+=== bench_pir_decode_8192_d_2_a_32
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_8192_d_2_a_32 query size: 311296 bytes
+bench_pir_decode_8192_d_2_a_32 answer size: 12288 bytes
+bench_pir_decode_8192_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_32
+Benchmarking bench_pir_decode_8192_d_2_a_32: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_8192_d_2_a_32: Collecting 25 samples in estimated 15524.089271275 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_8192_d_2_a_32: Analyzing
+bench_pir_decode_8192_d time:   [783.91 us 803.42 us 830.48 us]
+                        change: [-0.2185% +3.5632% +7.4900%] (p = 0.08 > 0.05)
+                        No change in performance detected.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1378.00s
+
+peak_rss_kb=1462224 wall_s=1378.02 exit=0
+=== bench_pir_decode_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+bench_pir_decode_8192_d_2_a_8_1KB query size: 311296 bytes
+bench_pir_decode_8192_d_2_a_8_1KB answer size: 12288 bytes
+bench_pir_decode_8192_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 15977.77964575 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Analyzing
+bench_pir_decode_8192_d time:   [772.95 us 781.14 us 787.20 us]
+                        change: [+29.377% +31.363% +33.690%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 1403.51s
+
+peak_rss_kb=2509564 wall_s=1403.56 exit=0
+=== bench_pir_query_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_query_131072_d_2_a_32_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_32_1KB query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 2285.7173651 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Analyzing
+bench_pir_query_131072_ time:   [62.490 ms 62.587 ms 62.686 ms]
+                        change: [+655.95% +663.21% +668.88%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) low mild
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 208.98s
+
+peak_rss_kb=367200 wall_s=208.98 exit=0
+=== bench_pir_query_131072_d_2_a_64
+
+running 1 test
+test bench_pir_query_131072_d_2_a_64 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_64 query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_64
+Benchmarking bench_pir_query_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_64: Collecting 25 samples in estimated 2259.649721225 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_64: Analyzing
+bench_pir_query_131072_ time:   [63.066 ms 63.176 ms 63.266 ms]
+                        change: [+923.20% +932.47% +939.15%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 207.59s
+
+peak_rss_kb=367056 wall_s=207.59 exit=0
+=== bench_pir_query_2048_d_2_a_32
+
+running 1 test
+test bench_pir_query_2048_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_32 query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_32
+Benchmarking bench_pir_query_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_32: Collecting 25 samples in estimated 2284.700895425 s (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_32: Analyzing
+bench_pir_query_2048_d_ time:   [62.650 ms 62.689 ms 62.731 ms]
+                        change: [-2.2327% -1.8681% -1.5447%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 209.18s
+
+peak_rss_kb=367128 wall_s=209.18 exit=0
+=== bench_pir_query_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_2048_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_8_1KB query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 2256.599757425 s (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Analyzing
+bench_pir_query_2048_d_ time:   [63.164 ms 63.233 ms 63.284 ms]
+                        change: [+3092.707829589909% +3105.115357158881% +3115.864223977551%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 207.85s
+
+peak_rss_kb=367272 wall_s=207.85 exit=0
+=== bench_pir_query_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_query_32768_d_2_a_16_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_16_1KB query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 2285.56884335 s (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Analyzing
+bench_pir_query_32768_d time:   [63.223 ms 63.291 ms 63.380 ms]
+                        change: [+923.52% +935.08% +946.66%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 209.44s
+
+peak_rss_kb=367056 wall_s=209.44 exit=0
+=== bench_pir_query_32768_d_2_a_32
+
+running 1 test
+test bench_pir_query_32768_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_32 query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_32
+Benchmarking bench_pir_query_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_32: Collecting 25 samples in estimated 2285.7995745 s (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_32: Analyzing
+bench_pir_query_32768_d time:   [63.123 ms 63.230 ms 63.306 ms]
+                        change: [+1455.746938625752% +1460.5360824100676% +1464.8642422459136%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) low mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 208.39s
+
+peak_rss_kb=367220 wall_s=208.39 exit=0
+=== bench_pir_query_8192_d_2_a_32
+
+running 1 test
+test bench_pir_query_8192_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_32 query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_32
+Benchmarking bench_pir_query_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_32: Collecting 25 samples in estimated 2286.7088582 s (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_32: Analyzing
+bench_pir_query_8192_d_ time:   [62.529 ms 62.614 ms 62.708 ms]
+                        change: [+3034.1182047659177% +3062.1766783550383% +3083.701050596168%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 5 outliers among 25 measurements (20.00%)
+  2 (8.00%) low mild
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 209.04s
+
+peak_rss_kb=366976 wall_s=209.04 exit=0
+=== bench_pir_query_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_8192_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_8_1KB query size: 311296 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 2258.964725225 s (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Analyzing
+bench_pir_query_8192_d_ time:   [63.106 ms 63.201 ms 63.271 ms]
+                        change: [+1437.6011922331847% +1451.6378426657163% +1461.865052865978%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 207.55s
+
+peak_rss_kb=367088 wall_s=207.54 exit=0
+=== bench_pir_server_creation_131072
+
+running 1 test
+test bench_pir_server_creation_131072 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_131072
+Benchmarking bench_pir_server_creation_131072: Warming up for 3.0000 s
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+Benchmarking bench_pir_server_creation_131072: Collecting 25 samples in estimated 50410.211452575 s (325 iterations)
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4

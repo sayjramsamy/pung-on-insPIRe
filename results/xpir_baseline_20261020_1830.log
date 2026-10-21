@@ -1,0 +1,692 @@
+# XPIR baseline, 2026-10-20T18:30:36+00:00
+# host: 4 cores, 9Gi RAM, 6.17.0-1017-aws
+# rustc: rustc 1.78.0-nightly (256b6fb19 2024-02-06); commit: a189cb3
+=== bench_pir_answer_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_32_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_131072_d_2_a_32_1KB query size: 2097152 bytes
+bench_pir_answer_131072_d_2_a_32_1KB answer size: 1982464 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 343.80 s (325 iterations)
+Benchmarking bench_pir_answer_131072_d_2_a_32_1KB: Analyzing
+bench_pir_answer_131072 time:   [359.47 ms 362.65 ms 366.16 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 149.70s
+
+peak_rss_kb=1655300 wall_s=149.78 exit=0
+=== bench_pir_answer_131072_d_2_a_64
+
+running 1 test
+test bench_pir_answer_131072_d_2_a_64 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_131072_d_2_a_64 query size: 1572864 bytes
+bench_pir_answer_131072_d_2_a_64 answer size: 933888 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_131072_d_2_a_64
+Benchmarking bench_pir_answer_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_131072_d_2_a_64: Collecting 25 samples in estimated 69.585 s (325 iterations)
+Benchmarking bench_pir_answer_131072_d_2_a_64: Analyzing
+bench_pir_answer_131072 time:   [129.64 ms 131.99 ms 134.08 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 54.57s
+
+peak_rss_kb=991584 wall_s=54.63 exit=0
+=== bench_pir_answer_2048_d_2_a_32
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_2048_d_2_a_32 query size: 262144 bytes
+bench_pir_answer_2048_d_2_a_32 answer size: 442368 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_32
+Benchmarking bench_pir_answer_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_2048_d_2_a_32: Collecting 25 samples in estimated 2.2156 s (325 iterations)
+Benchmarking bench_pir_answer_2048_d_2_a_32: Analyzing
+bench_pir_answer_2048_d time:   [5.9350 ms 5.9948 ms 6.0580 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.93s
+
+peak_rss_kb=240208 wall_s=5.95 exit=0
+=== bench_pir_answer_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_2048_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_2048_d_2_a_8_1KB query size: 524288 bytes
+bench_pir_answer_2048_d_2_a_8_1KB answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 5.3134 s (325 iterations)
+Benchmarking bench_pir_answer_2048_d_2_a_8_1KB: Analyzing
+bench_pir_answer_2048_d time:   [14.649 ms 14.898 ms 15.221 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 10.10s
+
+peak_rss_kb=330536 wall_s=10.12 exit=0
+=== bench_pir_answer_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_16_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_32768_d_2_a_16_1KB query size: 1572864 bytes
+bench_pir_answer_32768_d_2_a_16_1KB answer size: 933888 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 65.533 s (325 iterations)
+Benchmarking bench_pir_answer_32768_d_2_a_16_1KB: Analyzing
+bench_pir_answer_32768_ time:   [131.72 ms 133.28 ms 134.54 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 54.39s
+
+peak_rss_kb=802748 wall_s=54.43 exit=0
+=== bench_pir_answer_32768_d_2_a_32
+
+running 1 test
+test bench_pir_answer_32768_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_32768_d_2_a_32 query size: 1048576 bytes
+bench_pir_answer_32768_d_2_a_32 answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_32768_d_2_a_32
+Benchmarking bench_pir_answer_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_32768_d_2_a_32: Collecting 25 samples in estimated 12.751 s (325 iterations)
+Benchmarking bench_pir_answer_32768_d_2_a_32: Analyzing
+bench_pir_answer_32768_ time:   [31.056 ms 31.212 ms 31.430 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 17.87s
+
+peak_rss_kb=604524 wall_s=17.90 exit=0
+=== bench_pir_answer_8192_d_2_a_32
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_32 ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_8192_d_2_a_32 query size: 524288 bytes
+bench_pir_answer_8192_d_2_a_32 answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_32
+Benchmarking bench_pir_answer_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_8192_d_2_a_32: Collecting 25 samples in estimated 5.3015 s (325 iterations)
+Benchmarking bench_pir_answer_8192_d_2_a_32: Analyzing
+bench_pir_answer_8192_d time:   [13.895 ms 14.062 ms 14.227 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) low mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 9.86s
+
+peak_rss_kb=345260 wall_s=9.88 exit=0
+=== bench_pir_answer_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_answer_8192_d_2_a_8_1KB ... ----------------PUNG ANSWER MEMORY RESULT------------------
+
+bench_pir_answer_8192_d_2_a_8_1KB query size: 1048576 bytes
+bench_pir_answer_8192_d_2_a_8_1KB answer size: 475136 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 12.781 s (325 iterations)
+Benchmarking bench_pir_answer_8192_d_2_a_8_1KB: Analyzing
+bench_pir_answer_8192_d time:   [31.260 ms 31.350 ms 31.450 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 17.87s
+
+peak_rss_kb=552420 wall_s=17.89 exit=0
+=== bench_pir_decode_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_32_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_131072_d_2_a_32_1KB query size: 2097152 bytes
+bench_pir_decode_131072_d_2_a_32_1KB answer size: 1982464 bytes
+bench_pir_decode_131072_d_2_a_32_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 333.62 s (325 iterations)
+Benchmarking bench_pir_decode_131072_d_2_a_32_1KB: Analyzing
+bench_pir_decode_131072 time:   [2.4380 ms 2.4427 ms 2.4478 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 146.91s
+
+peak_rss_kb=1657492 wall_s=146.99 exit=0
+=== bench_pir_decode_131072_d_2_a_64
+
+running 1 test
+test bench_pir_decode_131072_d_2_a_64 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_131072_d_2_a_64 query size: 1572864 bytes
+bench_pir_decode_131072_d_2_a_64 answer size: 933888 bytes
+bench_pir_decode_131072_d_2_a_64 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_131072_d_2_a_64
+Benchmarking bench_pir_decode_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_131072_d_2_a_64: Collecting 25 samples in estimated 66.151 s (325 iterations)
+Benchmarking bench_pir_decode_131072_d_2_a_64: Analyzing
+bench_pir_decode_131072 time:   [1.1551 ms 1.1594 ms 1.1655 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  3 (12.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 54.80s
+
+peak_rss_kb=992272 wall_s=54.85 exit=0
+=== bench_pir_decode_2048_d_2_a_32
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_2048_d_2_a_32 query size: 262144 bytes
+bench_pir_decode_2048_d_2_a_32 answer size: 442368 bytes
+bench_pir_decode_2048_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_32
+Benchmarking bench_pir_decode_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_2048_d_2_a_32: Collecting 25 samples in estimated 2.3904 s (325 iterations)
+Benchmarking bench_pir_decode_2048_d_2_a_32: Analyzing
+bench_pir_decode_2048_d time:   [550.03 us 551.40 us 553.47 us]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 6.34s
+
+peak_rss_kb=242316 wall_s=6.35 exit=0
+=== bench_pir_decode_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_2048_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_2048_d_2_a_8_1KB query size: 524288 bytes
+bench_pir_decode_2048_d_2_a_8_1KB answer size: 475136 bytes
+bench_pir_decode_2048_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 5.5788 s (325 iterations)
+Benchmarking bench_pir_decode_2048_d_2_a_8_1KB: Analyzing
+bench_pir_decode_2048_d time:   [604.09 us 605.88 us 607.72 us]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 10.24s
+
+peak_rss_kb=333972 wall_s=10.25 exit=0
+=== bench_pir_decode_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_16_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_32768_d_2_a_16_1KB query size: 1572864 bytes
+bench_pir_decode_32768_d_2_a_16_1KB answer size: 933888 bytes
+bench_pir_decode_32768_d_2_a_16_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 66.194 s (325 iterations)
+Benchmarking bench_pir_decode_32768_d_2_a_16_1KB: Analyzing
+bench_pir_decode_32768_ time:   [1.1640 ms 1.1699 ms 1.1754 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 53.94s
+
+peak_rss_kb=803664 wall_s=53.98 exit=0
+=== bench_pir_decode_32768_d_2_a_32
+
+running 1 test
+test bench_pir_decode_32768_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_32768_d_2_a_32 query size: 1048576 bytes
+bench_pir_decode_32768_d_2_a_32 answer size: 475136 bytes
+bench_pir_decode_32768_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_32768_d_2_a_32
+Benchmarking bench_pir_decode_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_32768_d_2_a_32: Collecting 25 samples in estimated 12.824 s (325 iterations)
+Benchmarking bench_pir_decode_32768_d_2_a_32: Analyzing
+bench_pir_decode_32768_ time:   [586.14 us 589.20 us 592.89 us]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 18.15s
+
+peak_rss_kb=603960 wall_s=18.18 exit=0
+=== bench_pir_decode_8192_d_2_a_32
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_32 ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_8192_d_2_a_32 query size: 524288 bytes
+bench_pir_decode_8192_d_2_a_32 answer size: 475136 bytes
+bench_pir_decode_8192_d_2_a_32 decoded result size: 288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_32
+Benchmarking bench_pir_decode_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_8192_d_2_a_32: Collecting 25 samples in estimated 5.5677 s (325 iterations)
+Benchmarking bench_pir_decode_8192_d_2_a_32: Analyzing
+bench_pir_decode_8192_d time:   [767.18 us 784.43 us 799.84 us]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) low severe
+  1 (4.00%) low mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 10.33s
+
+peak_rss_kb=345676 wall_s=10.34 exit=0
+=== bench_pir_decode_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_decode_8192_d_2_a_8_1KB ... ----------------PUNG DECODE MEMORY RESULT------------------
+
+bench_pir_decode_8192_d_2_a_8_1KB query size: 1048576 bytes
+bench_pir_decode_8192_d_2_a_8_1KB answer size: 475136 bytes
+bench_pir_decode_8192_d_2_a_8_1KB decoded result size: 1024 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 12.875 s (325 iterations)
+Benchmarking bench_pir_decode_8192_d_2_a_8_1KB: Analyzing
+bench_pir_decode_8192_d time:   [587.97 us 593.93 us 603.80 us]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 18.14s
+
+peak_rss_kb=552220 wall_s=18.16 exit=0
+=== bench_pir_query_131072_d_2_a_32_1KB
+
+running 1 test
+test bench_pir_query_131072_d_2_a_32_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_32_1KB query size: 2097152 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Collecting 25 samples in estimated 2.6885 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_32_1KB: Analyzing
+bench_pir_query_131072_ time:   [8.1467 ms 8.2263 ms 8.3031 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 7.02s
+
+peak_rss_kb=16604 wall_s=7.02 exit=0
+=== bench_pir_query_131072_d_2_a_64
+
+running 1 test
+test bench_pir_query_131072_d_2_a_64 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_131072_d_2_a_64 query size: 1572864 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_131072_d_2_a_64
+Benchmarking bench_pir_query_131072_d_2_a_64: Warming up for 3.0000 s
+Benchmarking bench_pir_query_131072_d_2_a_64: Collecting 25 samples in estimated 2.0047 s (325 iterations)
+Benchmarking bench_pir_query_131072_d_2_a_64: Analyzing
+bench_pir_query_131072_ time:   [6.0656 ms 6.1205 ms 6.2189 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  1 (4.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.26s
+
+peak_rss_kb=16768 wall_s=5.26 exit=0
+=== bench_pir_query_2048_d_2_a_32
+
+running 1 test
+test bench_pir_query_2048_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_32 query size: 262144 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_32
+Benchmarking bench_pir_query_2048_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_32: Collecting 25 samples in estimated 310.79 ms (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_32: Analyzing
+bench_pir_query_2048_d_ time:   [943.11 us 947.11 us 952.07 us]
+Found 2 outliers among 25 measurements (8.00%)
+  1 (4.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4.35s
+
+peak_rss_kb=16804 wall_s=4.35 exit=0
+=== bench_pir_query_2048_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_2048_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_2048_d_2_a_8_1KB query size: 524288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Collecting 25 samples in estimated 639.33 ms (325 iterations)
+Benchmarking bench_pir_query_2048_d_2_a_8_1KB: Analyzing
+bench_pir_query_2048_d_ time:   [1.9581 ms 1.9614 ms 1.9659 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4.78s
+
+peak_rss_kb=16756 wall_s=4.78 exit=0
+=== bench_pir_query_32768_d_2_a_16_1KB
+
+running 1 test
+test bench_pir_query_32768_d_2_a_16_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_16_1KB query size: 1572864 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Collecting 25 samples in estimated 1.9976 s (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_16_1KB: Analyzing
+bench_pir_query_32768_d time:   [5.9456 ms 5.9991 ms 6.0770 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.22s
+
+peak_rss_kb=16360 wall_s=5.22 exit=0
+=== bench_pir_query_32768_d_2_a_32
+
+running 1 test
+test bench_pir_query_32768_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_32768_d_2_a_32 query size: 1048576 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_32768_d_2_a_32
+Benchmarking bench_pir_query_32768_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_32768_d_2_a_32: Collecting 25 samples in estimated 1.3205 s (325 iterations)
+Benchmarking bench_pir_query_32768_d_2_a_32: Analyzing
+bench_pir_query_32768_d time:   [4.0329 ms 4.0442 ms 4.0575 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.59s
+
+peak_rss_kb=16696 wall_s=5.58 exit=0
+=== bench_pir_query_8192_d_2_a_32
+
+running 1 test
+test bench_pir_query_8192_d_2_a_32 ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_32 query size: 524288 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_32
+Benchmarking bench_pir_query_8192_d_2_a_32: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_32: Collecting 25 samples in estimated 649.68 ms (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_32: Analyzing
+bench_pir_query_8192_d_ time:   [1.9648 ms 1.9964 ms 2.0338 ms]
+Found 4 outliers among 25 measurements (16.00%)
+  3 (12.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 4.87s
+
+peak_rss_kb=16892 wall_s=4.87 exit=0
+=== bench_pir_query_8192_d_2_a_8_1KB
+
+running 1 test
+test bench_pir_query_8192_d_2_a_8_1KB ... ----------------PUNG QUERY MEMORY RESULT------------------
+
+bench_pir_query_8192_d_2_a_8_1KB query size: 1048576 bytes
+-----------------------------------------------------
+
+Gnuplot not found, disabling plotting
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Collecting 25 samples in estimated 1.3396 s (325 iterations)
+Benchmarking bench_pir_query_8192_d_2_a_8_1KB: Analyzing
+bench_pir_query_8192_d_ time:   [4.0501 ms 4.0945 ms 4.1489 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.66s
+
+peak_rss_kb=16284 wall_s=5.66 exit=0
+=== bench_pir_server_creation_131072
+
+running 1 test
+test bench_pir_server_creation_131072 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_131072
+Benchmarking bench_pir_server_creation_131072: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_131072: Collecting 25 samples in estimated 79.910 s (325 iterations)
+Benchmarking bench_pir_server_creation_131072: Analyzing
+bench_pir_server_creati time:   [230.25 ms 230.40 ms 230.60 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 79.29s
+
+peak_rss_kb=3004696 wall_s=79.43 exit=0
+=== bench_pir_server_creation_131072_1KB
+
+running 1 test
+test bench_pir_server_creation_131072_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_131072_1KB
+Benchmarking bench_pir_server_creation_131072_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_131072_1KB: Collecting 25 samples in estimated 336.72 s (325 iterations)
+Benchmarking bench_pir_server_creation_131072_1KB: Analyzing
+bench_pir_server_creati time:   [876.65 ms 876.90 ms 877.19 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  1 (4.00%) high mild
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 290.27s
+
+peak_rss_kb=3398268 wall_s=290.42 exit=0
+=== bench_pir_server_creation_2048
+
+running 1 test
+test bench_pir_server_creation_2048 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_2048
+Benchmarking bench_pir_server_creation_2048: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_2048: Collecting 25 samples in estimated 1.2893 s (325 iterations)
+Benchmarking bench_pir_server_creation_2048: Analyzing
+bench_pir_server_creati time:   [3.9060 ms 3.9254 ms 3.9488 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 5.43s
+
+peak_rss_kb=309368 wall_s=5.45 exit=0
+=== bench_pir_server_creation_2048_1KB
+
+running 1 test
+test bench_pir_server_creation_2048_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_2048_1KB
+Benchmarking bench_pir_server_creation_2048_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_2048_1KB: Collecting 25 samples in estimated 4.5074 s (325 iterations)
+Benchmarking bench_pir_server_creation_2048_1KB: Analyzing
+bench_pir_server_creati time:   [13.368 ms 13.440 ms 13.510 ms]
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 8.00s
+
+peak_rss_kb=148588 wall_s=8.01 exit=0
+=== bench_pir_server_creation_32768
+
+running 1 test
+test bench_pir_server_creation_32768 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_32768
+Benchmarking bench_pir_server_creation_32768: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_32768: Collecting 25 samples in estimated 19.300 s (325 iterations)
+Benchmarking bench_pir_server_creation_32768: Analyzing
+bench_pir_server_creati time:   [56.890 ms 57.080 ms 57.295 ms]
+Found 1 outliers among 25 measurements (4.00%)
+  1 (4.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 22.43s
+
+peak_rss_kb=883800 wall_s=22.47 exit=0
+=== bench_pir_server_creation_32768_1KB
+
+running 1 test
+test bench_pir_server_creation_32768_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_32768_1KB
+Benchmarking bench_pir_server_creation_32768_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_32768_1KB: Collecting 25 samples in estimated 75.634 s (325 iterations)
+Benchmarking bench_pir_server_creation_32768_1KB: Analyzing
+bench_pir_server_creati time:   [218.92 ms 219.11 ms 219.38 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  2 (8.00%) high mild
+  1 (4.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 75.33s
+
+peak_rss_kb=907504 wall_s=75.37 exit=0
+=== bench_pir_server_creation_8192
+
+running 1 test
+test bench_pir_server_creation_8192 ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_8192
+Benchmarking bench_pir_server_creation_8192: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_8192: Collecting 25 samples in estimated 4.7183 s (325 iterations)
+Benchmarking bench_pir_server_creation_8192: Analyzing
+bench_pir_server_creati time:   [14.321 ms 14.384 ms 14.462 ms]
+Found 2 outliers among 25 measurements (8.00%)
+  2 (8.00%) high severe
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 8.48s
+
+peak_rss_kb=371788 wall_s=8.50 exit=0
+=== bench_pir_server_creation_8192_1KB
+
+running 1 test
+test bench_pir_server_creation_8192_1KB ... Gnuplot not found, disabling plotting
+Benchmarking bench_pir_server_creation_8192_1KB
+Benchmarking bench_pir_server_creation_8192_1KB: Warming up for 3.0000 s
+Benchmarking bench_pir_server_creation_8192_1KB: Collecting 25 samples in estimated 18.371 s (325 iterations)
+Benchmarking bench_pir_server_creation_8192_1KB: Analyzing
+bench_pir_server_creati time:   [54.539 ms 54.715 ms 54.989 ms]
+Found 3 outliers among 25 measurements (12.00%)
+  3 (12.00%) high mild
+
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 21.47s
+
+peak_rss_kb=286452 wall_s=21.49 exit=0
+# done 2026-10-20T18:50:30+00:00
