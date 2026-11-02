@@ -1,0 +1,106 @@
+=== num_entries=2048 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.4 encode=8.4 yserver=14685.2 offline=19639.4 pack_params=7094.7 total=41428.8 ms
+  client: params=0.4 keygen=0.1 pack_params=7149.7 yclient=1.7 total=7151.8 ms
+  shape-dependent=14245.2 ms  data-dependent=34333.0 ms
+Appended to results/inspire_setup_breakdown.csv
+   [2048 x 288] 	Percent of CPU this job got: 99%
+   [2048 x 288] 	Maximum resident set size (kbytes): 1426376
+=== num_entries=2048 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.4 encode=17.5 yserver=14725.4 offline=19832.9 pack_params=7093.2 total=41670.1 ms
+  client: params=0.3 keygen=0.1 pack_params=7174.9 yclient=1.9 total=7177.1 ms
+  shape-dependent=14268.8 ms  data-dependent=34575.8 ms
+Appended to results/inspire_setup_breakdown.csv
+   [2048 x 1024] 	Percent of CPU this job got: 99%
+   [2048 x 1024] 	Maximum resident set size (kbytes): 1427792
+=== num_entries=8192 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.4 encode=19.9 yserver=14659.2 offline=19846.9 pack_params=7111.1 total=41638.1 ms
+  client: params=0.3 keygen=0.1 pack_params=7166.8 yclient=1.7 total=7168.9 ms
+  shape-dependent=14278.6 ms  data-dependent=34526.0 ms
+Appended to results/inspire_setup_breakdown.csv
+   [8192 x 288] 	Percent of CPU this job got: 99%
+   [8192 x 288] 	Maximum resident set size (kbytes): 1428052
+=== num_entries=8192 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=2
+  server: params=0.4 encode=81.1 yserver=15177.7 offline=21526.6 pack_params=7117.9 total=43905.1 ms
+  client: params=0.3 keygen=0.1 pack_params=7183.7 yclient=1.7 total=7185.8 ms
+  shape-dependent=14302.3 ms  data-dependent=36785.5 ms
+Appended to results/inspire_setup_breakdown.csv
+   [8192 x 1024] 	Percent of CPU this job got: 137%
+   [8192 x 1024] 	Maximum resident set size (kbytes): 2112440
+=== num_entries=32768 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=4
+  server: params=0.4 encode=136.3 yserver=15385.2 offline=35495.6 pack_params=7161.8 total=58181.5 ms
+  client: params=0.3 keygen=0.1 pack_params=7112.3 yclient=1.7 total=7114.5 ms
+  shape-dependent=14274.9 ms  data-dependent=51017.1 ms
+Appended to results/inspire_setup_breakdown.csv
+   [32768 x 288] 	Percent of CPU this job got: 242%
+   [32768 x 288] 	Maximum resident set size (kbytes): 3133604
+=== num_entries=32768 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=8
+  server: params=0.5 encode=491.2 yserver=17398.0 offline=70924.9 pack_params=7115.7 total=95933.9 ms
+  client: params=0.3 keygen=0.1 pack_params=7116.9 yclient=1.7 total=7119.0 ms
+  shape-dependent=14233.4 ms  data-dependent=88814.1 ms
+Appended to results/inspire_setup_breakdown.csv
+   [32768 x 1024] 	Percent of CPU this job got: 281%
+   [32768 x 1024] 	Maximum resident set size (kbytes): 4991456
+=== num_entries=131072 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=16
+  server: params=0.4 encode=587.6 yserver=19922.9 offline=140884.6 pack_params=7124.5 total=168528.7 ms
+  client: params=0.3 keygen=0.1 pack_params=7109.4 yclient=1.7 total=7111.6 ms
+  shape-dependent=14234.7 ms  data-dependent=161395.1 ms
+Appended to results/inspire_setup_breakdown.csv
+   [131072 x 288] 	Percent of CPU this job got: 312%
+   [131072 x 288] 	Maximum resident set size (kbytes): 8272524
+=== num_entries=131072 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+=== num_entries=131072 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+=== num_entries=131072 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4

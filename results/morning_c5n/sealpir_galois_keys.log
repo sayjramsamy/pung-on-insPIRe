@@ -1,0 +1,9 @@
+num_entries=2048 entry_size=288 galois_keys=3311969 bytes (3234.3 KiB)
+num_entries=2048 entry_size=1024 galois_keys=3311658 bytes (3234.0 KiB)
+num_entries=8192 entry_size=288 galois_keys=3311704 bytes (3234.1 KiB)
+num_entries=8192 entry_size=1024 galois_keys=3311311 bytes (3233.7 KiB)
+num_entries=32768 entry_size=288 galois_keys=3311427 bytes (3233.8 KiB)
+num_entries=32768 entry_size=1024 galois_keys=3311303 bytes (3233.7 KiB)
+num_entries=131072 entry_size=288 galois_keys=3311414 bytes (3233.8 KiB)
+num_entries=131072 entry_size=1024 galois_keys=3311978 bytes (3234.4 KiB)
+Wrote results/sealpir_galois_keys.csv

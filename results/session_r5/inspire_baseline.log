@@ -1,0 +1,145 @@
+=== num_entries=2048 entry_size=288 (db=0.56 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 69247.278 ms
+  query 1/10: idx=2015 latency=412.968 ms
+  query 2/10: idx=1733 latency=408.721 ms
+  query 3/10: idx=1370 latency=419.871 ms
+  query 4/10: idx=1115 latency=412.180 ms
+  query 5/10: idx=1970 latency=423.759 ms
+  query 6/10: idx=1739 latency=424.016 ms
+  query 7/10: idx=621 latency=411.021 ms
+  query 8/10: idx=986 latency=423.427 ms
+  query 9/10: idx=212 latency=410.492 ms
+  query 10/10: idx=1981 latency=423.204 ms
+  mean_query=416.966 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=2048 entry_size=1024 (db=2.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 68066.281 ms
+  query 1/10: idx=1865 latency=408.030 ms
+  query 2/10: idx=1810 latency=398.883 ms
+  query 3/10: idx=461 latency=406.885 ms
+  query 4/10: idx=708 latency=406.656 ms
+  query 5/10: idx=1849 latency=397.802 ms
+  query 6/10: idx=1541 latency=407.033 ms
+  query 7/10: idx=715 latency=397.353 ms
+  query 8/10: idx=1025 latency=406.985 ms
+  query 9/10: idx=1025 latency=406.534 ms
+  query 10/10: idx=1588 latency=406.934 ms
+  mean_query=404.310 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=8192 entry_size=288 (db=2.25 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 68102.007 ms
+  query 1/10: idx=3473 latency=402.761 ms
+  query 2/10: idx=8110 latency=402.654 ms
+  query 3/10: idx=1752 latency=401.976 ms
+  query 4/10: idx=7564 latency=401.294 ms
+  query 5/10: idx=5124 latency=401.774 ms
+  query 6/10: idx=279 latency=393.156 ms
+  query 7/10: idx=4873 latency=401.457 ms
+  query 8/10: idx=762 latency=402.052 ms
+  query 9/10: idx=1619 latency=401.615 ms
+  query 10/10: idx=2125 latency=393.940 ms
+  mean_query=400.268 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=8192 entry_size=1024 (db=8.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 69282.907 ms
+  query 1/10: idx=367 latency=441.704 ms
+  query 2/10: idx=1755 latency=429.776 ms
+  query 3/10: idx=6533 latency=440.684 ms
+  query 4/10: idx=3018 latency=440.445 ms
+  query 5/10: idx=3626 latency=439.499 ms
+  query 6/10: idx=3176 latency=430.816 ms
+  query 7/10: idx=5825 latency=440.645 ms
+  query 8/10: idx=5534 latency=440.653 ms
+  query 9/10: idx=8011 latency=429.533 ms
+  query 10/10: idx=4180 latency=429.483 ms
+  mean_query=436.324 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=32768 entry_size=288 (db=9.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 82077.246 ms
+  query 1/10: idx=8265 latency=481.625 ms
+  query 2/10: idx=22714 latency=501.083 ms
+  query 3/10: idx=6929 latency=493.204 ms
+  query 4/10: idx=27745 latency=489.933 ms
+  query 5/10: idx=963 latency=476.683 ms
+  query 6/10: idx=21730 latency=456.107 ms
+  query 7/10: idx=27928 latency=483.514 ms
+  query 8/10: idx=1951 latency=484.216 ms
+  query 9/10: idx=24452 latency=472.996 ms
+  query 10/10: idx=3182 latency=473.128 ms
+  mean_query=481.249 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=32768 entry_size=1024 (db=32.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 115769.474 ms
+  query 1/10: idx=18077 latency=563.495 ms
+  query 2/10: idx=10617 latency=546.798 ms
+  query 3/10: idx=27656 latency=570.175 ms
+  query 4/10: idx=15076 latency=573.136 ms
+  query 5/10: idx=23234 latency=570.790 ms
+  query 6/10: idx=23319 latency=572.373 ms
+  query 7/10: idx=28170 latency=571.010 ms
+  query 8/10: idx=27340 latency=568.657 ms
+  query 9/10: idx=14935 latency=562.858 ms
+  query 10/10: idx=27374 latency=572.571 ms
+  mean_query=567.186 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=131072 entry_size=288 (db=36.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 182075.711 ms
+  query 1/10: idx=47944 latency=529.289 ms
+  query 2/10: idx=52928 latency=528.178 ms
+  query 3/10: idx=76652 latency=527.283 ms
+  query 4/10: idx=106045 latency=525.730 ms
+  query 5/10: idx=101790 latency=524.249 ms
+  query 6/10: idx=120012 latency=525.840 ms
+  query 7/10: idx=124182 latency=527.628 ms
+  query 8/10: idx=101219 latency=528.205 ms
+  query 9/10: idx=84418 latency=531.390 ms
+  query 10/10: idx=36169 latency=530.436 ms
+  mean_query=527.823 ms query_size=311296 bytes answer_size=12288 bytes
+=== num_entries=131072 entry_size=1024 (db=128.00 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  setup: 327023.442 ms
+  query 1/10: idx=118030 latency=850.173 ms
+  query 2/10: idx=121754 latency=858.956 ms
+  query 3/10: idx=19443 latency=875.118 ms
+  query 4/10: idx=130633 latency=881.228 ms
+  query 5/10: idx=22117 latency=873.434 ms
+  query 6/10: idx=27634 latency=879.296 ms
+  query 7/10: idx=74750 latency=880.090 ms
+  query 8/10: idx=42841 latency=867.742 ms
+  query 9/10: idx=31990 latency=863.349 ms
+  query 10/10: idx=121166 latency=873.330 ms
+  mean_query=870.272 ms query_size=311296 bytes answer_size=12288 bytes
+Wrote results/inspire_baseline.csv

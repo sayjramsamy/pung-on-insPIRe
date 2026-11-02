@@ -1,0 +1,88 @@
+=== num_entries=2048 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=2.0 encode=9.1 yserver=15988.9 offline=18561.2 pack_params=7815.8 total=42377.6 ms
+  client: params=0.4 keygen=0.1 pack_params=7870.4 yclient=1.9 total=7872.7 ms
+  shape-dependent=15688.5 ms  data-dependent=34559.2 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=2048 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.5 encode=19.1 yserver=15974.0 offline=18506.6 pack_params=7799.5 total=42300.4 ms
+  client: params=0.4 keygen=0.1 pack_params=7870.7 yclient=1.9 total=7873.1 ms
+  shape-dependent=15671.1 ms  data-dependent=34499.7 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=8192 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.5 encode=23.2 yserver=16037.9 offline=18911.8 pack_params=7815.9 total=42789.8 ms
+  client: params=0.4 keygen=0.1 pack_params=7889.1 yclient=1.9 total=7891.5 ms
+  shape-dependent=15705.9 ms  data-dependent=34972.8 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=8192 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=2
+  server: params=0.5 encode=94.0 yserver=16629.2 offline=20399.5 pack_params=7838.8 total=44963.4 ms
+  client: params=0.3 keygen=0.1 pack_params=7907.2 yclient=1.9 total=7909.6 ms
+  shape-dependent=15746.9 ms  data-dependent=37122.8 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=32768 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=4
+  server: params=0.5 encode=138.8 yserver=16757.1 offline=29805.3 pack_params=7806.6 total=54510.1 ms
+  client: params=0.4 keygen=0.1 pack_params=7812.4 yclient=1.9 total=7814.8 ms
+  shape-dependent=15619.9 ms  data-dependent=46701.1 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=32768 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=8
+  server: params=0.5 encode=468.8 yserver=18711.0 offline=62255.1 pack_params=7825.7 total=89265.0 ms
+  client: params=0.4 keygen=0.1 pack_params=7826.2 yclient=1.9 total=7828.6 ms
+  shape-dependent=15652.8 ms  data-dependent=81434.8 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=131072 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=16
+  server: params=0.5 encode=610.2 yserver=21628.9 offline=121810.7 pack_params=7833.9 total=151893.3 ms
+  client: params=0.4 keygen=0.1 pack_params=7826.2 yclient=1.9 total=7828.7 ms
+  shape-dependent=15661.0 ms  data-dependent=144049.8 ms
+Appended to results/inspire_setup_breakdown.csv
+=== num_entries=131072 entry_size=1024 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=32
+  server: params=0.5 encode=2008.2 yserver=28175.0 offline=262813.2 pack_params=7829.9 total=300840.5 ms
+  client: params=0.4 keygen=0.1 pack_params=7838.1 yclient=1.9 total=7840.5 ms
+  shape-dependent=15668.9 ms  data-dependent=292996.4 ms
+Appended to results/inspire_setup_breakdown.csv
