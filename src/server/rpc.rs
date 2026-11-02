@@ -522,6 +522,20 @@ impl pung_rpc::Server for PungRpc {
                 return gj::Promise::err(Error::failed("invalid level requested".to_string()));
             }
 
+            #[cfg(not(feature = "inspire"))]
+            {
+                // The shim keeps a single Galois-key slot per SealPirServer; correct here
+                // because this experiment has exactly one client, but a multi-client server
+                // would need per-client key storage.
+                if !galois_keys.is_empty() {
+                    let pir_handler = collection.pir_handler(level_idx);
+                    let key_start = Instant::now();
+                    pir_handler.set_galois_keys(galois_keys);
+                    let key_elapsed = key_start.elapsed();
+                    println!("keys_time level={} usec={}", level_idx, key_elapsed.as_micros());
+                }
+            }
+
             let start = Instant::now();
             {
                 let pir_handler = collection.pir_handler(level_idx);
@@ -535,13 +549,6 @@ impl pung_rpc::Server for PungRpc {
 
                 #[cfg(not(feature = "inspire"))]
                 {
-                    // The shim keeps a single Galois-key slot per SealPirServer; correct here
-                    // because this experiment has exactly one client, but a multi-client server
-                    // would need per-client key storage.
-                    if !galois_keys.is_empty() {
-                        pir_handler.set_galois_keys(galois_keys);
-                    }
-
                     let answer = pir_handler.gen_answer_from_bytes(query);
                     res.get().set_answer(&answer.to_bytes());
                     res.get().set_anum(1);

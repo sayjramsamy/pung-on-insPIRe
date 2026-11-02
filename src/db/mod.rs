@@ -5,6 +5,7 @@ use std::cell::RefCell;
 use std::mem;
 use std::rc::Rc;
 use std::slice;
+use std::time::Instant;
 use util;
 
 /// Size of a label in Pung (256 bits due to HMAC-SHA256 PRF).
@@ -624,7 +625,15 @@ impl<'a> Collection<'a> {
                 )
             };
 
-            pir_dbs.push(SealPirServer::new(db_bytes, num_entries, entry_size));
+            let start = Instant::now();
+            let pir_db = SealPirServer::new(db_bytes, num_entries, entry_size);
+            let elapsed = start.elapsed();
+            println!(
+                "pir_setup_level level={} tuples={} usec={}",
+                i, num_entries, elapsed.as_micros()
+            );
+
+            pir_dbs.push(pir_db);
         }
 
         self.pir_dbs = pir_dbs;
@@ -637,7 +646,17 @@ impl<'a> Collection<'a> {
 
         for i in 0..levels {
             let level: &[PungTuple] = self.get_level(i);
-            pir_dbs.push(InspireServer::new::<PungTuple>(level, 1, self.depth));
+            let num_entries = level.len() as u64;
+
+            let start = Instant::now();
+            let pir_db = InspireServer::new::<PungTuple>(level, 1, self.depth);
+            let elapsed = start.elapsed();
+            println!(
+                "pir_setup_level level={} tuples={} usec={}",
+                i, num_entries, elapsed.as_micros()
+            );
+
+            pir_dbs.push(pir_db);
         }
 
         self.pir_dbs = pir_dbs;
