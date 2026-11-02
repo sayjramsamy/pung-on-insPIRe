@@ -12,7 +12,7 @@
 // | cpp_client_update_db_params   | InspireClient::update_params                             |
 // | cpp_client_generate_query     | InspireClient::gen_query                                 |
 // | cpp_client_process_reply      | InspireClient::decode_answer                             |
-// | cpp_client_free               | Drop for ClientDbState (per-database client state)       |
+// | cpp_client_free               | Drop for ClientDbState and QueryState (see below)        |
 // | cpp_buffer_free               | none: InspireQuery/InspireAnswer/InspireResult own Vecs  |
 //
 // Ownership: insPIRe's YServer, YClient and OfflinePrecomputedValues borrow `&'a Params` (and
@@ -26,6 +26,7 @@
 // this wrapper packs one byte per element (always < 256), trading up to 2x rate for simplicity.
 
 use std::cell::RefCell;
+use std::convert::TryInto;
 use std::mem::{self, ManuallyDrop};
 use std::slice;
 use std::time::{Duration, Instant};
@@ -237,31 +238,62 @@ impl Drop for InspireServer {
 
 /// Client side. One client is reused across every database it queries; `update_params` switches it
 /// to the next database's shape before each query.
+///
+/// insPIRe's query encrypts the requested row under public randomness derived from a *fixed* seed
+/// (`SEED_0`, see `gen_query`), i.e. the CRS is reused across every query to a given database shape.
+/// Security under a reused CRS requires a fresh secret key per query: two queries encrypted under
+/// the same key and the same public `a` would let a server compute `a * (sk_1 - sk_2)` noise-free
+/// and start recovering information about the secret (and, after enough queries, about the
+/// retrieved indices). So only the key-independent, shape-dependent state (params, packing tables,
+/// sizes) is cached in `ClientDbState`; the secret key and everything derived from it are
+/// regenerated fresh in every `gen_query` and held in `query` until `decode_answer` consumes them.
 pub struct InspireClient {
     depth: u64,
-    /// State for the current database. `RefCell` because Pung calls every method through `&self`.
+    /// Shape state for the current database. `RefCell` because Pung calls every method through
+    /// `&self`.
     db: RefCell<Option<ClientDbState>>,
+    /// Key material for the most recent `gen_query`, consumed by `decode_answer`. `RefCell` for the
+    /// same reason as `db`.
+    query: RefCell<Option<QueryState>>,
 }
 
-/// Client state for one database shape: parameters, secret key, and the index being retrieved.
+/// Key-independent client state for one database shape: parameters, packing tables, and sizes.
+/// Cached across queries because `PackParams::new` builds automorphism tables that are expensive
+/// but depend only on the shape, not on any secret key.
 struct ClientDbState {
-    /// Leaked so `y_client` can borrow it for `'static`; reclaimed in `Drop`.
+    /// Leaked so `packing_params` can borrow it for `'static`; reclaimed in `Drop`.
     params: &'static Params,
-    /// Leaked so `y_client` can borrow it mutably for `'static`; reclaimed in `Drop`.
-    client: *mut Client<'static>,
-    /// Wraps the leaked spiral-rs `Client` holding the secret key.
-    y_client: ManuallyDrop<YClient<'static>>,
     /// Automorphism tables for the packing step; expensive to build, so computed once per shape.
     packing_params: PackParams<'static>,
     interpolate_degree: usize,
     num_entries: u64,
     entry_bytes: u64,
-    /// Index passed to the last `gen_query`, needed by `decode_answer` to extract the record.
-    last_index: Option<u64>,
 }
 
-/// Builds a fresh client state for a database of `num_entries` entries of `entry_bytes` bytes each,
-/// generating a new secret key (shared by `InspireClient::new` and `update_params`).
+/// Per-query key material: a freshly sampled secret key and everything that borrows it. Built in
+/// `gen_query`, consumed in `decode_answer`, then dropped (directly, or by the next `gen_query`
+/// replacing it) before a new one is ever created.
+struct QueryState {
+    /// Leaked so `y_client` can borrow it mutably for `'static`; reclaimed in `Drop`.
+    client: *mut Client<'static>,
+    /// Wraps the leaked spiral-rs `Client` holding this query's secret key.
+    y_client: ManuallyDrop<YClient<'static>>,
+    /// Index passed to `gen_query`, needed by `decode_answer` to extract the record.
+    last_index: u64,
+}
+
+impl Drop for QueryState {
+    /// Drops `y_client`, then reclaims the leaked `Client`.
+    fn drop(&mut self) {
+        unsafe {
+            ManuallyDrop::drop(&mut self.y_client);
+            drop(Box::from_raw(self.client));
+        }
+    }
+}
+
+/// Builds a fresh client state for a database of `num_entries` entries of `entry_bytes` bytes each
+/// (shared by `InspireClient::new` and `update_params`).
 fn new_db_state(num_entries: u64, entry_bytes: u64) -> ClientDbState {
     new_db_state_with_breakdown(num_entries, entry_bytes).0
 }
@@ -277,45 +309,34 @@ fn new_db_state_with_breakdown(num_entries: u64, entry_bytes: u64) -> (ClientDbS
     let t_params = t.elapsed();
 
     let t = Instant::now();
-    let client_ptr: *mut Client<'static> = Box::into_raw(Box::new(Client::init(params)));
-    let client_ref: &'static mut Client<'static> = unsafe { &mut *client_ptr };
-    client_ref.generate_secret_keys();
-    let t_keygen = t.elapsed();
-
-    let t = Instant::now();
     let packing_params = PackParams::new(params, params.poly_len);
     let t_pack = t.elapsed();
 
-    let t = Instant::now();
-    let y_client = YClient::new(client_ref, params);
-    let t_yclient = t.elapsed();
-
     let breakdown = ClientSetupBreakdown {
         params: t_params,
-        keygen: t_keygen,
+        // Secret-key generation and `YClient` construction now happen fresh in every `gen_query`
+        // (see `InspireClient::gen_query`), not once per shape, so they are no longer part of
+        // per-database setup; keeping the fields (rather than removing them) avoids reshaping this
+        // breakdown's consumers for a change that is orthogonal to their timings.
+        keygen: Duration::ZERO,
         pack_params: t_pack,
-        yclient: t_yclient,
+        yclient: Duration::ZERO,
     };
 
     let state = ClientDbState {
         params,
-        client: client_ptr,
-        y_client: ManuallyDrop::new(y_client),
         packing_params,
         interpolate_degree,
         num_entries,
         entry_bytes,
-        last_index: None,
     };
     (state, breakdown)
 }
 
 impl Drop for ClientDbState {
-    /// Drops `y_client`, then reclaims the leaked `Client` and `params` (cpp_client_free).
+    /// Reclaims the leaked `params` (cpp_client_free).
     fn drop(&mut self) {
         unsafe {
-            ManuallyDrop::drop(&mut self.y_client);
-            drop(Box::from_raw(self.client));
             drop(Box::from_raw(self.params as *const Params as *mut Params));
         }
     }
@@ -327,6 +348,7 @@ impl InspireClient {
         InspireClient {
             depth,
             db: RefCell::new(Some(new_db_state(num, size))),
+            query: RefCell::new(None),
         }
     }
 
@@ -337,47 +359,64 @@ impl InspireClient {
             InspireClient {
                 depth,
                 db: RefCell::new(Some(state)),
+                query: RefCell::new(None),
             },
             breakdown,
         )
     }
 
     /// Switches the client to a database of `num` entries of `size` bytes
-    /// (cpp_client_update_db_params).
+    /// (cpp_client_update_db_params). Also drops any in-flight query key, since it was built
+    /// against the previous shape's `params`.
     pub fn update_params(&self, size: u64, num: u64, _alpha: u64) {
         *self.db.borrow_mut() = Some(new_db_state(num, size));
+        *self.query.borrow_mut() = None;
     }
 
-    /// Builds the serialized query for entry `index` (cpp_client_generate_query).
+    /// Builds the serialized query for entry `index` (cpp_client_generate_query). Samples a fresh
+    /// secret key for this query (see the `InspireClient` doc comment for why), and keeps it around
+    /// until `decode_answer`; the previous query's key, if any, is dropped here.
     pub fn gen_query(&self, index: u64) -> InspireQuery {
-        let mut db = self.db.borrow_mut();
-        let state = db.as_mut().expect("update_params must be called before gen_query");
-        state.last_index = Some(index);
+        let db = self.db.borrow();
+        let state = db.as_ref().expect("update_params must be called before gen_query");
 
         let params = state.params;
         let loc = locate(params, state.interpolate_degree, state.entry_bytes, index);
 
+        let client_ptr: *mut Client<'static> = Box::into_raw(Box::new(Client::init(params)));
+        let client_ref: &'static mut Client<'static> = unsafe { &mut *client_ptr };
+        client_ref.generate_secret_keys();
+        let y_client = YClient::new(client_ref, params);
+
         let mut packing_keys = generate_packing_keys(
             params,
             &state.packing_params,
-            state.y_client.client().get_sk_reg(),
+            y_client.client().get_sk_reg(),
             PackingType::InspiRING,
             params.poly_len,
         );
-        let ct_gsw_body = generate_rgsw_query(&state.y_client, params, loc.sub_col, state.interpolate_degree);
+        let ct_gsw_body = generate_rgsw_query(&y_client, params, loc.sub_col, state.interpolate_degree);
 
         // `generate_query_over_prime` returns one ciphertext body element per database row
         // (length `db_rows`); there is no separate "mask" block to slice off here.
         let query_row =
-            state
-                .y_client
-                .generate_query_over_prime(SEED_0, params.db_dim_1, PackingType::InspiRING, loc.row);
+            y_client.generate_query_over_prime(SEED_0, params.db_dim_1, PackingType::InspiRING, loc.row);
         let packed_query_row = pack_query(params, &query_row);
 
-        InspireQuery {
+        let query = InspireQuery {
             query: serialize_everything(params, &mut packing_keys, packed_query_row, ct_gsw_body),
             num: 1,
-        }
+        };
+
+        // Replacing the `Option` drops the previous `QueryState` (if any) here, before this one is
+        // ever observed.
+        *self.query.borrow_mut() = Some(QueryState {
+            client: client_ptr,
+            y_client: ManuallyDrop::new(y_client),
+            last_index: index,
+        });
+
+        query
     }
 
     /// Decrypts `answer` and extracts the entry requested by the last `gen_query`
@@ -385,13 +424,15 @@ impl InspireClient {
     pub fn decode_answer(&self, answer: &[u8], a_num: u64) -> InspireResult {
         let db = self.db.borrow();
         let state = db.as_ref().expect("update_params must be called before decode_answer");
-        let index = state.last_index.expect("gen_query must be called before decode_answer");
+        let query = self.query.borrow();
+        let qstate = query.as_ref().expect("gen_query must be called before decode_answer");
+        let index = qstate.last_index;
 
         let chunk_size = answer.len() / a_num as usize;
         let response: Vec<Vec<u8>> = answer.chunks_exact(chunk_size).map(|c| c.to_vec()).collect();
 
         let params = state.params;
-        let decoded = decode_rgsw_response(&state.y_client, params, &response);
+        let decoded = decode_rgsw_response(&qstate.y_client, params, &response);
 
         let loc = locate(params, state.interpolate_degree, state.entry_bytes, index);
         let start = loc.group_idx * params.poly_len + loc.within_offset;
@@ -401,6 +442,30 @@ impl InspireClient {
             result: decoded[start..start + entry_bytes].iter().map(|&v| v as u8).collect(),
         }
     }
+}
+
+/// Test-only: re-derives the params for a (`num_entries`, `entry_bytes`) shape the same way
+/// `InspireClient` does, and slices out the packed row-query segment (and its CRT modulus) from a
+/// serialized query. Lets `tests/inspire_pir.rs` check that `gen_query` samples a fresh key every
+/// time, without exposing `ClientDbState`/`QueryState` themselves.
+#[doc(hidden)]
+pub fn debug_packed_row_query(query: &InspireQuery, num_entries: u64, entry_bytes: u64) -> (Vec<u64>, u64) {
+    let dim0 = choose_dim0(num_entries, entry_bytes);
+    let item_bits = (entry_bytes * 16) as usize;
+    let (params, _, _) = params_rgswpir_given_input_size_and_dim0(num_entries as usize, item_bits, dim0);
+
+    let db_rows = 1usize << (params.db_dim_1 + params.poly_len_log2);
+    let header_words = params.t_exp_left * params.poly_len * 2;
+
+    let all_u64: Vec<u64> = query
+        .query
+        .chunks_exact(8)
+        .map(|c| u64::from_ne_bytes(c.try_into().unwrap()))
+        .collect();
+
+    let row = all_u64[header_words..header_words + db_rows].to_vec();
+    let modulus = if params.crt_count == 2 { params.moduli[0] } else { params.modulus };
+    (row, modulus)
 }
 
 /// Serialized query: packing keys, row query and RGSW ciphertext, as `num` equal-size elements.

@@ -1,0 +1,9 @@
+[2026-11-02T16:14:23Z] Part A (insPIRe only): main sweep (explicit retrieval)
+[2026-11-02T16:14:23Z] backend=inspire scheme=e extra=2048 rounds=4
+[2026-11-02T16:18:19Z] backend=inspire scheme=e extra=8192 rounds=4
+[2026-11-02T16:22:17Z] backend=inspire scheme=e extra=32768 rounds=4
+[2026-11-02T16:27:10Z] backend=inspire scheme=e extra=131072 rounds=4
+[2026-11-02T16:39:25Z] Part B (insPIRe only): tree retrieval demonstration (small)
+[2026-11-02T16:39:25Z] backend=inspire scheme=t extra=2048 rounds=2
+[2026-11-02T17:03:33Z] Recording machine info
+[2026-11-02T17:03:33Z] All insPIRe parts complete.

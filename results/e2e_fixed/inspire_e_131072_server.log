@@ -1,0 +1,36 @@
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+pir_setup_level level=0 tuples=131073 usec=175659939
+pir_setup round=0 tuples=131073 usec=175659963
+answer_time level=0 usec=574361
+Advancing to round 1
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+pir_setup_level level=0 tuples=131073 usec=188907642
+pir_setup round=1 tuples=131073 usec=188907672
+answer_time level=0 usec=595378
+Advancing to round 2
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+pir_setup_level level=0 tuples=131073 usec=181056209
+pir_setup round=2 tuples=131073 usec=181056235
+answer_time level=0 usec=569081
+Advancing to round 3
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+pir_setup_level level=0 tuples=131073 usec=175523807
+pir_setup round=3 tuples=131073 usec=175523831
+answer_time level=0 usec=568591
+Advancing to round 4
