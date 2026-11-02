@@ -1,0 +1,8 @@
+### lscpu model name
+Model name:                              Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+### free -h
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       1.1Gi        27Gi       2.7Mi       3.1Gi        29Gi
+Swap:             0B          0B          0B
+### git commit
+4df9ba902efc5e713bd2cfc0389d0dc2bbc00558

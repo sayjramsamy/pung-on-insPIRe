@@ -1,0 +1,18 @@
+[2026-11-02T13:44:50Z] Part A: main sweep (explicit retrieval)
+[2026-11-02T13:44:50Z] backend=sealpir scheme=e extra=2048 rounds=4
+[2026-11-02T13:44:53Z] backend=sealpir scheme=e extra=8192 rounds=4
+[2026-11-02T13:44:56Z] backend=sealpir scheme=e extra=32768 rounds=4
+[2026-11-02T13:45:01Z] backend=sealpir scheme=e extra=131072 rounds=4
+[2026-11-02T13:45:12Z] backend=inspire scheme=e extra=2048 rounds=4
+[2026-11-02T13:48:16Z] backend=inspire scheme=e extra=8192 rounds=4
+[2026-11-02T13:51:20Z] backend=inspire scheme=e extra=32768 rounds=4
+[2026-11-02T13:55:28Z] backend=inspire scheme=e extra=131072 rounds=4
+[2026-11-02T14:06:43Z] Part B: tree retrieval demonstration (small)
+[2026-11-02T14:06:43Z] backend=sealpir scheme=t extra=2048 rounds=2
+[2026-11-02T14:06:49Z] backend=inspire scheme=t extra=2048 rounds=2
+[2026-11-02T14:25:42Z] Part C: SealPIR peak memory
+[2026-11-02T14:26:36Z] Recording machine info
+[2026-11-02T14:26:36Z] Parsing results
+wrote results/e2e/summary.csv (36 rows)
+wrote results/e2e/tree_levels.csv (48 rows)
+[2026-11-02T14:26:36Z] All parts complete.

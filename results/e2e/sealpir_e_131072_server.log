@@ -1,0 +1,80 @@
+pir_setup_level level=0 tuples=131073 usec=20943
+pir_setup round=0 tuples=131073 usec=20975
+keys_time level=0 usec=39179
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 62
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 62 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 61
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 61 ctxts 
+Server: expansion done 
+answer_time level=0 usec=2213628
+Advancing to round 1
+pir_setup_level level=0 tuples=131073 usec=18040
+pir_setup round=1 tuples=131073 usec=18053
+keys_time level=0 usec=24075
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 62
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 62 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 61
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 61 ctxts 
+Server: expansion done 
+answer_time level=0 usec=2084711
+Advancing to round 2
+pir_setup_level level=0 tuples=131073 usec=17236
+pir_setup round=2 tuples=131073 usec=17258
+keys_time level=0 usec=24245
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 62
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 62 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 61
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 61 ctxts 
+Server: expansion done 
+answer_time level=0 usec=2024803
+Advancing to round 3
+pir_setup_level level=0 tuples=131073 usec=17265
+pir_setup round=3 tuples=131073 usec=17286
+keys_time level=0 usec=26753
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 62
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 62 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 61
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 61 ctxts 
+Server: expansion done 
+answer_time level=0 usec=2106298
+Advancing to round 4

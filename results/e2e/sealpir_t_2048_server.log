@@ -1,0 +1,436 @@
+pir_setup_level level=0 tuples=1 usec=20915
+pir_setup_level level=1 tuples=2 usec=18845
+pir_setup_level level=2 tuples=4 usec=18855
+pir_setup_level level=3 tuples=8 usec=18855
+pir_setup_level level=4 tuples=16 usec=18803
+pir_setup_level level=5 tuples=32 usec=18845
+pir_setup_level level=6 tuples=64 usec=18820
+pir_setup_level level=7 tuples=128 usec=18863
+pir_setup_level level=8 tuples=256 usec=18812
+pir_setup_level level=9 tuples=512 usec=18841
+pir_setup_level level=10 tuples=1024 usec=18850
+pir_setup_level level=11 tuples=2 usec=18858
+pir_setup round=0 tuples=2049 usec=228312
+keys_time level=0 usec=40529
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=0 usec=14806
+keys_time level=1 usec=33177
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=1 usec=13593
+keys_time level=2 usec=31417
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=2 usec=13731
+keys_time level=3 usec=28210
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=3 usec=13721
+keys_time level=4 usec=32219
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=4 usec=13743
+keys_time level=5 usec=31028
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=5 usec=13744
+keys_time level=6 usec=32822
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=6 usec=14211
+keys_time level=7 usec=29509
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=7 usec=16138
+keys_time level=8 usec=26661
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+answer_time level=8 usec=20422
+keys_time level=9 usec=28411
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 4
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 4 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 4
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 4 ctxts 
+Server: expansion done 
+answer_time level=9 usec=27550
+keys_time level=10 usec=28545
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 6
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 6 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 6
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 6 ctxts 
+Server: expansion done 
+answer_time level=10 usec=44274
+keys_time level=11 usec=28546
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=11 usec=13851
+Advancing to round 1
+pir_setup_level level=0 tuples=1 usec=17020
+pir_setup_level level=1 tuples=2 usec=16879
+pir_setup_level level=2 tuples=4 usec=16909
+pir_setup_level level=3 tuples=8 usec=16914
+pir_setup_level level=4 tuples=16 usec=16917
+pir_setup_level level=5 tuples=32 usec=16953
+pir_setup_level level=6 tuples=64 usec=16856
+pir_setup_level level=7 tuples=128 usec=17019
+pir_setup_level level=8 tuples=256 usec=16854
+pir_setup_level level=9 tuples=512 usec=16875
+pir_setup_level level=10 tuples=1024 usec=16885
+pir_setup_level level=11 tuples=2 usec=16912
+pir_setup round=1 tuples=2049 usec=203120
+keys_time level=0 usec=29642
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=0 usec=13723
+keys_time level=1 usec=29570
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=1 usec=13735
+keys_time level=2 usec=29702
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=2 usec=13747
+keys_time level=3 usec=28102
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=3 usec=13718
+keys_time level=4 usec=29902
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=4 usec=13757
+keys_time level=5 usec=30916
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=5 usec=13775
+keys_time level=6 usec=30158
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=6 usec=13896
+keys_time level=7 usec=28463
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=7 usec=16178
+keys_time level=8 usec=30128
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 3
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 3 ctxts 
+Server: expansion done 
+answer_time level=8 usec=20505
+keys_time level=9 usec=30121
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 4
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 4 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 4
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 4 ctxts 
+Server: expansion done 
+answer_time level=9 usec=27561
+keys_time level=10 usec=30359
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 6
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 6 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 6
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 6 ctxts 
+Server: expansion done 
+answer_time level=10 usec=44144
+keys_time level=11 usec=30250
+Elements per plaintext: 35
+Coeff per ptxt: 4025
+Bytes per plaintext: 10010
+Server: 1-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+Server: 1-th recursion level finished 
+
+Server: 2-th recursion level started 
+Server: n_i = 2
+Server: expanding 1 query ctxts
+-- expanding one query ctxt into 2 ctxts 
+Server: expansion done 
+answer_time level=11 usec=13734
+Advancing to round 2
