@@ -1,0 +1,11 @@
+=== num_entries=2048 entry_size=288 ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.5 encode=10.0 yserver=16044.1 offline=20289.2 pack_params=7829.5 total=44174.1 ms
+  client: params=0.4 keygen=0.1 pack_params=7892.3 yclient=1.9 total=7894.7 ms
+  shape-dependent=15722.7 ms  data-dependent=36343.3 ms
+Appended to results/inspire_setup_breakdown.csv

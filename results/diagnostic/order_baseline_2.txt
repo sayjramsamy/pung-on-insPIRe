@@ -1,0 +1,10 @@
+=== num_entries=2048 entry_size=288 (db=0.56 MiB) ===
+i=0 -> i=256 -> i=512 -> i=768 -> i=1024 -> i=1280 -> i=1536 -> i=1792 ->  -- Offline 1
+ -- Offline 2
+ -- Offline 3
+ -- Offline 4
+ -- Offline 5
+  dim0=2048 interpolate_degree=1
+  server: params=0.5 encode=9.2 yserver=24448.6 offline=20484.5 pack_params=12030.6 total=56974.2 ms
+  client: params=0.4 keygen=0.1 pack_params=12096.9 yclient=1.9 total=12099.3 ms
+  shape-dependent=24128.4 ms  data-dependent=44942.4 ms
