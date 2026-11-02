@@ -498,6 +498,8 @@ impl pung_rpc::Server for PungRpc {
         // TODO(sealpir) note in client::pir_retr), but insPIRe's gen_answer takes it.
         #[cfg_attr(not(feature = "inspire"), allow(unused_variables))]
         let q_num: u64 = req.get_qnum();
+        #[cfg_attr(feature = "inspire", allow(unused_variables))]
+        let galois_keys: &[u8] = pry!(req.get_galois_keys());
 
         // check to make sure level
         let mut db = self.dbase.borrow_mut();
@@ -533,6 +535,13 @@ impl pung_rpc::Server for PungRpc {
 
                 #[cfg(not(feature = "inspire"))]
                 {
+                    // The shim keeps a single Galois-key slot per SealPirServer; correct here
+                    // because this experiment has exactly one client, but a multi-client server
+                    // would need per-client key storage.
+                    if !galois_keys.is_empty() {
+                        pir_handler.set_galois_keys(galois_keys);
+                    }
+
                     let answer = pir_handler.gen_answer_from_bytes(query);
                     res.get().set_answer(&answer.to_bytes());
                     res.get().set_anum(1);

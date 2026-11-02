@@ -20,7 +20,6 @@ use pung_capnp::pung_rpc;
 
 use rand;
 use rand::Rng;
-#[cfg(feature = "inspire")]
 use std::cell::RefCell;
 use std::cmp::Ordering;
 use std::collections::HashMap;
@@ -84,12 +83,16 @@ pub struct PungClient<'a> {
 
     peers: HashMap<&'a str, PungPeer>,
 
-    // Not read: pir_retr constructs a fresh SealPirClient per retrieval
-    // instead (SealPIR's params are fixed at construction, unlike XPIR's
-    // update_params). See TODO(sealpir) note on pir_retr.
+    // One SealPirClient per database length, reused across retrievals of that length (same
+    // pattern as insPIRe's inspire_clients below). RefCell because pir_retr takes &self.
     #[cfg(not(feature = "inspire"))]
-    #[allow(dead_code)]
-    pir_handler: SealPirClient,
+    sealpir_clients: RefCell<HashMap<u64, SealPirClient>>,
+    // (round, level) pairs for which Galois keys have already been uploaded. The server rebuilds
+    // its SealPirServer (and thus needs fresh keys) once per round, even though a given
+    // SealPirClient's keys don't change, so keys are sent only the first time a (round, level)
+    // pair is seen.
+    #[cfg(not(feature = "inspire"))]
+    keys_sent: RefCell<HashSet<(u64, u32)>>,
 
     // One InspireClient per database length, reused across retrievals of that length:
     // constructing one costs ~7s of packing-table construction (see pir::inspire), so it must
@@ -217,7 +220,9 @@ impl<'a> PungClient<'a> {
             opt_scheme: opt_scheme,
             peers: HashMap::new(),
             #[cfg(not(feature = "inspire"))]
-            pir_handler: SealPirClient::new(1, 1),
+            sealpir_clients: RefCell::new(HashMap::new()),
+            #[cfg(not(feature = "inspire"))]
+            keys_sent: RefCell::new(HashSet::new()),
             #[cfg(feature = "inspire")]
             inspire_clients: RefCell::new(HashMap::new()),
             #[cfg(feature = "inspire")]
@@ -1701,19 +1706,25 @@ impl<'a> PungClient<'a> {
         scope: &gj::WaitScope,
         port: &mut gjio::EventPort,
     ) -> Result<db::PungTuple, Error> {
-        // SealPIR's encryption/PIR parameters are fixed at construction time
-        // (no update_params equivalent), and each BST level has a different
-        // size, so we build a fresh client per retrieval instead of reusing
-        // self.pir_handler.
-        //
-        // TODO(sealpir): galois-key exchange with the server has no RPC yet
-        // (shallow swap only - see task notes), so this path will fail at
-        // runtime against a real SealPIR server until that's wired up.
-        let client = SealPirClient::new(len, db::TUPLE_SIZE as u64);
+        // One SealPirClient per database length, kept across retrievals (see struct comment).
+        let mut clients = self.sealpir_clients.borrow_mut();
+        let client = clients
+            .entry(len)
+            .or_insert_with(|| SealPirClient::new(len, db::TUPLE_SIZE as u64));
 
         // Create PIR request
         let query = client.gen_query(idx);
         let query_bytes = query.to_bytes();
+
+        // The server rebuilds its SealPirServer every round (see send_dataflow::graph), so it
+        // needs fresh Galois keys each round even though the client's own keys don't change;
+        // send them only the first time this (round, level) pair is seen.
+        let galois_keys: Vec<u8> = if self.keys_sent.borrow_mut().insert((self.round, level)) {
+            client.get_galois_keys()
+        } else {
+            Vec::new()
+        };
+
         let mut request = self.conn.retr_request();
         request.get().set_id(self.id);
         request.get().set_round(self.round);
@@ -1722,8 +1733,12 @@ impl<'a> PungClient<'a> {
         request.get().set_level(level);
         request.get().set_query(&query_bytes);
         request.get().set_qnum(1);
+        request.get().set_galois_keys(&galois_keys);
 
         println!("Upload (pir) {} bytes", 32 + query_bytes.len());
+        if !galois_keys.is_empty() {
+            println!("Upload (keys) {} bytes", galois_keys.len());
+        }
 
         // Send request to the server and get response
         let response = request.send().promise.wait(scope, port)?;

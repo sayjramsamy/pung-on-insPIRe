@@ -12,8 +12,8 @@ interface PungRpc {
   send @2 (id :UInt64, round :UInt64, 
            tuples :List(Data)) -> (numMessages :List(UInt64), minLabels :List(Data));
 
-  retr @3 (id :UInt64, round :UInt64, bucket :UInt32, collection :UInt32, 
-           level :UInt32, query :Data, qnum :UInt64) -> (answer :Data, anum :UInt64);
+  retr @3 (id :UInt64, round :UInt64, bucket :UInt32, collection :UInt32,
+           level :UInt32, query :Data, qnum :UInt64, galoisKeys :Data) -> (answer :Data, anum :UInt64);
 
   getMapping @4 (round :UInt64) -> (labels :List(List(Data)));
 
