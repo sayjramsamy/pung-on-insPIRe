@@ -12,12 +12,20 @@
 //
 // Writes results/inspire_baseline.csv with columns:
 // num_entries, entry_size_bytes, setup_ms, mean_query_ms, query_size_bytes, answer_size_bytes
+//
+// Usage:
+//   inspire_baseline                 # full sweep, writes results/inspire_baseline.csv (unchanged)
+//   inspire_baseline <entries> <size> # one combination (size must be 288 or 1024); builds server
+//                                      # and client via *_with_breakdown and prints the same
+//                                      # per-phase timings as inspire_setup_breakdown, for diagnostic
+//                                      # comparison. Does not touch the CSV.
 
 extern crate pung;
 extern crate rand;
 
 use pung::pir::inspire::{InspireClient, InspireServer};
 use rand::Rng;
+use std::env;
 use std::fs::File;
 use std::io::Write;
 use std::time::Instant;
@@ -120,7 +128,69 @@ fn run_combo<const N: usize>(num_entries: u64, rows: &mut Vec<Row>) {
     });
 }
 
+// Builds server and client via the *_with_breakdown constructors (same code path as
+// inspire_setup_breakdown) and prints the same per-phase timings, for a diagnostic, apples-to-apples
+// comparison against that binary's output on the same (num_entries, N) combination.
+fn run_combo_breakdown<const N: usize>(num_entries: u64) {
+    println!(
+        "=== num_entries={} entry_size={} (db={:.2} MiB) ===",
+        num_entries,
+        N,
+        (num_entries * N as u64) as f64 / (1024.0 * 1024.0)
+    );
+
+    let mut rng = rand::thread_rng();
+    let mut collection: Vec<[u8; N]> = Vec::with_capacity(num_entries as usize);
+    for _ in 0..num_entries {
+        let mut entry = [0u8; N];
+        rng.fill_bytes(&mut entry);
+        collection.push(entry);
+    }
+
+    let t = Instant::now();
+    let (server, s) = InspireServer::new_with_breakdown(&collection);
+    let server_total = t.elapsed();
+
+    let t = Instant::now();
+    let (client, c) = InspireClient::new_with_breakdown(N as u64, num_entries, 1);
+    let client_total = t.elapsed();
+
+    let idx = rand::random::<u64>() % num_entries;
+    let q = client.gen_query(idx);
+    let a = server.gen_answer(&q.query, q.num);
+    let r = client.decode_answer(&a.answer, a.num);
+    assert_eq!(r.result.as_slice(), &collection[idx as usize][..], "decoded entry mismatch");
+
+    let shape_ms = ms(s.params) + ms(s.pack_params) + ms(c.params) + ms(c.pack_params);
+    let data_ms = ms(s.encode) + ms(s.yserver) + ms(s.offline);
+
+    println!("  dim0={} interpolate_degree={}", s.dim0, s.interpolate_degree);
+    println!(
+        "  server: params={:.1} encode={:.1} yserver={:.1} offline={:.1} pack_params={:.1} total={:.1} ms",
+        ms(s.params), ms(s.encode), ms(s.yserver), ms(s.offline), ms(s.pack_params), ms(server_total)
+    );
+    println!(
+        "  client: params={:.1} keygen={:.1} pack_params={:.1} yclient={:.1} total={:.1} ms",
+        ms(c.params), ms(c.keygen), ms(c.pack_params), ms(c.yclient), ms(client_total)
+    );
+    println!("  shape-dependent={:.1} ms  data-dependent={:.1} ms", shape_ms, data_ms);
+}
+
+fn run_single(num_entries: u64, size: u64) {
+    match size {
+        288 => run_combo_breakdown::<288>(num_entries),
+        1024 => run_combo_breakdown::<1024>(num_entries),
+        _ => panic!("entry size must be 288 or 1024"),
+    }
+}
+
 fn main() {
+    let args: Vec<String> = env::args().collect();
+    if args.len() == 3 {
+        run_single(args[1].parse().unwrap(), args[2].parse().unwrap());
+        return;
+    }
+
     let mut rows: Vec<Row> = Vec::new();
 
     // Same (num_entries, entry_size_bytes) pairs and order as
