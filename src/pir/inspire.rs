@@ -28,6 +28,7 @@
 use std::cell::RefCell;
 use std::mem::{self, ManuallyDrop};
 use std::slice;
+use std::time::{Duration, Instant};
 
 use inspire::client::{pack_query, YClient};
 use inspire::commons::{deserialize_everything, params_rgswpir_given_input_size_and_dim0, serialize_everything};
@@ -139,22 +140,57 @@ pub struct InspireServer {
 impl InspireServer {
     /// Encodes `collection` and runs the offline precomputation (cpp_server_setup).
     pub fn new<T>(collection: &[T], _alpha: u64, _depth: u64) -> InspireServer {
+        Self::new_with_breakdown(collection).0
+    }
+
+    /// Same as `new`, but also reports how long each phase of server setup took. Used by the
+    /// `inspire_setup_breakdown` benchmark to separate shape-dependent work (parameter selection,
+    /// packing tables) from data-dependent work (encoding, server construction, offline phase).
+    pub fn new_with_breakdown<T>(collection: &[T]) -> (InspireServer, ServerSetupBreakdown) {
         let entry_bytes = mem::size_of::<T>() as u64;
         let num_entries = collection.len() as u64;
 
+        // Shape-dependent: depends only on (num_entries, entry_bytes).
+        let t = Instant::now();
         let dim0 = choose_dim0(num_entries, entry_bytes);
         let item_bits = (entry_bytes * 16) as usize;
         let (params, interpolate_degree, _) =
             params_rgswpir_given_input_size_and_dim0(num_entries as usize, item_bits, dim0);
         let params: &'static Params = Box::leak(Box::new(params));
+        let t_params = t.elapsed();
 
+        // Data-dependent: lay the tuples out in insPIRe's matrix format.
+        let t = Instant::now();
         let db = encode_db(collection, params, interpolate_degree);
+        let t_encode = t.elapsed();
+
+        // Data-dependent: build insPIRe's server object over the encoded database.
+        let t = Instant::now();
         let server = YServer::<u16>::new_rgswpir(params, &db, interpolate_degree);
         let server: &'static YServer<'static, u16> = Box::leak(Box::new(server));
-        let offline = server.perform_offline_precomputation_simplepir(params.poly_len, None, false);
-        let packing_params = PackParams::new(params, params.poly_len);
+        let t_yserver = t.elapsed();
 
-        InspireServer {
+        // Data-dependent: the offline (silent) preprocessing.
+        let t = Instant::now();
+        let offline = server.perform_offline_precomputation_simplepir(params.poly_len, None, false);
+        let t_offline = t.elapsed();
+
+        // Shape-dependent: automorphism tables for InspiRING packing.
+        let t = Instant::now();
+        let packing_params = PackParams::new(params, params.poly_len);
+        let t_pack = t.elapsed();
+
+        let breakdown = ServerSetupBreakdown {
+            params: t_params,
+            encode: t_encode,
+            yserver: t_yserver,
+            offline: t_offline,
+            pack_params: t_pack,
+            dim0,
+            interpolate_degree,
+        };
+
+        let server = InspireServer {
             params,
             server,
             offline: ManuallyDrop::new(offline),
@@ -162,7 +198,8 @@ impl InspireServer {
             interpolate_degree,
             num_entries,
             entry_bytes,
-        }
+        };
+        (server, breakdown)
     }
 
     /// Answers one serialized query (cpp_server_process_query).
@@ -226,20 +263,41 @@ struct ClientDbState {
 /// Builds a fresh client state for a database of `num_entries` entries of `entry_bytes` bytes each,
 /// generating a new secret key (shared by `InspireClient::new` and `update_params`).
 fn new_db_state(num_entries: u64, entry_bytes: u64) -> ClientDbState {
+    new_db_state_with_breakdown(num_entries, entry_bytes).0
+}
+
+/// Same as `new_db_state`, but also reports how long each phase took.
+fn new_db_state_with_breakdown(num_entries: u64, entry_bytes: u64) -> (ClientDbState, ClientSetupBreakdown) {
+    let t = Instant::now();
     let dim0 = choose_dim0(num_entries, entry_bytes);
     let item_bits = (entry_bytes * 16) as usize;
     let (params, interpolate_degree, _) =
         params_rgswpir_given_input_size_and_dim0(num_entries as usize, item_bits, dim0);
     let params: &'static Params = Box::leak(Box::new(params));
+    let t_params = t.elapsed();
 
+    let t = Instant::now();
     let client_ptr: *mut Client<'static> = Box::into_raw(Box::new(Client::init(params)));
     let client_ref: &'static mut Client<'static> = unsafe { &mut *client_ptr };
     client_ref.generate_secret_keys();
+    let t_keygen = t.elapsed();
 
+    let t = Instant::now();
     let packing_params = PackParams::new(params, params.poly_len);
-    let y_client = YClient::new(client_ref, params);
+    let t_pack = t.elapsed();
 
-    ClientDbState {
+    let t = Instant::now();
+    let y_client = YClient::new(client_ref, params);
+    let t_yclient = t.elapsed();
+
+    let breakdown = ClientSetupBreakdown {
+        params: t_params,
+        keygen: t_keygen,
+        pack_params: t_pack,
+        yclient: t_yclient,
+    };
+
+    let state = ClientDbState {
         params,
         client: client_ptr,
         y_client: ManuallyDrop::new(y_client),
@@ -248,7 +306,8 @@ fn new_db_state(num_entries: u64, entry_bytes: u64) -> ClientDbState {
         num_entries,
         entry_bytes,
         last_index: None,
-    }
+    };
+    (state, breakdown)
 }
 
 impl Drop for ClientDbState {
@@ -269,6 +328,18 @@ impl InspireClient {
             depth,
             db: RefCell::new(Some(new_db_state(num, size))),
         }
+    }
+
+    /// Same as `new`, but also reports how long each phase of client setup took.
+    pub fn new_with_breakdown(size: u64, num: u64, depth: u64) -> (InspireClient, ClientSetupBreakdown) {
+        let (state, breakdown) = new_db_state_with_breakdown(num, size);
+        (
+            InspireClient {
+                depth,
+                db: RefCell::new(Some(state)),
+            },
+            breakdown,
+        )
     }
 
     /// Switches the client to a database of `num` entries of `size` bytes
@@ -350,3 +421,24 @@ pub struct InspireResult {
 }
 
 
+
+/// Time spent in each phase of `InspireServer::new`.
+/// `params` and `pack_params` depend only on the database shape and could be cached across tree
+/// levels, buckets and rounds; `encode`, `yserver` and `offline` depend on the database contents.
+pub struct ServerSetupBreakdown {
+    pub params: Duration,
+    pub encode: Duration,
+    pub yserver: Duration,
+    pub offline: Duration,
+    pub pack_params: Duration,
+    pub dim0: usize,
+    pub interpolate_degree: usize,
+}
+
+/// Time spent in each phase of client setup (`InspireClient::new` / `update_params`).
+pub struct ClientSetupBreakdown {
+    pub params: Duration,
+    pub keygen: Duration,
+    pub pack_params: Duration,
+    pub yclient: Duration,
+}
