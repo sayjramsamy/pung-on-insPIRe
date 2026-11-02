@@ -12,11 +12,16 @@ use db;
 use gj;
 use gjio; // asynchronous IO libraries
 
+#[cfg(feature = "inspire")]
+use pir::inspire::InspireClient;
+#[cfg(not(feature = "inspire"))]
 use pir::sealpir_client::SealPirClient;
 use pung_capnp::pung_rpc;
 
 use rand;
 use rand::Rng;
+#[cfg(feature = "inspire")]
+use std::cell::RefCell;
 use std::cmp::Ordering;
 use std::collections::HashMap;
 use std::collections::HashSet;
@@ -82,8 +87,18 @@ pub struct PungClient<'a> {
     // Not read: pir_retr constructs a fresh SealPirClient per retrieval
     // instead (SealPIR's params are fixed at construction, unlike XPIR's
     // update_params). See TODO(sealpir) note on pir_retr.
+    #[cfg(not(feature = "inspire"))]
     #[allow(dead_code)]
     pir_handler: SealPirClient,
+
+    // One InspireClient per database length, reused across retrievals of that length:
+    // constructing one costs ~7s of packing-table construction (see pir::inspire), so it must
+    // not be rebuilt per retrieval. RefCell because pir_retr takes &self.
+    #[cfg(feature = "inspire")]
+    inspire_clients: RefCell<HashMap<u64, InspireClient>>,
+    #[cfg(feature = "inspire")]
+    depth: u64,
+
     partitions: Vec<Vec<u8>>, // Static partitioning of label space
 
     // Mapping between collection and encoding recipe (i.e., which pieces to xor together)
@@ -102,7 +117,8 @@ impl<'a> PungClient<'a> {
         address: &str,
         send_rate: u32,
         ret_rate: u32,
-        _depth: u64,
+        #[cfg_attr(not(feature = "inspire"), allow(unused_variables))]
+        depth: u64,
         ret_scheme: db::RetScheme,
         opt_scheme: db::OptScheme,
         scope: &gj::WaitScope,
@@ -200,7 +216,12 @@ impl<'a> PungClient<'a> {
             ret_scheme: ret_scheme,
             opt_scheme: opt_scheme,
             peers: HashMap::new(),
+            #[cfg(not(feature = "inspire"))]
             pir_handler: SealPirClient::new(1, 1),
+            #[cfg(feature = "inspire")]
+            inspire_clients: RefCell::new(HashMap::new()),
+            #[cfg(feature = "inspire")]
+            depth: depth,
             partitions: partitions,
             h4_mappings: h4_mappings,
         }
@@ -1669,6 +1690,7 @@ impl<'a> PungClient<'a> {
 
 
     // Retrieves a tuple from the server given a bucket, collection, level, and index
+    #[cfg(not(feature = "inspire"))]
     fn pir_retr(
         &self,
         bucket: usize,
@@ -1719,6 +1741,58 @@ impl<'a> PungClient<'a> {
         println!("Download (pir) {} bytes", 8 + answer.len());
 
         Ok(db::PungTuple::new(&decoded.to_bytes()))
+    }
+
+    // Retrieves a tuple from the server given a bucket, collection, level, and index
+    #[cfg(feature = "inspire")]
+    fn pir_retr(
+        &self,
+        bucket: usize,
+        collection: u32,
+        level: u32,
+        idx: u64,
+        len: u64,
+        scope: &gj::WaitScope,
+        port: &mut gjio::EventPort,
+    ) -> Result<db::PungTuple, Error> {
+        // One InspireClient per database length, kept across retrievals (see struct comment):
+        // constructing one costs ~7s of packing-table construction, so it must not be rebuilt
+        // per retrieval.
+        let mut clients = self.inspire_clients.borrow_mut();
+        let client = clients
+            .entry(len)
+            .or_insert_with(|| InspireClient::new(db::TUPLE_SIZE as u64, len, 1, self.depth));
+
+        // Create PIR request
+        let query = client.gen_query(idx);
+        let mut request = self.conn.retr_request();
+        request.get().set_id(self.id);
+        request.get().set_round(self.round);
+        request.get().set_bucket(bucket as u32);
+        request.get().set_collection(collection);
+        request.get().set_level(level);
+        request.get().set_query(&query.query);
+        request.get().set_qnum(query.num);
+
+        println!("Upload (pir) {} bytes", 32 + query.query.len());
+
+        // Send request to the server and get response
+        let response = request.send().promise.wait(scope, port)?;
+
+        // Extract PIR answer from response
+        let answer: &[u8] = response.get()?.get_answer()?;
+        let anum: u64 = response.get()?.get_anum();
+
+        if answer.len() == 0 {
+            return Err(Error::failed("Invalid PIR answer returned.".to_string()));
+        }
+
+        // Decode answer to get tuple
+        let decoded = client.decode_answer(answer, anum);
+
+        println!("Download (pir) {} bytes", 8 + answer.len());
+
+        Ok(db::PungTuple::new(&decoded.result))
     }
 
     // Retrieves a tuple using only a label by searching on the server

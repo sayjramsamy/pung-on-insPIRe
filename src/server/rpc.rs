@@ -17,6 +17,7 @@ use rand::Rng;
 use server::timely_shim;
 use std::collections::HashMap;
 use std::rc::Rc;
+use std::time::Instant;
 
 // Naiad libraries
 use timely::dataflow::scopes::root::Root;
@@ -493,9 +494,10 @@ impl pung_rpc::Server for PungRpc {
         let collection_idx: usize = req.get_collection() as usize;
         let level_idx: usize = req.get_level() as usize;
         let query: &[u8] = pry!(req.get_query());
-        // qnum is a leftover XPIR-specific field (query slot count); SealPIR
-        // has no analog. See TODO(sealpir) note in client::pir_retr.
-        let _q_num: u64 = req.get_qnum();
+        // qnum is a leftover XPIR-specific field (query slot count); SealPIR has no analog (see
+        // TODO(sealpir) note in client::pir_retr), but insPIRe's gen_answer takes it.
+        #[cfg_attr(not(feature = "inspire"), allow(unused_variables))]
+        let q_num: u64 = req.get_qnum();
 
         // check to make sure level
         let mut db = self.dbase.borrow_mut();
@@ -518,17 +520,26 @@ impl pung_rpc::Server for PungRpc {
                 return gj::Promise::err(Error::failed("invalid level requested".to_string()));
             }
 
-            // let start = time::PreciseTime::now();
+            let start = Instant::now();
             {
                 let pir_handler = collection.pir_handler(level_idx);
 
-                let answer = pir_handler.gen_answer_from_bytes(query);
-                res.get().set_answer(&answer.to_bytes());
-                res.get().set_anum(1);
+                #[cfg(feature = "inspire")]
+                {
+                    let answer = pir_handler.gen_answer(query, q_num);
+                    res.get().set_answer(&answer.answer);
+                    res.get().set_anum(answer.num);
+                }
+
+                #[cfg(not(feature = "inspire"))]
+                {
+                    let answer = pir_handler.gen_answer_from_bytes(query);
+                    res.get().set_answer(&answer.to_bytes());
+                    res.get().set_anum(1);
+                }
             }
-            // let end = time::PreciseTime::now();
-            // println!("bucket {}, collection {}, level {}, answer time: {} usec",
-            // bucket_idx, collection_idx, level_idx, start.to(end).num_microseconds().unwrap());
+            let elapsed = start.elapsed();
+            println!("answer_time level={} usec={}", level_idx, elapsed.as_micros());
         }
 
         // Account for this retrieval

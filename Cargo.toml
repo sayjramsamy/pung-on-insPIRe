@@ -38,6 +38,12 @@ spiral-rs = { workspace = true }
 [dev-dependencies]
 criterion = "0.1.2"
 
+[features]
+# Off by default: Pung's PIR backend is SealPIR unless this is enabled (see
+# src/db/mod.rs). Built into a separate target dir (CARGO_TARGET_DIR=target-inspire)
+# so the two builds coexist.
+inspire = []
+
 # Old crates hand-fixed to build on modern rustc (see patches/crates/*):
 # capnp: borrow-check fix in src/private/layout.rs; gjio: unaligned read of packed epoll_event in
 # src/sys/unix/epoll.rs.

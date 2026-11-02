@@ -4,6 +4,7 @@ use db;
 use server::timely_shim;
 use std::cell::RefCell;
 use std::rc::Rc;
+use std::time::Instant;
 
 // Naiad libraries
 use timely::dataflow::channels::pact::Pipeline;
@@ -82,7 +83,16 @@ pub fn graph(
                     }
 
                     // Setup PIR for each collection in the database
+                    let tuples = db.len();
+                    let start = Instant::now();
                     db.pir_setup();
+                    let elapsed = start.elapsed();
+                    println!(
+                        "pir_setup round={} tuples={} usec={}",
+                        time.inner,
+                        tuples,
+                        elapsed.as_micros()
+                    );
 
                     output.session(&time).give(0);
               });

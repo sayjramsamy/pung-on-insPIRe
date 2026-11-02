@@ -1,6 +1,7 @@
 //! This module contains the collection of Pung's messages.
 
 use std::cell::RefCell;
+#[cfg(not(feature = "inspire"))]
 use std::mem;
 use std::rc::Rc;
 use std::slice;
@@ -53,6 +54,9 @@ mod tuple;
 pub mod bst;
 
 use db::bst::BSTOrder;
+#[cfg(feature = "inspire")]
+use pir::inspire::InspireServer;
+#[cfg(not(feature = "inspire"))]
 use pir::sealpir_server::SealPirServer;
 
 pub type DatabasePtr = Rc<RefCell<Database<'static>>>;
@@ -75,8 +79,15 @@ pub struct Bucket<'a> {
 pub struct Collection<'a> {
     set: Vec<PungTuple>,
     ret_scheme: RetScheme,
+    #[cfg(not(feature = "inspire"))]
     pir_dbs: Vec<SealPirServer<'a>>,
-    #[allow(dead_code)]
+    // InspireServer owns (rather than borrows) its encoded database (see pir::inspire), so this
+    // variant has no use for 'a; the marker keeps the lifetime parameter from becoming unused.
+    #[cfg(feature = "inspire")]
+    pir_dbs: Vec<InspireServer>,
+    #[cfg(feature = "inspire")]
+    _marker: ::std::marker::PhantomData<&'a ()>,
+    #[cfg_attr(not(feature = "inspire"), allow(dead_code))]
     depth: u64,
     bloom: util::bloomfilter::Bloom,
 }
@@ -489,6 +500,8 @@ impl<'a> Collection<'a> {
             set: Vec::new(),
             ret_scheme: ret_scheme,
             pir_dbs: Vec::new(),
+            #[cfg(feature = "inspire")]
+            _marker: ::std::marker::PhantomData,
             depth: depth,
             bloom: util::bloomfilter::Bloom::new(1, 1),
         }
@@ -590,6 +603,7 @@ impl<'a> Collection<'a> {
         }
     }
 
+    #[cfg(not(feature = "inspire"))]
     pub fn pir_setup(&mut self) {
         let levels = self.num_levels();
         let mut pir_dbs = Vec::with_capacity(levels);
@@ -616,8 +630,28 @@ impl<'a> Collection<'a> {
         self.pir_dbs = pir_dbs;
     }
 
+    #[cfg(feature = "inspire")]
+    pub fn pir_setup(&mut self) {
+        let levels = self.num_levels();
+        let mut pir_dbs = Vec::with_capacity(levels);
+
+        for i in 0..levels {
+            let level: &[PungTuple] = self.get_level(i);
+            pir_dbs.push(InspireServer::new::<PungTuple>(level, 1, self.depth));
+        }
+
+        self.pir_dbs = pir_dbs;
+    }
+
+    #[cfg(not(feature = "inspire"))]
     #[inline]
     pub fn pir_handler(&self, level: usize) -> &SealPirServer {
+        &self.pir_dbs[level as usize]
+    }
+
+    #[cfg(feature = "inspire")]
+    #[inline]
+    pub fn pir_handler(&self, level: usize) -> &InspireServer {
         &self.pir_dbs[level as usize]
     }
 
